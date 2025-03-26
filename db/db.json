@@ -1,0 +1,65 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Alice"
+    },
+    {
+      "id": 2,
+      "name": "Bob"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "question": "What does HTML stand for?",
+      "options": [
+        { "id": "a", "text": "Hyper Trainer Marking Language" },
+        { "id": "b", "text": "Hyper Text Marketing Language" },
+        { "id": "c", "text": "Hyper Text Markup Language" },
+        { "id": "d", "text": "Hyperlink and Text Markup Language" }
+      ],
+      "correctAnswerId": "c",
+      "category": "HTML",
+      "difficulty": "easy",
+      "points": 20
+    },
+    {
+      "id": 2,
+      "question": "Which CSS property is used to change the text color of an element?",
+      "options": [
+        { "id": "a", "text": "font-color" },
+        { "id": "b", "text": "text-color" },
+        { "id": "c", "text": "color" },
+        { "id": "d", "text": "font-style" }
+      ],
+      "correctAnswerId": "c",
+      "category": "CSS",
+      "difficulty": "easy",
+      "points": 20
+    }
+  ],
+  "results": [
+    {
+      "id": 1,
+      "userId": 2,
+      "score": 45,
+      "totalTimeTaken": 38.5,
+      "date": "2023-10-27T10:30:00.000Z"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "score": 48,
+      "totalTimeTaken": 42.1,
+      "date": "2023-10-27T11:05:15.000Z"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "score": 50,
+      "totalTimeTaken": 35.2,
+      "date": "2023-10-28T09:15:00.000Z"
+    }
+  ]
+}
