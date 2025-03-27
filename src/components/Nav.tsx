@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-import Logo from "../assets/images/logo.png";
+import Logo from "../assets/images/logo.svg?react";
 import Icon from "supercons";
 import { TABS } from "../utils/constants";
 import ThemeToggle from "./ui/ThemeToggle";
@@ -10,16 +10,20 @@ type NavPropsType = {
 };
 
 const baseItemClasses =
-  "font-primary flex cursor-pointer text-secondary items-center gap-4 rounded-lg px-6 py-4 font-medium transition-all duration-300";
+  "font-primary flex cursor-pointer text-neutral  items-center gap-4 rounded-lg px-6 py-4 font-medium transition-all duration-300";
 
-const activeClasses = "bg-secondary text-secondary-content";
-const inactiveClasses = "hover:bg-accent-content/20 hover:text-secondary";
+const activeClasses = "bg-primary dark:bg-secondary text-primary-content";
+const inactiveClasses =
+  "hover:bg-primary/30 dark:hover:bg-secondary/30 dark:text-neutral-content";
 
 function Nav({ tab, setTab }: NavPropsType) {
   return (
     <nav className="w-full max-w-7xl self-center p-6">
-      <div className="flex items-center justify-between rounded-2xl border p-4">
-        <img src={Logo} alt="logo" className="w-40" />
+      <div className="border-primary dark:border-secondary flex items-center justify-between rounded-2xl border p-4">
+        <div className="flex items-center gap-4">
+          <Logo className="text-primary dark:text-secondary h-fit w-16" />
+          <p className="font-secondary uppercase text-2xl font-medium text-primary dark:text-secondary">quizzy</p>
+        </div>
         <ul className="flex items-center gap-4">
           <li
             className={` ${baseItemClasses} ${tab === TABS.QUIZ ? activeClasses : inactiveClasses} `}

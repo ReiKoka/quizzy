@@ -18,7 +18,7 @@ type ThemeProviderPropTypes = {
 export const ThemeProvider = ({ children }: ThemeProviderPropTypes) => {
   const [theme, setTheme, removeTheme] = useLocalStorage<Theme>(
     "theme",
-    "caramellatte",
+    "bumblebee",
   );
 
   useEffect(() => {

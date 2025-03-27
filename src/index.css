@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap");
 @import "tailwindcss";
 @import "tailwindcss-animated";
 @plugin "daisyui" {
   themes:
-    caramellatte --default,
+    garden --default,
     sunset --prefersdark;
 }
 
@@ -11,4 +12,5 @@
 
 @theme {
   --font-primary: "Ubuntu";
+  --font-secondary: "Josefin Sans";
 }
