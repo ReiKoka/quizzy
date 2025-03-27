@@ -27,13 +27,12 @@ export type QuizActionType =
 export interface QuizType {
   status: string;
   index: number;
-  answer: string;
+  answer: string | null;
   points: number;
   highScore: number;
   secondsRemaining: number;
-  filterQuestions: [];
+  filterQuestions: Question[];
   difficulty: "easy" | "medium" | "hard" | "all";
   numQuestions: number;
   maxPossiblePoints: number;
-
 }
