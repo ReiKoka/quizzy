@@ -1,10 +1,15 @@
 import axios from "axios";
-import { Question } from "../utils/types";
+import { Difficulty, Question } from "../utils/types";
 import { URL } from "../utils/constants";
 
-export const getQuestions = async (): Promise<Question[]> => {
+export const getQuestions = async (
+  difficulty: Difficulty = "all",
+): Promise<Question[]> => {
   try {
-    const response = await axios.get<Question[]>(`${URL}/questions`);
+    const customUrl = `${URL}/questions/${difficulty === "all" ? "" : `?difficulty=${difficulty}`}`;
+    console.log(customUrl);
+    const response = await axios.get<Question[]>(customUrl);
+    console.log(response.data);
     return response.data;
   } catch (error) {
     console.error(error);

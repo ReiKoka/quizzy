@@ -1,23 +1,11 @@
-import { createContext, ReactNode, useReducer } from "react";
-import { QuizActionType, QuizType } from "../utils/types";
-import { reducer } from "../reducer/reducer";
+import { createContext, ReactNode, useEffect, useReducer } from "react";
+import { QuizType } from "../utils/types";
+import { initialState, QuizActionType, reducer } from "../reducer/reducer";
+import { getQuestions } from "../services/questions";
 
 interface QuizContextType extends QuizType {
   dispatch: React.Dispatch<QuizActionType>;
 }
-
-const initialState: QuizType = {
-  status: "loading",
-  index: 0,
-  answer: null,
-  points: 0,
-  highScore: 0,
-  secondsRemaining: 0,
-  filterQuestions: [],
-  difficulty: "all",
-  numQuestions: 0,
-  maxPossiblePoints: 0,
-};
 
 const QuizContext = createContext<QuizContextType>({
   ...initialState,
@@ -30,8 +18,23 @@ type QuizProviderTypes = {
 
 export const QuizProvider = ({ children }: QuizProviderTypes) => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const numQuestions = state.filterQuestions.length;
-  const maxPossiblePoints = state.filterQuestions.reduce(
+
+  useEffect(() => {
+    // dispatch({ type: 'startLoading' });
+    try {
+      const getData = async () => {
+        const data = await getQuestions(state.difficulty);
+        dispatch({ type: "dataReceived", payload: data });
+      };
+      getData();
+    } catch (error) {
+      console.error(error);
+      dispatch({ type: "dataFailed" });
+    }
+  }, [state.difficulty]);
+
+  const numQuestions = state.questions.length;
+  const maxPossiblePoints = state.questions.reduce(
     (prev, cur) => prev + cur.points,
     0,
   );

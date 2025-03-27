@@ -20,9 +20,8 @@
         { "id": "d", "text": "Hyperlink and Text Markup Language" }
       ],
       "correctAnswerId": "c",
-      "category": "HTML",
       "difficulty": "easy",
-      "points": 20
+      "points": 10
     },
     {
       "id": 2,
@@ -34,9 +33,174 @@
         { "id": "d", "text": "font-style" }
       ],
       "correctAnswerId": "c",
-      "category": "CSS",
       "difficulty": "easy",
+      "points": 10
+    },
+    {
+      "id": 3,
+      "question": "What is the purpose of the `alt` attribute on an `<img>` tag?",
+      "options": [
+        { "id": "a", "text": "To provide alternative styling" },
+        { "id": "b", "text": "To link the image to another page" },
+        {
+          "id": "c",
+          "text": "To provide alternative text for screen readers and if the image fails to load"
+        },
+        { "id": "d", "text": "To set the alignment of the image" }
+      ],
+      "correctAnswerId": "c",
+      "difficulty": "easy",
+      "points": 10
+    },
+    {
+      "id": 4,
+      "question": "Which JavaScript keyword is used to declare a variable that cannot be reassigned?",
+      "options": [
+        { "id": "a", "text": "var" },
+        { "id": "b", "text": "let" },
+        { "id": "c", "text": "const" },
+        { "id": "d", "text": "static" }
+      ],
+      "correctAnswerId": "c",
+      "difficulty": "easy",
+      "points": 10
+    },
+    {
+      "id": 5,
+      "question": "What does the CSS property `display: flex;` primarily do?",
+      "options": [
+        { "id": "a", "text": "Makes text bold" },
+        {
+          "id": "b",
+          "text": "Enables a flex container, allowing items within it to be laid out in one dimension"
+        },
+        { "id": "c", "text": "Changes the background color" },
+        { "id": "d", "text": "Adds a border around the element" }
+      ],
+      "correctAnswerId": "b",
+      "difficulty": "medium",
       "points": 20
+    },
+    {
+      "id": 6,
+      "question": "In React, what hook is used to manage state within a functional component?",
+      "options": [
+        { "id": "a", "text": "useEffect" },
+        { "id": "b", "text": "useContext" },
+        { "id": "c", "text": "useState" },
+        { "id": "d", "text": "useReducer" }
+      ],
+      "correctAnswerId": "c",
+      "difficulty": "medium",
+      "points": 20
+    },
+    {
+      "id": 7,
+      "question": "What is the difference between `==` and `===` in JavaScript?",
+      "options": [
+        { "id": "a", "text": "They are identical" },
+        {
+          "id": "b",
+          "text": "`==` compares only value, `===` compares both value and type"
+        },
+        {
+          "id": "c",
+          "text": "`===` compares only value, `==` compares both value and type"
+        },
+        {
+          "id": "d",
+          "text": "`==` is used for assignment, `===` for comparison"
+        }
+      ],
+      "correctAnswerId": "b",
+      "difficulty": "medium",
+      "points": 20
+    },
+    {
+      "id": 8,
+      "question": "What is the purpose of the `useMemo` hook in React?",
+      "options": [
+        { "id": "a", "text": "To fetch data from an API" },
+        { "id": "b", "text": "To memoize a callback function" },
+        {
+          "id": "c",
+          "text": "To memoize the result of a computationally expensive function, recomputing only when dependencies change"
+        },
+        { "id": "d", "text": "To create a reference to a DOM element" }
+      ],
+      "correctAnswerId": "c",
+      "difficulty": "hard",
+      "points": 30
+    },
+    {
+      "id": 9,
+      "question": "Explain the concept of 'event delegation' in JavaScript.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Assigning multiple event listeners to a single element"
+        },
+        { "id": "b", "text": "Using `setTimeout` to delay event handling" },
+        {
+          "id": "c",
+          "text": "Attaching a single event listener to a parent element to manage events for multiple child elements"
+        },
+        { "id": "d", "text": "Preventing the default action of an event" }
+      ],
+      "correctAnswerId": "c",
+      "difficulty": "hard",
+      "points": 30
+    },
+    {
+      "id": 10,
+      "question": "What is the difference between `localStorage` and `sessionStorage`?",
+      "options": [
+        { "id": "a", "text": "`localStorage` is faster than `sessionStorage`" },
+        {
+          "id": "b",
+          "text": "`localStorage` data persists even after the browser window is closed, while `sessionStorage` data is cleared when the session ends (window/tab closed)"
+        },
+        {
+          "id": "c",
+          "text": "`sessionStorage` data persists even after the browser window is closed, while `localStorage` data is cleared when the session ends"
+        },
+        {
+          "id": "d",
+          "text": "`sessionStorage` can store more data than `localStorage`"
+        }
+      ],
+      "correctAnswerId": "b",
+      "difficulty": "hard",
+      "points": 30
+    },
+    {
+      "id": 11,
+      "question": "What is the CSS Box Model?",
+      "options": [
+        { "id": "a", "text": "A model for organizing CSS files" },
+        { "id": "b", "text": "A standard for naming CSS classes" },
+        {
+          "id": "c",
+          "text": "A box that wraps around every HTML element, consisting of: margins, borders, padding, and the actual content"
+        },
+        { "id": "d", "text": "A JavaScript library for creating 3D boxes" }
+      ],
+      "correctAnswerId": "c",
+      "difficulty": "medium",
+      "points": 20
+    },
+    {
+      "id": 12,
+      "question": "What does the `git clone` command do?",
+      "options": [
+        { "id": "a", "text": "Creates a new branch" },
+        { "id": "b", "text": "Stages changes for a commit" },
+        { "id": "c", "text": "Creates a local copy of a remote repository" },
+        { "id": "d", "text": "Merges two branches" }
+      ],
+      "correctAnswerId": "c",
+      "difficulty": "easy",
+      "points": 10
     }
   ],
   "results": [

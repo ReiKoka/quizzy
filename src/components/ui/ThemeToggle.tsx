@@ -4,8 +4,6 @@ import useTheme from "../../hooks/useTheme";
 function ThemeToggle() {
   const { theme, setTheme } = useTheme();
 
-  console.log(theme);
-
   const handleToggle = () => {
     setTheme(theme === "sunset" ? "garden" : "sunset");
   };

@@ -1,12 +1,12 @@
 export type Theme = "garden" | "sunset";
+export type Difficulty = "easy" | "medium" | "hard" | "all";
 
 export type Question = {
   id: string;
   question: string;
   options: Option[];
   correctAnswerId: string;
-  category: string;
-  difficulty: string;
+  difficulty: Difficulty;
   points: number;
 };
 
@@ -15,24 +15,18 @@ export type Option = {
   text: string;
 };
 
-export type QuizActionType =
-  | {
-      type: "dataReceived";
-      payload: Question[];
-    }
-  | {
-      type: "dataFailed";
-    };
+
 
 export interface QuizType {
-  status: string;
+  // loading, 'error', 'ready', 'active', 'finished'
+  status: "loading" | "error" | "ready" | "active" | "finished";
   index: number;
   answer: string | null;
   points: number;
   highScore: number;
   secondsRemaining: number;
-  filterQuestions: Question[];
-  difficulty: "easy" | "medium" | "hard" | "all";
+  questions: Question[];
+  difficulty: Difficulty;
   numQuestions: number;
   maxPossiblePoints: number;
 }
