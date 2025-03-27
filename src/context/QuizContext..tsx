@@ -20,17 +20,17 @@ export const QuizProvider = ({ children }: QuizProviderTypes) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
-    // dispatch({ type: 'startLoading' });
-    try {
-      const getData = async () => {
+    const fetchData = async () => {
+      try {
         const data = await getQuestions(state.difficulty);
         dispatch({ type: "dataReceived", payload: data });
-      };
-      getData();
-    } catch (error) {
-      console.error(error);
-      dispatch({ type: "dataFailed" });
-    }
+      } catch (error) {
+        console.error("Error caught in useEffect:", error);
+        dispatch({ type: "dataFailed" });
+      }
+    };
+
+    fetchData(); // Call the async function
   }, [state.difficulty]);
 
   const numQuestions = state.questions.length;

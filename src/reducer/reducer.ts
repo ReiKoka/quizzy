@@ -8,7 +8,9 @@ export type QuizActionType =
   | {
       type: "dataFailed";
     }
-  | { type: "setDifficulty"; payload: Difficulty };
+  | { type: "setDifficulty"; payload: Difficulty }
+  | { type: "startQuiz" }
+  | { type: "restartQuiz" };
 
 export const initialState: QuizType = {
   status: "loading",
@@ -24,8 +26,6 @@ export const initialState: QuizType = {
 };
 
 export const reducer = (state: QuizType, action: QuizActionType): QuizType => {
-  console.log(state);
-
   switch (action.type) {
     case "dataReceived":
       return {
@@ -33,15 +33,34 @@ export const reducer = (state: QuizType, action: QuizActionType): QuizType => {
         questions: action.payload,
         status: "ready",
       };
+    case "dataFailed":
+      return { ...state, status: "error" };
     case "setDifficulty": {
       return {
         ...state,
         difficulty: action.payload,
       };
     }
-
-    default:
-      console.error(`Unknown action type: ${action.type}`);
+    case "startQuiz": {
+      return {
+        ...state,
+        status: "active",
+        secondsRemaining: state.questions
+          .map((question) => question.points)
+          .reduce((acc, curr) => acc + curr, 0),
+      };
+    }
+    case "restartQuiz":
+      return {
+        ...initialState,
+        questions: state.questions,
+        status: "ready",
+        highScore: state.highScore,
+        difficulty: "all",
+      };
+    default: {
+      console.error(`Unknown action type: ${(action as QuizActionType).type}`);
       return state;
+    }
   }
 };
