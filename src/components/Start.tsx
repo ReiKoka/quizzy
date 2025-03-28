@@ -13,16 +13,16 @@ function Start() {
 
   return (
     <>
-      <QuizLogo className="text-primary dark:text-secondary mx-auto w-[400px]" />
+      <QuizLogo className="text-primary mx-auto w-[400px]" />
       <h3 className="mx-auto max-w-96 text-center text-lg font-medium">
         Welcome! Get ready to challenge your brain and have some fun. Let's see
         how much trivia you've got packed in there!
       </h3>
 
-      <div className="flex items-center justify-between mt-auto">
+      <div className="mt-auto flex items-center justify-between">
         <DifficultySelect />
         <button
-          className="btn btn-primary dark:btn-secondary ml-auto flex w-fit gap-4"
+          className="btn btn-primary ml-auto flex w-fit gap-4"
           onClick={handleStartQuiz}
           disabled={isStartDisabled}
         >

@@ -19,12 +19,12 @@ function DifficultySelect() {
       <div
         tabIndex={0}
         role="button"
-        className="btn btn-primary group dark:btn-secondary btn-soft border-primary dark:border-secondary m-1 flex items-center gap-2"
+        className="btn btn-primary group btn-soft border-primary m-1 flex items-center gap-2"
       >
         <Icon
           glyph="up-caret"
           size={24}
-          className="text-primary dark:text-secondary group-hover:text-primary-content group-hover:dark:text-secondary-content"
+          className="text-primary group-hover:text-primary-content group-hover:dark:text-secondary-content"
         />
         <span className="capitalize">
           {difficulty === "all" ? "Select Difficulty" : difficulty}

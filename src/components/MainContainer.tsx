@@ -7,7 +7,7 @@ interface MainContainerProps {
 function MainContainer({ children }: MainContainerProps) {
   return (
     <div className="h-full w-full max-w-7xl grow self-center px-6 pb-6">
-      <div className="border-primary dark:border-secondary h-full w-full overflow-hidden rounded-2xl border p-4">
+      <div className="border-primary h-full w-full overflow-hidden rounded-2xl border p-4">
         {children}
       </div>
     </div>
