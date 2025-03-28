@@ -38,6 +38,7 @@ export const QuizProvider = ({ children }: QuizProviderTypes) => {
     (prev, cur) => prev + cur.points,
     0,
   );
+  
 
   const contextValue: QuizContextType = {
     ...state,

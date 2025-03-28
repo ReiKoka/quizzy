@@ -1,11 +1,11 @@
 import useQuiz from "../../hooks/useQuiz";
 
 function ProgressBar() {
-  const { index, numQuestions, points, maxPossiblePoints, answer } = useQuiz();
+  const { index, numQuestions, answer } = useQuiz();
   return (
     <div>
       <progress
-        className="progress w-full"
+        className="progress progress-primary w-full"
         value={index + Number(answer !== null)}
         max={numQuestions}
       ></progress>

@@ -5,7 +5,7 @@ function Question() {
   const { questions, index } = useQuiz();
   const question = questions[index];
   return (
-    <div>
+    <div className="flex flex-col gap-12 grow">
       <div className="relative flex items-center justify-center">
         <h4 className="text-2xl font-medium tracking-wide">
           {question.question}

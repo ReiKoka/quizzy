@@ -1,5 +1,9 @@
 export type Theme = "garden" | "sunset";
 export type Difficulty = "easy" | "medium" | "hard" | "all";
+export type HighScore = {
+  highScorePoints: number;
+  time: number;
+};
 
 export type Question = {
   id: string;
@@ -15,15 +19,13 @@ export type Option = {
   text: string;
 };
 
-
-
 export interface QuizType {
   // loading, 'error', 'ready', 'active', 'finished'
   status: "loading" | "error" | "ready" | "active" | "finished";
   index: number;
   answer: string | null;
   points: number;
-  highScore: number;
+  highScore: HighScore;
   secondsRemaining: number;
   questions: Question[];
   difficulty: Difficulty;
