@@ -21,3 +21,22 @@ export const getQuestions = async (
     throw error;
   }
 };
+
+export const getCategories = async (): Promise<string[]> => {
+  try {
+    const response = await axios.get<Question[]>(`${URL}/questions`);
+    const categoriesSet = new Set(
+      response.data.map((question) => question.category),
+    );
+    const categories = Array.from(categoriesSet);
+    return categories;
+  } catch (error) {
+    console.error(error);
+    if (axios.isAxiosError(error)) {
+      throw new Error(
+        `${error.message || error} - Failed to get all questions`,
+      );
+    }
+    throw error;
+  }
+};

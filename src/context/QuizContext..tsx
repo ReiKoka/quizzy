@@ -1,7 +1,8 @@
 import { createContext, ReactNode, useEffect, useReducer } from "react";
 import { QuizType } from "../utils/types";
 import { initialState, QuizActionType, reducer } from "../reducer/reducer";
-import { getQuestions } from "../services/questions";
+import { getCategories } from "../services/questions";
+import { showToast } from "../components/ui/ShowToast";
 
 interface QuizContextType extends QuizType {
   dispatch: React.Dispatch<QuizActionType>;
@@ -19,26 +20,27 @@ type QuizProviderTypes = {
 export const QuizProvider = ({ children }: QuizProviderTypes) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await getQuestions(state.difficulty);
-        dispatch({ type: "dataReceived", payload: data });
-      } catch (error) {
-        console.error("Error caught in useEffect:", error);
-        dispatch({ type: "dataFailed" });
-      }
-    };
-
-    fetchData(); // Call the async function
-  }, [state.difficulty]);
-
   const numQuestions = state.questions.length;
   const maxPossiblePoints = state.questions.reduce(
     (prev, cur) => prev + cur.points,
     0,
   );
-  
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const categories = await getCategories();
+        dispatch({ type: "setAllCategories", payload: categories });
+      } catch (error) {
+        console.error(error);
+        showToast(
+          "error",
+          "Failed to get categories! Please check your console",
+        );
+      }
+    };
+    fetchCategories();
+  }, [dispatch]);
 
   const contextValue: QuizContextType = {
     ...state,

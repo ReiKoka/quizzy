@@ -22,7 +22,7 @@ function Nav({ tab, setTab }: NavPropsType) {
         <div className="flex items-center gap-4">
           <Logo className="text-primary h-fit w-16" />
           <p className="font-secondary text-primary text-2xl font-medium uppercase">
-            quizzy
+            quizzthing
           </p>
         </div>
         <ul className="flex items-center gap-4">

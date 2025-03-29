@@ -1,9 +1,12 @@
 import { Difficulty, Question, QuizType } from "../utils/types";
 
 export type QuizActionType =
+  | { type: "setAllCategories"; payload: string[] }
+  | { type: "setStatus"; payload: QuizType["status"] }
+  | { type: "setCategory"; payload: string }
+  | { type: "setDifficulty"; payload: Difficulty }
   | { type: "dataReceived"; payload: Question[] }
   | { type: "dataFailed" }
-  | { type: "setDifficulty"; payload: Difficulty }
   | { type: "startQuiz" }
   | { type: "restartQuiz" }
   | { type: "newAnswer"; payload: string }
@@ -24,24 +27,52 @@ export const initialState: QuizType = {
   difficulty: "all",
   numQuestions: 0,
   maxPossiblePoints: 0,
+  category: null,
+  allCategories: [],
 };
 
 export const reducer = (state: QuizType, action: QuizActionType): QuizType => {
   switch (action.type) {
-    case "dataReceived":
+    case "setAllCategories": {
       return {
         ...state,
-        questions: action.payload,
+        allCategories: action.payload,
+        status: "initial",
+      };
+    }
+
+    case "setStatus": {
+      return {
+        ...state,
+        status: action.payload,
+      };
+    }
+
+    case "setCategory": {
+      return {
+        ...state,
+        category: action.payload,
         status: "ready",
       };
-    case "dataFailed":
-      return { ...state, status: "error" };
+    }
+
     case "setDifficulty": {
       return {
         ...state,
         difficulty: action.payload,
       };
     }
+
+    case "dataReceived":
+      return {
+        ...state,
+        questions: action.payload,
+        status: "ready",
+      };
+
+    case "dataFailed":
+      return { ...state, status: "error" };
+
     case "startQuiz": {
       return {
         ...state,
@@ -51,6 +82,7 @@ export const reducer = (state: QuizType, action: QuizActionType): QuizType => {
           .reduce((acc, curr) => acc + curr, 0),
       };
     }
+
     case "restartQuiz":
       return {
         ...initialState,
@@ -59,6 +91,7 @@ export const reducer = (state: QuizType, action: QuizActionType): QuizType => {
         highScore: state.highScore,
         difficulty: "all",
       };
+
     case "newAnswer": {
       const question = state.questions[state.index];
       return {
@@ -70,6 +103,7 @@ export const reducer = (state: QuizType, action: QuizActionType): QuizType => {
             : state.points,
       };
     }
+
     case "nextQuestion":
       return { ...state, index: state.index + 1, answer: null };
     case "finishedQuiz": {
@@ -94,6 +128,7 @@ export const reducer = (state: QuizType, action: QuizActionType): QuizType => {
         highScore: updatedHighScore,
       };
     }
+
     default: {
       console.error(`Unknown action type: ${(action as QuizActionType).type}`);
       return state;

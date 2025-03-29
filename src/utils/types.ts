@@ -1,5 +1,8 @@
 export type Theme = "garden" | "sunset";
+//prettier-ignore
+export type StatusType = "initial" | "loading" | "error" | "ready" | "active" | "finished";
 export type Difficulty = "easy" | "medium" | "hard" | "all";
+
 export type HighScore = {
   highScorePoints: number;
   time: number;
@@ -12,6 +15,7 @@ export type Question = {
   correctAnswerId: string;
   difficulty: Difficulty;
   points: number;
+  category: string;
 };
 
 export type Option = {
@@ -20,8 +24,8 @@ export type Option = {
 };
 
 export interface QuizType {
-  // loading, 'error', 'ready', 'active', 'finished'
-  status: "loading" | "error" | "ready" | "active" | "finished";
+  //initial, loading, 'error', 'ready', 'active', 'finished'
+  status: StatusType;
   index: number;
   answer: string | null;
   points: number;
@@ -31,4 +35,6 @@ export interface QuizType {
   difficulty: Difficulty;
   numQuestions: number;
   maxPossiblePoints: number;
+  category: string | null;
+  allCategories: string[];
 }
