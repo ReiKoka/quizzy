@@ -4,9 +4,10 @@ import { URL } from "../utils/constants";
 
 export const getQuestions = async (
   difficulty: Difficulty = "all",
+  category: string,
 ): Promise<Question[]> => {
   try {
-    const customUrl = `${URL}/questions/${difficulty === "all" ? "" : `?difficulty=${difficulty}`}`;
+    const customUrl = `${URL}/questions?category=${category}&${difficulty === "all" ? "" : `difficulty=${difficulty}`}`;
     console.log(customUrl);
     const response = await axios.get<Question[]>(customUrl);
     console.log(response.data);

@@ -11,9 +11,11 @@ function SelectQuiz() {
   return (
     <div className="flex h-full w-full grow flex-col gap-8 overflow-hidden">
       <QuizLogo className="text-primary mx-auto max-w-72 min-w-40" />
-      <h3 className="font-secondary text-base-content mx-auto text-2xl">
-        Start by selecting a category
+      <h3 className="font-secondary text-base-content mx-auto max-w-96 text-center text-lg font-medium">
+        Welcome! Get ready to challenge your brain and have some fun. Let's see
+        how much trivia you've got packed in there!
       </h3>
+      <h4 className="font-secondary text-primary mx-auto max-w-96 text-center text-2xl font-medium">Start by selecting a category</h4>
       <div className="grid h-full grow grid-cols-2 gap-6 overflow-y-auto p-6">
         {allCategories &&
           allCategories.map((category) => (
