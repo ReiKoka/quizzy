@@ -1,5 +1,10 @@
 import axios from "axios";
-import { Difficulty, Question } from "../utils/types";
+import {
+  Difficulty,
+  HighScore,
+  HighscoreExtended,
+  Question,
+} from "../utils/types";
 import { URL } from "../utils/constants";
 
 export const getQuestions = async (
@@ -36,6 +41,30 @@ export const getCategories = async (): Promise<string[]> => {
     if (axios.isAxiosError(error)) {
       throw new Error(
         `${error.message || error} - Failed to get all questions`,
+      );
+    }
+    throw error;
+  }
+};
+
+export const getHighscore = async (
+  category: string,
+  difficulty: Difficulty,
+): Promise<HighScore> => {
+  try {
+    const response = await axios.get<HighscoreExtended[]>(
+      `${URL}/highestScores?id=${category.toLocaleLowerCase()}_${difficulty.toLocaleLowerCase()}`,
+    );
+    console.log(response.data);
+    return {
+      highScorePoints: response.data[0].score,
+      time: response.data[0].time,
+    };
+  } catch (error) {
+    console.error(error);
+    if (axios.isAxiosError(error)) {
+      throw new Error(
+        `${error.message || error} - Failed to get highscore for ${category} ${difficulty}`,
       );
     }
     throw error;

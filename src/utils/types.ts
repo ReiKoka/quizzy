@@ -8,6 +8,15 @@ export type HighScore = {
   time: number;
 };
 
+export type HighscoreExtended = {
+  id: string;
+  category: string;
+  difficultySetting: Difficulty;
+  userId: string;
+  score: number;
+  time: number;
+};
+
 export type Question = {
   id: string;
   question: string;
@@ -37,4 +46,5 @@ export interface QuizType {
   maxPossiblePoints: number;
   category: string | null;
   allCategories: string[];
+  isNewHighScore: boolean;
 }

@@ -21,7 +21,7 @@ function Footer() {
 
   return (
     <div className="flex items-center justify-between">
-      <p className="font-secondary flex items-center gap-2 text-2xl">
+      <p className="font-primary flex items-center gap-2 text-2xl">
         <Icon glyph="stopwatch" size={26} />
         <span className="countdown">
           <span style={{ "--value": minutes } as React.CSSProperties}></span>:

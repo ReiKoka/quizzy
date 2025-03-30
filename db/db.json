@@ -633,15 +633,15 @@
   ],
   "highestScores": [
     {
-      "id": "HTML_easy",
+      "id": "html_easy",
       "category": "HTML",
       "difficultySetting": "easy",
       "userId": 1,
-      "score": 50,
+      "score": 20,
       "time": 125
     },
     {
-      "id": "HTML_medium",
+      "id": "html_medium",
       "category": "HTML",
       "difficultySetting": "medium",
       "userId": 1,
@@ -649,7 +649,7 @@
       "time": 110
     },
     {
-      "id": "HTML_hard",
+      "id": "html_hard",
       "category": "HTML",
       "difficultySetting": "hard",
       "userId": 1,
@@ -657,7 +657,7 @@
       "time": 110
     },
     {
-      "id": "HTML_all",
+      "id": "html_all",
       "category": "HTML",
       "difficultySetting": "all",
       "userId": 1,

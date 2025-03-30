@@ -1,10 +1,12 @@
-import { Difficulty, Question, QuizType } from "../utils/types";
+import { Difficulty, HighScore, Question, QuizType } from "../utils/types";
 
 export type QuizActionType =
   | { type: "setAllCategories"; payload: string[] }
-  | { type: "setStatus"; payload: QuizType["status"] }
   | { type: "setCategory"; payload: string }
   | { type: "setDifficulty"; payload: Difficulty }
+  | { type: "setDifficulty"; payload: Difficulty }
+  | { type: "setHighscore"; payload: HighScore }
+  | { type: "setStatus"; payload: QuizType["status"] }
   | { type: "dataReceived"; payload: Question[] }
   | { type: "dataFailed" }
   | { type: "startQuiz" }
@@ -29,6 +31,7 @@ export const initialState: QuizType = {
   maxPossiblePoints: 0,
   category: null,
   allCategories: [],
+  isNewHighScore: false,
 };
 
 export const reducer = (state: QuizType, action: QuizActionType): QuizType => {
@@ -41,17 +44,11 @@ export const reducer = (state: QuizType, action: QuizActionType): QuizType => {
       };
     }
 
-    case "setStatus": {
-      return {
-        ...state,
-        status: action.payload,
-      };
-    }
-
     case "setCategory": {
       return {
         ...state,
         category: action.payload,
+
         status: "ready",
       };
     }
@@ -60,6 +57,20 @@ export const reducer = (state: QuizType, action: QuizActionType): QuizType => {
       return {
         ...state,
         difficulty: action.payload,
+      };
+    }
+
+    case "setHighscore": {
+      return {
+        ...state,
+        highScore: action.payload,
+      };
+    }
+
+    case "setStatus": {
+      return {
+        ...state,
+        status: action.payload,
       };
     }
 
@@ -106,14 +117,17 @@ export const reducer = (state: QuizType, action: QuizActionType): QuizType => {
 
     case "nextQuestion":
       return { ...state, index: state.index + 1, answer: null };
+
     case "finishedQuiz": {
       let updatedHighScore = state.highScore;
+      let isNewHighScore = false;
 
       if (state.points > state.highScore.highScorePoints) {
         updatedHighScore = {
           highScorePoints: state.points,
           time: state.secondsRemaining,
         };
+        isNewHighScore = true;
       } else if (state.points === state.highScore.highScorePoints) {
         if (state.secondsRemaining > state.highScore.time) {
           updatedHighScore = {
@@ -121,11 +135,14 @@ export const reducer = (state: QuizType, action: QuizActionType): QuizType => {
             time: state.secondsRemaining,
           };
         }
+        isNewHighScore = true;
       }
+
       return {
         ...state,
         status: "finished",
         highScore: updatedHighScore,
+        isNewHighScore,
       };
     }
 

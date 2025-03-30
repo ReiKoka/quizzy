@@ -2,7 +2,9 @@ import QuizLogo from "../assets/images/quiz.svg?react";
 import Icon from "supercons";
 import DifficultySelect from "./ui/DifficultySelect";
 import useQuiz from "../hooks/useQuiz";
-import { getQuestions } from "../services/questions";
+import { getHighscore, getQuestions } from "../services/questions";
+import { HighScore, Question } from "../utils/types";
+import { showToast } from "./ui/ShowToast";
 
 function Start() {
   const { status, dispatch, category, difficulty } = useQuiz();
@@ -11,8 +13,21 @@ function Start() {
 
   const handleStartQuiz = async () => {
     dispatch({ type: "setStatus", payload: "loading" });
-    const questions = await getQuestions(difficulty, category as string);
+    let questions: Question[] = [];
+    let highScorePayload: HighScore;
+    try {
+      questions = await getQuestions(difficulty, category as string);
+      highScorePayload = await getHighscore(category as string, difficulty);
+    } catch (error) {
+      console.error(error);
+      dispatch({ type: "dataFailed" });
+      showToast("error", "Failed to get questions! Please check your console");
+      return;
+    }
+
+    console.log(highScorePayload);
     dispatch({ type: "dataReceived", payload: questions });
+    dispatch({ type: "setHighscore", payload: highScorePayload });
     dispatch({ type: "startQuiz" });
   };
 
