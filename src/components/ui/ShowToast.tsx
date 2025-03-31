@@ -19,31 +19,19 @@ export const showToast = (type: ToastType, message: string): void => {
         className="h-6 min-h-6 w-6 min-w-6 text-amber-600 dark:text-amber-500"
       />
     ),
-    error: (
-      <Icon
-        glyph="bug"
-        className="text-destructive h-6 min-h-6 w-6 min-w-6 dark:text-red-500"
-      />
-    ),
-    info: (
-      <Icon
-        glyph="info"
-        className="text-primary h-6 min-h-6 w-6 min-w-6 dark:text-purple-500"
-      />
-    ),
+    error: <Icon glyph="bug" className="text-error h-6 min-h-6 w-6 min-w-6" />,
+    info: <Icon glyph="info" className="text-info h-6 min-h-6 w-6 min-w-6" />,
   };
 
   const textColors = {
     success: "text-green-600 dark:text-green-500",
     warning: "text-amber-600 dark:text-amber-500",
-    error: "text-destructive dark:text-red-500",
-    info: "text-primary dark:text-purple-500",
+    error: "text-error",
+    info: "text-info",
   };
 
   toast.custom(() => (
-    <div
-      className={`bg-background shadow-toast flex w-auto items-center gap-4 rounded-xl border border-none p-4 sm:min-w-80 dark:shadow-black`}
-    >
+    <div>
       {icons[type] || icons.info}
       <div>
         <p

@@ -1054,36 +1054,19 @@
   "highestScores": [
     {
       "id": "html_easy",
-      "category": "HTML",
+      "category": "html",
       "difficultySetting": "easy",
-      "userId": 1,
-      "score": 30,
-      "time": 9,
-      "userName": "Rei Koka"
+      "userName": "test",
+      "score": 40,
+      "time": 6
     },
     {
-      "id": "html_medium",
-      "category": "HTML",
-      "difficultySetting": "medium",
-      "userId": 1,
-      "score": 100,
-      "time": 110
-    },
-    {
-      "id": "html_hard",
-      "category": "HTML",
-      "difficultySetting": "hard",
-      "userId": 1,
-      "score": 100,
-      "time": 110
-    },
-    {
-      "id": "html_all",
-      "category": "HTML",
-      "difficultySetting": "all",
-      "userId": 1,
-      "score": 220,
-      "time": 200
+      "id": "react_easy",
+      "category": "react",
+      "difficultySetting": "easy",
+      "userName": "testing",
+      "score": 40,
+      "time": 13
     }
   ],
   "results": [

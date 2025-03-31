@@ -20,7 +20,6 @@ function FinishedQuiz() {
     maxPossiblePoints,
     secondsRemaining,
     category,
-    status,
     difficulty,
     points,
   } = useQuiz();
@@ -55,16 +54,11 @@ function FinishedQuiz() {
     dispatch({ type: "restartQuiz" });
   };
 
-  const handleSaveScore = async (event: React.FormEvent) => {
+  const handleSaveScore = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     if (!userName.trim()) {
       showToast("warning", "Please enter your name.");
-      return;
-    }
-    // Safeguard checks
-    if (status !== "finished" || !isNewHighScore || !category || hasSaved) {
-      console.error("Conditions not met for saving score or already saved.");
       return;
     }
 
@@ -78,7 +72,7 @@ function FinishedQuiz() {
 
       await createOrEditHighscore(
         userName.trim(),
-        category,
+        category as string,
         difficulty,
         currentResult,
       );
@@ -113,12 +107,12 @@ function FinishedQuiz() {
           <NewHighscoreImg className="text-primary animate-jump-in animate-once animate-duration-700 animate-ease-out animate-delay-300 mx-auto w-[300px] max-w-[400px]" />
         </>
       ) : (
-        <FinishQuizImg className="text-primary animate-jump-in animate-once animate-duration-700 animate-ease-out animate-delay-300 mx-auto w-[400px] max-w-[400px]" />
+        <FinishQuizImg className="text-primary animate-jump-in animate-once animate-duration-700 animate-ease-out animate-delay-300 mx-auto w-[300px] max-w-[400px]" />
       )}
 
       <FinishedInfographic />
 
-      <div className="flex mt-auto ">
+      <div className="mt-auto flex">
         {isNewHighScore && !hasSaved && (
           <form
             onSubmit={handleSaveScore}
@@ -130,7 +124,7 @@ function FinishedQuiz() {
               placeholder="Enter your name to save score"
               value={userName}
               onChange={(e) => setUserName(e.target.value)}
-              className="input input-bordered "
+              className="input input-bordered"
               disabled={isSaving}
               required
               maxLength={50}
@@ -138,7 +132,7 @@ function FinishedQuiz() {
 
             <button
               type="submit"
-              className="btn btn-primary min-w-fit w-fit btn-md "
+              className="btn btn-primary btn-md w-fit min-w-fit"
               disabled={isSaving || !userName.trim()}
             >
               {isSaving ? "Saving..." : "Save High Score"}
@@ -148,6 +142,7 @@ function FinishedQuiz() {
         <button
           className="btn btn-primary mx-auto w-fit"
           onClick={handleRestartQuiz}
+          type="button"
         >
           Restart Quiz
         </button>
