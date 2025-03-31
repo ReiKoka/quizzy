@@ -10,9 +10,10 @@ export type QuizActionType =
   | { type: "dataReceived"; payload: Question[] }
   | { type: "dataFailed" }
   | { type: "startQuiz" }
-  | { type: "restartQuiz" }
+  | { type: "tick" }
   | { type: "newAnswer"; payload: string }
   | { type: "nextQuestion" }
+  | { type: "restartQuiz" }
   | { type: "finishedQuiz" };
 
 export const initialState: QuizType = {
@@ -91,6 +92,17 @@ export const reducer = (state: QuizType, action: QuizActionType): QuizType => {
         secondsRemaining: state.questions
           .map((question) => question.points)
           .reduce((acc, curr) => acc + curr, 0),
+      };
+    }
+
+    case "tick": {
+      const newSecondsRemaining = state.secondsRemaining - 1;
+      const newStatus = newSecondsRemaining === 0 ? "finished" : state.status;
+
+      return {
+        ...state,
+        secondsRemaining: newSecondsRemaining,
+        status: newStatus,
       };
     }
 

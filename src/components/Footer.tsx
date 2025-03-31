@@ -1,21 +1,29 @@
 import Icon from "supercons";
 import useQuiz from "../hooks/useQuiz";
+import { useEffect } from "react";
 
 function Footer() {
   const { secondsRemaining, dispatch, index, numQuestions } = useQuiz();
 
   const isFinalQuestion = index + 1 === numQuestions;
-
-  const minutes =
-    secondsRemaining !== null ? Math.floor(secondsRemaining / 60) : 0;
+  const minutes = secondsRemaining !== null ? Math.floor(secondsRemaining / 60) : 0;
   const seconds = secondsRemaining !== null ? secondsRemaining % 60 : 0;
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      dispatch({ type: "tick" });
+    }, 1000);
+
+    return () => clearInterval(id);
+  }, [dispatch]);
+
+
 
   const handleClick = () => {
     if (isFinalQuestion) {
       dispatch({ type: "finishedQuiz" });
       return;
     }
-
     dispatch({ type: "nextQuestion" });
   };
 
