@@ -1,7 +1,7 @@
 import { createContext, ReactNode, useEffect, useReducer } from "react";
 import { QuizType } from "../utils/types";
 import { initialState, QuizActionType, reducer } from "../reducer/reducer";
-import { getCategories } from "../services/questions";
+import { getCategories } from "../services/services";
 import { showToast } from "../components/ui/ShowToast";
 
 interface QuizContextType extends QuizType {

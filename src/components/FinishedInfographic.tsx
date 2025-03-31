@@ -16,25 +16,25 @@ function FinishedInfographic() {
   return (
     <div className="mx-auto">
       <div className="stats dark:shadow-info-content shadow-custom dark:border-primary/20 w-fit min-w-48 dark:border dark:shadow-none">
-        <div className="stat place-items-center">
+        <div className="stat place-items-center px-4 py-2">
           <div className="stat-title">Difficulty</div>
           <div className="stat-value text-primary capitalize">{difficulty}</div>
           <div className="stat-desc capitalize">{difficulty} questions</div>
         </div>
 
-        <div className="stat place-items-center">
+        <div className="stat place-items-center px-4 py-2">
           <div className="stat-title">Questions</div>
           <div className="stat-value text-primary">{numQuestions}</div>
           <div className="stat-desc">Total</div>
         </div>
 
-        <div className="stat place-items-center">
+        <div className="stat place-items-center px-4 py-2">
           <div className="stat-title">Points</div>
           <div className="stat-value text-primary">{points}</div>
           <div className="stat-desc">Max Points {maxPossiblePoints}</div>
         </div>
 
-        <div className="stat place-items-center">
+        <div className="stat place-items-center px-4 py-2">
           <div className="stat-title">Time</div>
           <div className="stat-value text-primary">
             {minutes < 10 ? `0${minutes}` : minutes}:

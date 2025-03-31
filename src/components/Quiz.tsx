@@ -12,7 +12,7 @@ import ProgressBar from "./ui/ProgressBar";
 
 function Quiz() {
   const { status } = useQuiz();
-  
+
   const insertTitle = () => {
     switch (status) {
       case "initial":
@@ -29,7 +29,7 @@ function Quiz() {
   };
 
   return (
-    <div className="flex h-full w-full flex-col gap-4 overflow-hidden">
+    <div className="flex h-full w-full flex-col gap-4">
       <h1 className="font-secondary text-primary mt-2 text-center text-4xl font-semibold">
         {insertTitle()}
       </h1>
@@ -38,7 +38,7 @@ function Quiz() {
       {status === "error" && <Error />}
       {status === "ready" && <Start />}
       {status === "active" && (
-        <div className="grow h-full flex flex-col gap-4">
+        <div className="flex h-full grow flex-col gap-4">
           <Infographic />
           <ProgressBar />
           <Question />

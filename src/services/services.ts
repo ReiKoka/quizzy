@@ -57,8 +57,8 @@ export const getHighscore = async (
     );
     console.log(response.data);
     return {
-      highScorePoints: response.data[0].score,
-      time: response.data[0].time,
+      highScorePoints: response.data[0]?.score || 0,
+      time: response.data[0]?.time || 0,
     };
   } catch (error) {
     console.error(error);

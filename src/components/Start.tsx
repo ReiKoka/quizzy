@@ -2,7 +2,7 @@ import QuizLogo from "../assets/images/quiz.svg?react";
 import Icon from "supercons";
 import DifficultySelect from "./ui/DifficultySelect";
 import useQuiz from "../hooks/useQuiz";
-import { getHighscore, getQuestions } from "../services/questions";
+import { getHighscore, getQuestions } from "../services/services";
 import { HighScore, Question } from "../utils/types";
 import { showToast } from "./ui/ShowToast";
 

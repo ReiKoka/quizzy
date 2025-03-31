@@ -7,7 +7,7 @@ import FinishQuizImg from "../assets/images/finish-quiz.svg?react";
 
 import FinishedInfographic from "./FinishedInfographic";
 import { showToast } from "./ui/ShowToast";
-import { createOrEditHighscore } from "../services/questions";
+import { createOrEditHighscore } from "../services/services";
 
 const CONFETTI_DURATION = 5000;
 
@@ -107,7 +107,7 @@ function FinishedQuiz() {
       )}
       {isNewHighScore ? (
         <>
-          <h1 className="font-secondary mb-4 text-center text-3xl font-semibold">
+          <h1 className="font-secondary text-center text-2xl font-semibold">
             New High Score
           </h1>
           <NewHighscoreImg className="text-primary animate-jump-in animate-once animate-duration-700 animate-ease-out animate-delay-300 mx-auto w-[300px] max-w-[400px]" />
@@ -118,38 +118,40 @@ function FinishedQuiz() {
 
       <FinishedInfographic />
 
-      {isNewHighScore && !hasSaved && (
-        <form
-          onSubmit={handleSaveScore}
-          className="mx-auto flex w-full max-w-[480px] items-center gap-4"
-        >
-          <input
-            type="text"
-            id="username"
-            placeholder="Enter your name to save score"
-            value={userName}
-            onChange={(e) => setUserName(e.target.value)}
-            className="input input-bordered flex-4/6]" 
-            disabled={isSaving}
-            required
-            maxLength={50} 
-          />
-
-          <button
-            type="submit"
-            className="btn btn-primary btn-md w-full flex-2/6" 
-            disabled={isSaving || !userName.trim()}
+      <div className="flex mt-auto ">
+        {isNewHighScore && !hasSaved && (
+          <form
+            onSubmit={handleSaveScore}
+            className="mx-auto flex w-full items-center gap-4"
           >
-            {isSaving ? "Saving..." : "Save High Score"}
-          </button>
-        </form>
-      )}
-      <button
-        className="btn btn-primary btn-lg mx-auto w-fit"
-        onClick={handleRestartQuiz}
-      >
-        Restart Quiz
-      </button>
+            <input
+              type="text"
+              id="username"
+              placeholder="Enter your name to save score"
+              value={userName}
+              onChange={(e) => setUserName(e.target.value)}
+              className="input input-bordered "
+              disabled={isSaving}
+              required
+              maxLength={50}
+            />
+
+            <button
+              type="submit"
+              className="btn btn-primary min-w-fit w-fit btn-md "
+              disabled={isSaving || !userName.trim()}
+            >
+              {isSaving ? "Saving..." : "Save High Score"}
+            </button>
+          </form>
+        )}
+        <button
+          className="btn btn-primary mx-auto w-fit"
+          onClick={handleRestartQuiz}
+        >
+          Restart Quiz
+        </button>
+      </div>
     </div>
   );
 }
