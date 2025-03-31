@@ -16,19 +16,21 @@ function Infographic() {
   return (
     <div className="flex items-center justify-between">
       <div className="stats dark:shadow-info-content shadow-custom dark:border-primary/20 w-fit min-w-48 dark:border dark:shadow-none">
-        <div className="stat place-items-center">
+        <div className="stat place-items-center px-4 py-2 ">
           <div className="stat-title">Difficulty</div>
-          <div className="stat-value text-primary capitalize">{difficulty}</div>
+          <div className="stat-value text-primary text-xl capitalize">
+            {difficulty}
+          </div>
           <div className="stat-desc capitalize">{difficulty} questions</div>
         </div>
 
-        <div className="stat place-items-center">
+        <div className="stat place-items-center px-4 py-2 ">
           <div className="stat-title">Questions</div>
           <div className="stat-value text-primary">{numQuestions}</div>
           <div className="stat-desc">Total</div>
         </div>
 
-        <div className="stat place-items-center">
+        <div className="stat place-items-center px-4 py-2 ">
           <div className="stat-title">High Score</div>
           <div className="stat-value text-primary">
             {highScore.highScorePoints}
@@ -36,7 +38,7 @@ function Infographic() {
           <div className="stat-desc">Max Points {maxPossiblePoints}</div>
         </div>
 
-        <div className="stat place-items-center">
+        <div className="stat place-items-center px-4 py-2 ">
           <div className="stat-title">Fastest Time</div>
           <div className="stat-value text-primary">
             {minutes < 10 ? `0${minutes}` : minutes}:
@@ -47,14 +49,14 @@ function Infographic() {
       </div>
 
       <div className="stats dark:shadow-info-content shadow-custom dark:border-primary/20 h-full w-fit min-w-48 dark:border dark:shadow-none">
-        <div className="stat place-items-center">
+        <div className="stat place-items-center px-4 py-2 ">
           <div className="stat-title">Question</div>
           <div className="stat-value text-primary capitalize">
             {index + 1} / {numQuestions}
           </div>
         </div>
 
-        <div className="stat place-items-center">
+        <div className="stat place-items-center px-4 py-2 ">
           <div className="stat-title">Points</div>
           <div className="stat-value text-primary">
             {points} / {maxPossiblePoints}

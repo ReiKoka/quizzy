@@ -29,8 +29,8 @@ function Quiz() {
   };
 
   return (
-    <div className="flex h-full w-full flex-col gap-8">
-      <h1 className="font-secondary text-primary mt-8 text-center text-4xl font-semibold">
+    <div className="flex h-full w-full flex-col gap-4 overflow-hidden">
+      <h1 className="font-secondary text-primary mt-2 text-center text-4xl font-semibold">
         {insertTitle()}
       </h1>
       {status === "initial" && <SelectQuiz />}
@@ -38,12 +38,12 @@ function Quiz() {
       {status === "error" && <Error />}
       {status === "ready" && <Start />}
       {status === "active" && (
-        <>
+        <div className="grow h-full flex flex-col gap-4">
           <Infographic />
           <ProgressBar />
           <Question />
           <Footer />
-        </>
+        </div>
       )}
       {status === "finished" && <FinishedQuiz />}
     </div>

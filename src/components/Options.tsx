@@ -14,7 +14,7 @@ function Options({ question }: OptionsProps) {
   };
 
   return (
-    <div className="flex h-full grow flex-col items-center gap-4">
+    <div className="h-full grow grid grid-cols-2 w-1/2 mx-auto items-center gap-4">
       {question.options.map((option) => {
         let dynamicClasses = "";
 
@@ -34,7 +34,7 @@ function Options({ question }: OptionsProps) {
         return (
           <button
             key={option.id}
-            className={`btn text-base-content hover:bg-warning hover:text-warning-content min-w-[300px] max-w-[300px] text-balance h-auto min-h-10 transition-all duration-300 ${dynamicClasses} ${hasAnswered && "pointer-events-none"}`}
+            className={`btn h-full text-base-content hover:bg-warning hover:text-warning-content w-full text-balance min-h-10 transition-all duration-300 ${dynamicClasses} ${hasAnswered && "pointer-events-none"}`}
             onClick={() => handleOptionClick(option)}
           >
             {option.text}
