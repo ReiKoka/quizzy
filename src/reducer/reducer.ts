@@ -107,12 +107,11 @@ export const reducer = (state: QuizType, action: QuizActionType): QuizType => {
     }
 
     case "restartQuiz":
+      console.log(state.allCategories);
       return {
         ...initialState,
-        questions: state.questions,
-        status: "ready",
-        highScore: state.highScore,
-        difficulty: "all",
+        allCategories: state.allCategories,
+        status: "initial",
       };
 
     case "newAnswer": {

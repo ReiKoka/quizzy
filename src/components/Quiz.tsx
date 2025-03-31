@@ -13,7 +13,6 @@ import ProgressBar from "./ui/ProgressBar";
 function Quiz() {
   const { status } = useQuiz();
   
-
   const insertTitle = () => {
     switch (status) {
       case "initial":

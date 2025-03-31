@@ -12,7 +12,7 @@ export type HighscoreExtended = {
   id: string;
   category: string;
   difficultySetting: Difficulty;
-  userId: string;
+  userName: string;
   score: number;
   time: number;
 };

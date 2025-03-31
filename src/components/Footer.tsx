@@ -17,8 +17,6 @@ function Footer() {
     return () => clearInterval(id);
   }, [dispatch]);
 
-
-
   const handleClick = () => {
     if (isFinalQuestion) {
       dispatch({ type: "finishedQuiz" });

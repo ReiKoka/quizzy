@@ -70,3 +70,74 @@ export const getHighscore = async (
     throw error;
   }
 };
+
+export const createOrEditHighscore = async (
+  name: string,
+  category: string,
+  difficulty: Difficulty,
+  currentResult: HighScore,
+): Promise<HighscoreExtended> => {
+  const recordId = `${category.toLowerCase()}_${difficulty.toLowerCase()}`;
+  const specificUrl = `${URL}/highestScores/${recordId}`;
+  const collectionUrl = `${URL}/highestScores`;
+
+  try {
+    let recordExists = false;
+    let existingData: HighscoreExtended | null = null;
+    try {
+      const response = await axios.get<HighscoreExtended>(specificUrl);
+      existingData = response.data;
+      recordExists = true;
+      console.log(`Existing high score found for ID: ${recordId}`);
+    } catch (error) {
+      if (axios.isAxiosError(error) && error.response?.status === 404) {
+        recordExists = false;
+        console.log(
+          `No existing high score found for ID: ${recordId}. Will create.`,
+        );
+      } else {
+        throw error;
+      }
+    }
+
+    if (!recordExists) {
+      const newHighscore: HighscoreExtended = {
+        id: recordId,
+        category: category.toLowerCase(),
+        difficultySetting: difficulty,
+        userName: name,
+        score: currentResult.highScorePoints,
+        time: currentResult.time,
+      };
+      const postResponse = await axios.post<HighscoreExtended>(
+        collectionUrl,
+        newHighscore,
+      );
+      console.log(`Successfully created high score for ${recordId}.`);
+      return postResponse.data;
+    } else {
+      const updatedHighscore: HighscoreExtended = {
+        ...(existingData as HighscoreExtended),
+        userName: name,
+        score: currentResult.highScorePoints,
+        time: currentResult.time,
+      };
+      const putResponse = await axios.put<HighscoreExtended>(
+        specificUrl,
+        updatedHighscore,
+      );
+      console.log(`Successfully updated high score for ${recordId}.`);
+      return putResponse.data;
+    }
+  } catch (error) {
+    console.error("Error in createOrEditHighscore:", error);
+    if (axios.isAxiosError(error)) {
+      throw new Error(
+        `Failed to save high score for ${category} (${difficulty}): ${
+          error.response?.data?.message || error.message
+        }`,
+      );
+    }
+    throw error;
+  }
+};
