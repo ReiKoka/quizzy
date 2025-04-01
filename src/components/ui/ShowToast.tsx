@@ -31,7 +31,9 @@ export const showToast = (type: ToastType, message: string): void => {
   };
 
   toast.custom(() => (
-    <div className="bg-primary-content dark:bg-base-300">
+    <div
+      className={`bg-primary-content shadow-custom dark:bg-base-300 flex w-auto items-center gap-4 rounded-xl border border-none p-4 sm:min-w-80`}
+    >
       {icons[type] || icons.info}
       <div>
         <p

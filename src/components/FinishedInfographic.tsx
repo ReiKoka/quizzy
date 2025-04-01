@@ -1,4 +1,5 @@
 import useQuiz from "../hooks/useQuiz";
+import SingleInfographicBox from "./ui/SingleInfographicBox";
 
 function FinishedInfographic() {
   const {
@@ -14,34 +15,34 @@ function FinishedInfographic() {
     secondsRemaining !== null ? Math.floor(secondsRemaining / 60) : 0;
   const seconds = secondsRemaining !== null ? secondsRemaining % 60 : 0;
   return (
-    <div className="mx-auto">
-      <div className="stats dark:shadow-info-content shadow-custom dark:border-primary/20 w-fit min-w-48 dark:border dark:shadow-none">
-        <div className="stat place-items-center px-4 py-2">
-          <div className="stat-title">Difficulty</div>
-          <div className="stat-value text-primary capitalize">{difficulty}</div>
-          <div className="stat-desc capitalize">{difficulty} questions</div>
-        </div>
+    <div className="mx-auto w-full flex">
+      <div className="stats dark:shadow-info-content shadow-custom dark:border-primary/20 mx-auto w-full min-w-48 md:w-fit dark:border dark:shadow-none">
+        <SingleInfographicBox
+          title="Difficulty"
+          value={difficulty}
+          description={`${difficulty} questions`}
+          className="hidden md:block"
+        />
 
-        <div className="stat place-items-center px-4 py-2">
-          <div className="stat-title">Questions</div>
-          <div className="stat-value text-primary">{numQuestions}</div>
-          <div className="stat-desc">Total</div>
-        </div>
+        <SingleInfographicBox
+          title="Questions"
+          value={numQuestions}
+          description="Total"
+        />
 
-        <div className="stat place-items-center px-4 py-2">
-          <div className="stat-title">Points</div>
-          <div className="stat-value text-primary">{points}</div>
-          <div className="stat-desc">Max Points {maxPossiblePoints}</div>
-        </div>
+        <SingleInfographicBox
+          title="Points"
+          value={points}
+          description={`Max Points ${maxPossiblePoints}`}
+        />
 
-        <div className="stat place-items-center px-4 py-2">
-          <div className="stat-title">Time</div>
-          <div className="stat-value text-primary">
-            {minutes < 10 ? `0${minutes}` : minutes}:
-            {seconds < 10 ? `0${seconds}` : seconds}
-          </div>
-          <div className="stat-desc">MM:SS</div>
-        </div>
+        <SingleInfographicBox
+          title="Fastest Time"
+          value={`${minutes < 10 ? `0${minutes}` : minutes}:${
+            seconds < 10 ? `0${seconds}` : seconds
+          }`}
+          description="MM:SS"
+        />
       </div>
     </div>
   );

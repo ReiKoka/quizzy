@@ -8,6 +8,7 @@ import FinishQuizImg from "../assets/images/finish-quiz.svg?react";
 import FinishedInfographic from "./FinishedInfographic";
 import { showToast } from "./ui/ShowToast";
 import { createOrEditHighscore } from "../services/services";
+import Icon from "supercons";
 
 const CONFETTI_DURATION = 5000;
 
@@ -89,7 +90,7 @@ function FinishedQuiz() {
   };
 
   return (
-    <div className="flex h-full grow flex-col gap-4">
+    <div className="flex h-full grow flex-col gap-4 md:gap-6">
       {showConfetti && isNewHighScore && (
         <ReactConfetti
           recycle={false}
@@ -101,18 +102,18 @@ function FinishedQuiz() {
       )}
       {isNewHighScore ? (
         <>
-          <h1 className="font-secondary text-center text-2xl font-semibold">
+          <h1 className="font-secondary text-center text-lg md:text-2xl font-semibold">
             New High Score
           </h1>
-          <NewHighscoreImg className="text-primary animate-jump-in animate-once animate-duration-700 animate-ease-out animate-delay-300 mx-auto w-[300px] max-w-[400px]" />
+          <NewHighscoreImg className="text-primary animate-jump-in animate-once animate-duration-700 animate-ease-out animate-delay-300 mx-auto w-[200px] md:w-[300px] md:portrait:w-[400px] max-w-[400px]" />
         </>
       ) : (
-        <FinishQuizImg className="text-primary animate-jump-in animate-once animate-duration-700 animate-ease-out animate-delay-300 mx-auto w-[300px] max-w-[400px]" />
+        <FinishQuizImg className="text-primary animate-jump-in animate-once animate-duration-700 animate-ease-out animate-delay-300 mx-auto w-[300px] max-w-[200px]" />
       )}
 
       <FinishedInfographic />
 
-      <div className="mt-auto flex">
+      <div className="mt-auto flex flex-col gap-2 md:flex-row">
         {isNewHighScore && !hasSaved && (
           <form
             onSubmit={handleSaveScore}
@@ -132,15 +133,15 @@ function FinishedQuiz() {
 
             <button
               type="submit"
-              className="btn btn-primary btn-md w-fit min-w-fit"
+              className="btn btn-primary btn-square w-fit min-w-fit aspect-square"
               disabled={isSaving || !userName.trim()}
             >
-              {isSaving ? "Saving..." : "Save High Score"}
+              {isSaving ? "Saving..." : <Icon glyph="badge-check-fill" />}
             </button>
           </form>
         )}
         <button
-          className="btn btn-primary mx-auto w-fit"
+          className="btn btn-primary w-full md:w-fit ml-auto"
           onClick={handleRestartQuiz}
           type="button"
         >

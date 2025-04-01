@@ -29,7 +29,7 @@ function Quiz() {
 
   return (
     <div className="oe flex h-full w-full flex-col">
-      <h1 className="font-secondary text-primary mb-3 text-center text-xl font-semibold md:text-2xl xl:my-6 md:portrait:my-4">
+      <h1 className="font-secondary text-primary text-balance  mb-3 text-center text-xl font-semibold md:text-2xl xl:my-6 md:portrait:my-4">
         {insertTitle()}
       </h1>
       {status === "initial" && <SelectQuiz />}
