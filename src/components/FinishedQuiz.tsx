@@ -90,7 +90,7 @@ function FinishedQuiz() {
   };
 
   return (
-    <div className="flex h-full grow flex-col gap-4 md:gap-6">
+    <div className="flex h-full grow flex-col gap-4 md:gap-4">
       {showConfetti && isNewHighScore && (
         <ReactConfetti
           recycle={false}
@@ -102,7 +102,7 @@ function FinishedQuiz() {
       )}
       {isNewHighScore ? (
         <>
-          <h1 className="font-secondary text-center text-lg font-semibold md:text-2xl">
+          <h1 className="font-secondary text-center text-lg font-semibold md:text-xl">
             New High Score
           </h1>
           <NewHighscoreImg className="text-primary animate-jump-in animate-once animate-duration-700 animate-ease-out animate-delay-300 mx-auto w-[250px] max-w-[600px] lg:w-[350px] 2xl:w-[600px] md:portrait:w-[400px]" />
