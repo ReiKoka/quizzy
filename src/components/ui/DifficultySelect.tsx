@@ -15,11 +15,11 @@ function DifficultySelect() {
     dropdownButtonRef.current?.blur();
   };
   return (
-    <div className="dropdown dropdown-top">
+    <div className="dropdown dropdown-top w-full sm:w-fit">
       <div
         tabIndex={0}
         role="button"
-        className="btn btn-primary group btn-soft border-primary m-1 flex items-center gap-2"
+        className="btn btn-primary group btn-soft border-primary text-sm flex items-center gap-2"
       >
         <Icon
           glyph="up-caret"

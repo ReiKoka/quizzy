@@ -8,7 +8,6 @@ import Start from "./Start";
 import Infographic from "./ui/Infographic";
 
 import Loader from "./ui/Loader";
-import ProgressBar from "./ui/ProgressBar";
 
 function Quiz() {
   const { status } = useQuiz();
@@ -29,8 +28,8 @@ function Quiz() {
   };
 
   return (
-    <div className="flex h-full w-full flex-col">
-      <h1 className="font-secondary text-primary text-center text-xl md:text-2xl font-semibold md:portrait:my-4 xl:my-6">
+    <div className="oe flex h-full w-full flex-col">
+      <h1 className="font-secondary text-primary mb-3 text-center text-xl font-semibold md:text-2xl xl:my-6 md:portrait:my-4">
         {insertTitle()}
       </h1>
       {status === "initial" && <SelectQuiz />}
@@ -38,9 +37,8 @@ function Quiz() {
       {status === "error" && <Error />}
       {status === "ready" && <Start />}
       {status === "active" && (
-        <div className="flex h-full grow flex-col gap-4">
+        <div className="flex h-full grow flex-col gap-4 overflow-auto">
           <Infographic />
-          <ProgressBar />
           <Question />
           <Footer />
         </div>

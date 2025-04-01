@@ -5,7 +5,7 @@ function ProgressBar() {
   return (
     <div>
       <progress
-        className="progress progress-primary w-full"
+        className="progress progress-primary w-full md:portrait:my-6"
         value={index + Number(answer !== null)}
         max={numQuestions}
       ></progress>

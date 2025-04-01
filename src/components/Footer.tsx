@@ -26,8 +26,8 @@ function Footer() {
   };
 
   return (
-    <div className="flex items-center justify-between">
-      <p className="font-primary flex items-center gap-2 text-2xl">
+    <div className="flex items-end justify-between">
+      <p className="font-secondary flex items-center gap-2 text-xl">
         <Icon glyph="stopwatch" size={26} />
         <span className="countdown">
           <span style={{ "--value": minutes } as React.CSSProperties}></span>:
@@ -35,7 +35,7 @@ function Footer() {
         </span>
       </p>
       <button
-        className="btn btn-primary text-primary-content"
+        className="btn btn-primary btn-sm text-primary-content"
         onClick={handleClick}
       >
         {isFinalQuestion ? "Finish Quiz" : "Next Question"}

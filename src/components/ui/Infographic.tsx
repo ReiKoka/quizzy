@@ -1,4 +1,5 @@
 import useQuiz from "../../hooks/useQuiz";
+import SingleInfographicBox from "./SingleInfographicBox";
 
 function Infographic() {
   const {
@@ -14,51 +15,47 @@ function Infographic() {
   const seconds = highScore.time !== null ? highScore.time % 60 : 0;
 
   return (
-    <div className="flex items-center justify-between">
-      <div className="stats dark:shadow-info-content shadow-custom dark:border-primary/20 w-fit min-w-48 dark:border dark:shadow-none">
-        <div className="stat place-items-center px-4 py-2 ">
-          <div className="stat-title">Difficulty</div>
-          <div className="stat-value text-primary text-xl capitalize">
-            {difficulty}
-          </div>
-          <div className="stat-desc capitalize">{difficulty} questions</div>
-        </div>
+    <div className="flex items-center gap-2">
+      <div className="stats dark:shadow-info-content shadow-custom dark:border-primary/20 flex w-full flex-2/3 dark:border dark:shadow-none">
+        <SingleInfographicBox
+          title="Difficulty"
+          value={difficulty}
+          description={`${difficulty} questions`}
+          className="hidden md:block"
+        />
 
-        <div className="stat place-items-center px-4 py-2 ">
-          <div className="stat-title">Questions</div>
-          <div className="stat-value text-primary">{numQuestions}</div>
-          <div className="stat-desc">Total</div>
-        </div>
+        <SingleInfographicBox
+          title="Questions"
+          value={numQuestions}
+          description="Total"
+        />
 
-        <div className="stat place-items-center px-4 py-2 ">
-          <div className="stat-title">High Score</div>
-          <div className="stat-value text-primary">
-            {highScore.highScorePoints}
-          </div>
-          <div className="stat-desc">Max Points {maxPossiblePoints}</div>
-        </div>
+        <SingleInfographicBox
+          title="High Score"
+          value={highScore.highScorePoints}
+          description={`Max Points ${maxPossiblePoints}`}
+        />
 
-        <div className="stat place-items-center px-4 py-2 ">
-          <div className="stat-title">Fastest Time</div>
-          <div className="stat-value text-primary">
-            {minutes < 10 ? `0${minutes}` : minutes}:
-            {seconds < 10 ? `0${seconds}` : seconds}
-          </div>
-          <div className="stat-desc">MM:SS</div>
-        </div>
+        <SingleInfographicBox
+          title="Fastest Time"
+          value={`${minutes < 10 ? `0${minutes}` : minutes}:${
+            seconds < 10 ? `0${seconds}` : seconds
+          }`}
+          description="MM:SS"
+        />
       </div>
 
-      <div className="stats dark:shadow-info-content shadow-custom dark:border-primary/20 h-full w-fit min-w-48 dark:border dark:shadow-none">
-        <div className="stat place-items-center px-4 py-2 ">
-          <div className="stat-title">Question</div>
-          <div className="stat-value text-primary capitalize">
+      <div className="stats dark:shadow-info-content shadow-custom dark:border-primary/20 w-full flex-1/3 min-w-48 md:h-full dark:border dark:shadow-none">
+        <div className="stat place-items-center px-4 py-2">
+          <div className="stat-title text-xs">Question</div>
+          <div className="stat-value text-primary text-sm capitalize">
             {index + 1} / {numQuestions}
           </div>
         </div>
 
-        <div className="stat place-items-center px-4 py-2 ">
-          <div className="stat-title">Points</div>
-          <div className="stat-value text-primary">
+        <div className="stat place-items-center px-4 py-2">
+          <div className="stat-title text-xs">Points</div>
+          <div className="stat-value text-primary text-sm">
             {points} / {maxPossiblePoints}
           </div>
         </div>

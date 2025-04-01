@@ -32,17 +32,17 @@ function Start() {
   };
 
   return (
-    <>
-      <QuizLogo className="text-primary mx-auto w-[400px]" />
-      <h3 className="mx-auto max-w-96 text-center text-lg font-medium">
+    <div className="flex h-full flex-col justify-between overflow-y-auto">
+      <QuizLogo className="text-primary mx-auto max-w-40 justify-center xl:max-w-72 md:portrait:max-w-96" />
+      <h3 className="font-secondary text-base-content mx-auto max-w-96 text-center text-sm font-medium md:text-base lg:text-lg ">
         Select quiz difficulty and start the quiz. Try to answer as fast as
         possible to get the highest score 😄🏆
       </h3>
 
-      <div className="mt-auto flex items-center justify-between">
+      <div className="flex flex-col items-center justify-between gap-2 sm:flex-row">
         <DifficultySelect />
         <button
-          className="btn btn-primary ml-auto flex w-fit gap-4"
+          className="btn btn-primary ml-auto flex w-full gap-4 sm:w-fit"
           onClick={handleStartQuiz}
           disabled={isStartDisabled}
         >
@@ -56,7 +56,7 @@ function Start() {
           </span>
         </button>
       </div>
-    </>
+    </div>
   );
 }
 
