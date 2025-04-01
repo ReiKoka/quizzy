@@ -15,8 +15,8 @@ function Infographic() {
   const seconds = highScore.time !== null ? highScore.time % 60 : 0;
 
   return (
-    <div className="flex items-center gap-2 p-2 flex-col md:flex-row">
-      <div className="stats dark:shadow-info-content shadow-custom dark:border-primary/20 flex w-full md:flex-2/3 dark:border dark:shadow-none">
+    <div className="flex flex-col items-center gap-2 p-2 md:flex-row">
+      <div className="stats dark:shadow-info-content shadow-custom dark:border-primary/20 flex w-full md:flex-2/3 lg:w-fit dark:border dark:shadow-none">
         <SingleInfographicBox
           title="Difficulty"
           value={difficulty}
@@ -45,20 +45,16 @@ function Infographic() {
         />
       </div>
 
-      <div className="stats dark:shadow-info-content shadow-custom dark:border-primary/20 w-full md:flex-1/3 min-w-48 md:h-full dark:border dark:shadow-none">
-        <div className="stat place-items-center px-4 py-2">
-          <div className="stat-title text-xs">Question</div>
-          <div className="stat-value text-primary text-sm capitalize">
-            {index + 1} / {numQuestions}
-          </div>
-        </div>
+      <div className="stats dark:shadow-info-content shadow-custom dark:border-primary/20 w-full min-w-48 md:h-full md:flex-1/3 lg:w-fit dark:border dark:shadow-none">
+        <SingleInfographicBox
+          title="Question"
+          value={`${index + 1} /  ${numQuestions}`}
+        />
 
-        <div className="stat place-items-center px-4 py-2">
-          <div className="stat-title text-xs">Points</div>
-          <div className="stat-value text-primary text-sm">
-            {points} / {maxPossiblePoints}
-          </div>
-        </div>
+        <SingleInfographicBox
+          title="Current Score"
+          value={`${points} /  ${maxPossiblePoints}`}
+        />
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ function SelectQuiz() {
 
   return (
     <div className="flex h-full w-full grow flex-col justify-between gap-4 overflow-y-auto">
-      <QuizLogo className="text-primary mx-auto max-w-40 justify-center xl:max-w-72 md:portrait:max-w-96" />
+      <QuizLogo className="text-primary mx-auto max-w-40 justify-center xl:max-w-80 md:portrait:max-w-96 " />
       <h3 className="font-secondary text-base-content mx-auto max-w-96 text-center text-sm font-medium md:text-base lg:text-lg">
         Welcome! Get ready to challenge your brain and have some fun. Let's see
         how much trivia you've got packed in there!

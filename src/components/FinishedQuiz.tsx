@@ -102,13 +102,13 @@ function FinishedQuiz() {
       )}
       {isNewHighScore ? (
         <>
-          <h1 className="font-secondary text-center text-lg md:text-2xl font-semibold">
+          <h1 className="font-secondary text-center text-lg font-semibold md:text-2xl">
             New High Score
           </h1>
-          <NewHighscoreImg className="text-primary animate-jump-in animate-once animate-duration-700 animate-ease-out animate-delay-300 mx-auto w-[200px] md:w-[300px] md:portrait:w-[400px] max-w-[400px]" />
+          <NewHighscoreImg className="text-primary animate-jump-in animate-once animate-duration-700 animate-ease-out animate-delay-300 mx-auto w-[250px] max-w-[400px] md:w-[250px] md:portrait:w-[400px]" />
         </>
       ) : (
-        <FinishQuizImg className="text-primary animate-jump-in animate-once animate-duration-700 animate-ease-out animate-delay-300 mx-auto w-[300px] max-w-[200px]" />
+        <FinishQuizImg className="text-primary animate-jump-in animate-once animate-duration-700 animate-ease-out animate-delay-300 mx-auto w-[200px] max-w-[400px] md:w-[250px] md:portrait:w-[400px]" />
       )}
 
       <FinishedInfographic />
@@ -133,7 +133,7 @@ function FinishedQuiz() {
 
             <button
               type="submit"
-              className="btn btn-primary btn-square w-fit min-w-fit aspect-square"
+              className="btn btn-primary btn-square aspect-square w-fit min-w-fit"
               disabled={isSaving || !userName.trim()}
             >
               {isSaving ? "Saving..." : <Icon glyph="badge-check-fill" />}
@@ -141,7 +141,7 @@ function FinishedQuiz() {
           </form>
         )}
         <button
-          className="btn btn-primary w-full md:w-fit ml-auto"
+          className="btn btn-primary ml-auto w-full md:w-fit"
           onClick={handleRestartQuiz}
           type="button"
         >
