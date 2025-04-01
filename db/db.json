@@ -1,14 +1,4 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "name": "Alice"
-    },
-    {
-      "id": 2,
-      "name": "Bob"
-    }
-  ],
   "questions": [
     {
       "id": 13,
@@ -1056,9 +1046,9 @@
       "id": "html_easy",
       "category": "html",
       "difficultySetting": "easy",
-      "userName": "test",
+      "userName": "ReiKoka",
       "score": 40,
-      "time": 6
+      "time": 3
     },
     {
       "id": "react_easy",

@@ -11,7 +11,7 @@ function AppLayout() {
   return (
     <div className="font-primary flex h-svh w-dvw flex-col overflow-hidden">
       <Nav tab={tab} setTab={setTab} />
-      <MainContainer>{tab === "quiz" ? <Quiz /> : <Results />}</MainContainer>
+      {/* <MainContainer>{tab === "quiz" ? <Quiz /> : <Results />}</MainContainer> */}
     </div>
   );
 }
