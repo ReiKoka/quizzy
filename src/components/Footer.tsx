@@ -13,7 +13,7 @@ function Footer() {
   useEffect(() => {
     const id = setInterval(() => {
       dispatch({ type: "tick" });
-    }, 10000);
+    }, 1000);
 
     return () => clearInterval(id);
   }, [dispatch]);
@@ -27,7 +27,7 @@ function Footer() {
   };
 
   return (
-    <div className="flex items-end justify-between px-2">
+    <div className="flex items-end justify-between px-2 pb-2">
       <p className="font-secondary flex items-center gap-2 text-xl">
         <Icon glyph="stopwatch" size={26} />
         <span className="countdown">

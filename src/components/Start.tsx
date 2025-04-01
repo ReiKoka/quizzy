@@ -32,7 +32,7 @@ function Start() {
   };
 
   return (
-    <div className="flex h-full flex-col justify-between overflow-y-auto">
+    <div className="flex h-full flex-col justify-between overflow-y-auto p-2">
       <QuizLogo className="text-primary mx-auto max-w-40 justify-center lg:max-w-80 md:portrait:max-w-96" />
       <h3 className="font-secondary text-base-content mx-auto max-w-96 text-center text-sm font-medium md:text-base lg:text-lg ">
         Select quiz difficulty and start the quiz. Try to answer as fast as

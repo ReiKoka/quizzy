@@ -4,18 +4,20 @@ import SingleInfographicBox from "./ui/SingleInfographicBox";
 function FinishedInfographic() {
   const {
     maxPossiblePoints,
-    // index,
     numQuestions,
     secondsRemaining,
     points,
     difficulty,
   } = useQuiz();
 
+  const currentTimeTaken = maxPossiblePoints - secondsRemaining;
+
   const minutes =
-    secondsRemaining !== null ? Math.floor(secondsRemaining / 60) : 0;
-  const seconds = secondsRemaining !== null ? secondsRemaining % 60 : 0;
+    secondsRemaining !== null ? Math.floor(currentTimeTaken / 60) : 0;
+  const seconds = secondsRemaining !== null ? currentTimeTaken % 60 : 0;
+
   return (
-    <div className="mx-auto w-full flex">
+    <div className="mx-auto flex w-full">
       <div className="stats dark:shadow-info-content shadow-custom dark:border-primary/20 mx-auto w-full min-w-48 md:w-fit dark:border dark:shadow-none">
         <SingleInfographicBox
           title="Difficulty"

@@ -1048,22 +1048,6 @@
       "difficultySetting": "easy",
       "userName": "ReiKoka",
       "score": 40,
-      "time": 0
-    },
-    {
-      "id": "react_easy",
-      "category": "react",
-      "difficultySetting": "easy",
-      "userName": "testing",
-      "score": 40,
-      "time": 13
-    },
-    {
-      "id": "html_all",
-      "category": "html",
-      "difficultySetting": "all",
-      "userName": "ReiKoka",
-      "score": 180,
       "time": 4
     }
   ],

@@ -92,6 +92,10 @@ export const reducer = (state: QuizType, action: QuizActionType): QuizType => {
         secondsRemaining: state.questions
           .map((question) => question.points)
           .reduce((acc, curr) => acc + curr, 0),
+        maxPossiblePoints: state.questions.reduce(
+          (prev, cur) => prev + cur.points,
+          0,
+        ),
       };
     }
 
@@ -131,7 +135,15 @@ export const reducer = (state: QuizType, action: QuizActionType): QuizType => {
 
     case "finishedQuiz": {
       let updatedHighScore = state.highScore;
+      const currentTimeTaken = state.maxPossiblePoints - state.secondsRemaining;
       let isNewHighScore = false;
+
+      console.log(
+        state.maxPossiblePoints,
+        state.secondsRemaining,
+        state.highScore.time,
+        state.status,
+      );
 
       if (state.points > state.highScore.highScorePoints) {
         updatedHighScore = {
@@ -140,13 +152,13 @@ export const reducer = (state: QuizType, action: QuizActionType): QuizType => {
         };
         isNewHighScore = true;
       } else if (state.points === state.highScore.highScorePoints) {
-        if (state.secondsRemaining > state.highScore.time) {
+        if (currentTimeTaken < state.highScore.time) {
           updatedHighScore = {
             highScorePoints: state.points,
             time: state.secondsRemaining,
           };
+          isNewHighScore = true;
         }
-        isNewHighScore = true;
       }
 
       return {
