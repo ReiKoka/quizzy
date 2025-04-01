@@ -13,9 +13,7 @@ export const getQuestions = async (
 ): Promise<Question[]> => {
   try {
     const customUrl = `${URL}/questions?category=${category}&${difficulty === "all" ? "" : `difficulty=${difficulty}`}`;
-    console.log(customUrl);
     const response = await axios.get<Question[]>(customUrl);
-    console.log(response.data);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -55,7 +53,6 @@ export const getHighscore = async (
     const response = await axios.get<HighscoreExtended[]>(
       `${URL}/highestScores?id=${category.toLocaleLowerCase()}_${difficulty.toLocaleLowerCase()}`,
     );
-    console.log(response.data);
     return {
       highScorePoints: response.data[0]?.score || 0,
       time: response.data[0]?.time || 0,
@@ -88,13 +85,9 @@ export const createOrEditHighscore = async (
       const response = await axios.get<HighscoreExtended>(specificUrl);
       existingData = response.data;
       recordExists = true;
-      console.log(`Existing high score found for ID: ${recordId}`);
     } catch (error) {
       if (axios.isAxiosError(error) && error.response?.status === 404) {
         recordExists = false;
-        console.log(
-          `No existing high score found for ID: ${recordId}. Will create.`,
-        );
       } else {
         throw error;
       }
@@ -113,7 +106,6 @@ export const createOrEditHighscore = async (
         collectionUrl,
         newHighscore,
       );
-      console.log(`Successfully created high score for ${recordId}.`);
       return postResponse.data;
     } else {
       const updatedHighscore: HighscoreExtended = {
@@ -126,7 +118,6 @@ export const createOrEditHighscore = async (
         specificUrl,
         updatedHighscore,
       );
-      console.log(`Successfully updated high score for ${recordId}.`);
       return putResponse.data;
     }
   } catch (error) {

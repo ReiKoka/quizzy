@@ -13,7 +13,7 @@ type NavPropsType = {
 
 function Nav({ tab, setTab }: NavPropsType) {
   const matches = useMediaQuery("(min-width: 768px)");
-  console.log(matches);
+
   return (
     <nav className="w-full max-w-7xl self-center p-3 sm:p-4 lg:p-5">
       <div className="border-primary flex items-center justify-between rounded-2xl border p-4">

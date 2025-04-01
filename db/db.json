@@ -1049,6 +1049,14 @@
       "userName": "ReiKoka",
       "score": 40,
       "time": 4
+    },
+    {
+      "id": "css_easy",
+      "category": "css",
+      "difficultySetting": "easy",
+      "userName": "ReiKoka",
+      "score": 40,
+      "time": 10
     }
   ],
   "results": [

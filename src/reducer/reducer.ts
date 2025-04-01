@@ -138,13 +138,6 @@ export const reducer = (state: QuizType, action: QuizActionType): QuizType => {
       const currentTimeTaken = state.maxPossiblePoints - state.secondsRemaining;
       let isNewHighScore = false;
 
-      console.log(
-        state.maxPossiblePoints,
-        state.secondsRemaining,
-        state.highScore.time,
-        state.status,
-      );
-
       if (state.points > state.highScore.highScorePoints) {
         updatedHighScore = {
           highScorePoints: state.points,
