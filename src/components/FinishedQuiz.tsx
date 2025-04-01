@@ -105,10 +105,10 @@ function FinishedQuiz() {
           <h1 className="font-secondary text-center text-lg font-semibold md:text-2xl">
             New High Score
           </h1>
-          <NewHighscoreImg className="text-primary animate-jump-in animate-once animate-duration-700 animate-ease-out animate-delay-300 mx-auto w-[250px] max-w-[400px] md:w-[250px] md:portrait:w-[400px]" />
+          <NewHighscoreImg className="text-primary animate-jump-in animate-once animate-duration-700 animate-ease-out animate-delay-300 mx-auto w-[250px] max-w-[600px] lg:w-[350px] 2xl:w-[600px] md:portrait:w-[400px]" />
         </>
       ) : (
-        <FinishQuizImg className="text-primary animate-jump-in animate-once animate-duration-700 animate-ease-out animate-delay-300 mx-auto w-[200px] max-w-[400px] md:w-[250px] md:portrait:w-[400px]" />
+        <FinishQuizImg className="text-primary animate-jump-in animate-once animate-duration-700 animate-ease-out animate-delay-300 mx-auto w-[250px] max-w-[600px] lg:w-[350px] 2xl:w-[600px] md:portrait:w-[400px]" />
       )}
 
       <FinishedInfographic />
