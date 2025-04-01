@@ -90,7 +90,7 @@ function FinishedQuiz() {
   };
 
   return (
-    <div className="flex h-full grow flex-col gap-4 md:gap-4">
+    <div className="flex h-full grow flex-col gap-4 overflow-hidden md:gap-4">
       {showConfetti && isNewHighScore && (
         <ReactConfetti
           recycle={false}
@@ -108,12 +108,12 @@ function FinishedQuiz() {
           <NewHighscoreImg className="text-primary animate-jump-in animate-once animate-duration-700 animate-ease-out animate-delay-300 mx-auto w-[250px] max-w-[600px] lg:w-[350px] 2xl:w-[600px] md:portrait:w-[400px]" />
         </>
       ) : (
-        <FinishQuizImg className="text-primary animate-jump-in animate-once animate-duration-700 animate-ease-out animate-delay-300 mx-auto w-[250px] max-w-[600px] lg:w-[350px] 2xl:w-[600px] md:portrait:w-[400px]" />
+        <FinishQuizImg className="text-primary animate-jump-in animate-once animate-duration-700 animate-ease-out animate-delay-300 mx-auto w-[250px] max-w-[400px] lg:w-[350px] 2xl:w-[300px] md:portrait:w-[400px]" />
       )}
 
       <FinishedInfographic />
 
-      <div className="mt-auto flex flex-col gap-2 md:flex-row">
+      <div className="mt-auto flex flex-col gap-2 p-2 md:flex-row">
         {isNewHighScore && !hasSaved && (
           <form
             onSubmit={handleSaveScore}
@@ -136,7 +136,14 @@ function FinishedQuiz() {
               className="btn btn-primary btn-square aspect-square w-fit min-w-fit"
               disabled={isSaving || !userName.trim()}
             >
-              {isSaving ? "Saving..." : <Icon glyph="badge-check-fill" />}
+              {isSaving ? (
+                <Icon
+                  glyph="view-reload"
+                  className="animate-duration-1000 animate-ease-linear animate-spin"
+                />
+              ) : (
+                <Icon glyph="badge-check-fill" />
+              )}
             </button>
           </form>
         )}
