@@ -9,21 +9,22 @@ function SelectQuiz() {
   };
 
   return (
-    <div className="flex h-full w-full grow flex-col gap-4 justify-between">
-      <div className="flex items-center mx-auto gap-6 ">
-        <QuizLogo className="text-primary min-w-40  max-w-72 justify-center" />
-        <h3 className="font-secondary text-base-content mx-auto max-w-96 text-center text-lg font-medium">
-          Welcome! Get ready to challenge your brain and have some fun. Let's see
-          how much trivia you've got packed in there!
-        </h3>
-      </div>
-      <h4 className="font-secondary text-primary mx-auto max-w-96 text-center text-2xl font-medium">Start by selecting a category</h4>
-      <div className="grid h-full grow grid-cols-2 gap-4 overflow-y-auto max-h-80">
+    <div className="flex h-full w-full grow flex-col justify-between gap-4">
+      <QuizLogo className="text-primary md:portrait:max-w-96 max-w-40 xl:max-w-72 justify-center mx-auto" />
+      <h3 className="font-secondary text-base-content mx-auto max-w-96 text-center text-sm font-medium md:text-base lg:text-lg ">
+        Welcome! Get ready to challenge your brain and have some fun. Let's see
+        how much trivia you've got packed in there!
+      </h3>
+
+      <h4 className="font-secondary text-primary mx-auto max-w-96 text-center text-base md:text-lg lg:text-xl font-medium">
+        Start by selecting a category
+      </h4>
+      <div className="grid max-h-80 grid-cols-2 gap-4 overflow-y-auto ">
         {allCategories &&
           allCategories.map((category) => (
             <button
               key={category}
-              className="btn btn-primary btn-soft h-full text-2xl"
+              className="btn btn-primary btn-soft h-fit min-h-12 text-sm md:min-h-14 xl:min-h-20"
               onClick={() => handleClick(category)}
             >
               {category}

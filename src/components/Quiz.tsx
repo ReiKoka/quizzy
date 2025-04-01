@@ -29,8 +29,8 @@ function Quiz() {
   };
 
   return (
-    <div className="flex h-full w-full flex-col gap-4">
-      <h1 className="font-secondary text-primary mt-2 text-center text-4xl font-semibold">
+    <div className="flex h-full w-full flex-col">
+      <h1 className="font-secondary text-primary text-center text-xl md:text-2xl font-semibold md:portrait:my-4 xl:my-6">
         {insertTitle()}
       </h1>
       {status === "initial" && <SelectQuiz />}

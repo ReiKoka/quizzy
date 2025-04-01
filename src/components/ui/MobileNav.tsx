@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useRef, useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import { TABS } from "../../utils/constants";
 import Icon from "supercons";
 
@@ -25,7 +25,7 @@ function MobileNav({ tab, setTab }: MobileNavPropsType) {
       </button>
 
       <ul
-        className={`animate-fade-left animate-ease-out fixed top-0 -right-full z-20 flex h-full w-screen flex-col items-center justify-center gap-4 ${isOpen ? "-translate-x-full opacity-100" : "opacity-0"} bg-base-100 transition-all duration-700`}
+        className={`animate-fade-left animate-ease-out fixed top-0 -right-full z-20 flex h-full w-screen flex-col items-center justify-center gap-4 opacity-0 ${isOpen && "-translate-x-full opacity-100"} bg-base-100 transition-all duration-700`}
       >
         <button
           className="btn btn-circle absolute top-5 right-5"
