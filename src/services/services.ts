@@ -4,7 +4,7 @@ import {
   HighScore,
   HighscoreExtended,
   NewResultData,
-  Question,
+  QuizQuestion,
   Result,
 } from "../utils/types";
 import { URL } from "../utils/constants";
@@ -12,10 +12,10 @@ import { URL } from "../utils/constants";
 export const getQuestions = async (
   difficulty: Difficulty = "all",
   category: string,
-): Promise<Question[]> => {
+): Promise<QuizQuestion[]> => {
   try {
     const customUrl = `${URL}/questions?category=${category}&${difficulty === "all" ? "" : `difficulty=${difficulty}`}`;
-    const response = await axios.get<Question[]>(customUrl);
+    const response = await axios.get<QuizQuestion[]>(customUrl);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -30,9 +30,15 @@ export const getQuestions = async (
 
 export const getCategories = async (): Promise<string[]> => {
   try {
-    const response = await axios.get<Question[]>(`${URL}/questions`);
+    const response = await axios.get<QuizQuestion[]>(`${URL}/questions`);
+
     const categoriesSet = new Set(
-      response.data.map((question) => question.category),
+      response.data
+        .filter(
+          (question): question is QuizQuestion & { category: string } =>
+            "category" in question,
+        )
+        .map((question) => question.category),
     );
     const categories = Array.from(categoriesSet);
     return categories;

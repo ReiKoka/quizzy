@@ -29,15 +29,27 @@ export interface Result extends ResultBase {
 
 export type NewResultData = Omit<Result, "id">;
 
-export type Question = {
+export interface BaseQuestion {
   id: string;
+  points: number;
+}
+
+export interface MultipleChoiceQuestion extends BaseQuestion {
   question: string;
   options: Option[];
   correctAnswerId: string;
   difficulty: Difficulty;
-  points: number;
   category: string;
-};
+}
+
+export interface ImagePuzzleQuestion extends BaseQuestion {
+  type: "image-puzzle";
+  prompt: string;
+  imageUrl: string;
+  gridSize: { rows: number; cols: number };
+}
+
+export type QuizQuestion = MultipleChoiceQuestion | ImagePuzzleQuestion;
 
 export type Option = {
   id: string;
@@ -52,7 +64,7 @@ export interface QuizType {
   points: number;
   highScore: HighScore;
   secondsRemaining: number;
-  questions: Question[];
+  questions: QuizQuestion[];
   difficulty: Difficulty;
   numQuestions: number;
   maxPossiblePoints: number;

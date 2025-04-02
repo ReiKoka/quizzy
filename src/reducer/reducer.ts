@@ -1,4 +1,4 @@
-import { Difficulty, HighScore, Question, QuizType } from "../utils/types";
+import { Difficulty, HighScore, QuizQuestion, QuizType } from "../utils/types";
 
 export type QuizActionType =
   | { type: "setAllCategories"; payload: string[] }
@@ -7,7 +7,7 @@ export type QuizActionType =
   | { type: "setDifficulty"; payload: Difficulty }
   | { type: "setHighscore"; payload: HighScore }
   | { type: "setStatus"; payload: QuizType["status"] }
-  | { type: "dataReceived"; payload: Question[] }
+  | { type: "dataReceived"; payload: QuizQuestion[] }
   | { type: "dataFailed" }
   | { type: "startQuiz" }
   | { type: "tick" }
@@ -124,7 +124,7 @@ export const reducer = (state: QuizType, action: QuizActionType): QuizType => {
         ...state,
         answer: action.payload,
         points:
-          action.payload === question.correctAnswerId
+          "correctAnswerId" in question && action.payload === question.correctAnswerId
             ? state.points + question.points
             : state.points,
       };
