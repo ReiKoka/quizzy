@@ -32,19 +32,20 @@ export type NewResultData = Omit<Result, "id">;
 export interface BaseQuestion {
   id: string;
   points: number;
+  category: string;
+  type: "multiple-choice" | "image-puzzle";
 }
 
 export interface MultipleChoiceQuestion extends BaseQuestion {
+  type: "multiple-choice";
   question: string;
   options: Option[];
   correctAnswerId: string;
   difficulty: Difficulty;
-  category: string;
 }
 
 export interface ImagePuzzleQuestion extends BaseQuestion {
   type: "image-puzzle";
-  prompt: string;
   imageUrl: string;
   gridSize: { rows: number; cols: number };
 }
@@ -71,4 +72,20 @@ export interface QuizType {
   category: string | null;
   allCategories: string[];
   isNewHighScore: boolean;
+}
+
+export interface PuzzlePiece {
+  id: string;
+  correctRow: number;
+  correctCol: number;
+  bgX: number;
+  bgY: number;
+  width: number;
+  height: number;
+}
+
+export interface BoardSlot {
+  row: number;
+  col: number;
+  piece: PuzzlePiece | null;
 }

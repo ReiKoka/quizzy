@@ -3,6 +3,8 @@ import {
   Difficulty,
   HighScore,
   HighscoreExtended,
+  ImagePuzzleQuestion,
+  MultipleChoiceQuestion,
   NewResultData,
   QuizQuestion,
   Result,
@@ -14,9 +16,24 @@ export const getQuestions = async (
   category: string,
 ): Promise<QuizQuestion[]> => {
   try {
-    const customUrl = `${URL}/questions?category=${category}&${difficulty === "all" ? "" : `difficulty=${difficulty}`}`;
-    const response = await axios.get<QuizQuestion[]>(customUrl);
-    return response.data;
+    // 1. Getting questions from multichoice questions array first
+    //prettier-ignore
+    const mcResponse = await axios.get<QuizQuestion[]>(
+      `${URL}/multipleChoiceQuestions?category=${category}&${difficulty === "all" ? "" : `difficulty=${difficulty}`}`,
+    );
+    const mcQuestions: MultipleChoiceQuestion[] =
+      mcResponse.data as MultipleChoiceQuestion[];
+
+    // 2. Getting questions from puzzle questions array secondly
+    const pzResponse = await axios.get<ImagePuzzleQuestion[]>(
+      `${URL}/puzzleQuestions?category=${category}`,
+    );
+    const pzQuestions: ImagePuzzleQuestion[] =
+      pzResponse.data as ImagePuzzleQuestion[];
+
+    // 3. Join them together in one array and return this array;
+    const response = [...mcQuestions, ...pzQuestions];
+    return response;
   } catch (error) {
     console.error(error);
     if (axios.isAxiosError(error)) {
@@ -30,7 +47,9 @@ export const getQuestions = async (
 
 export const getCategories = async (): Promise<string[]> => {
   try {
-    const response = await axios.get<QuizQuestion[]>(`${URL}/questions`);
+    const response = await axios.get<QuizQuestion[]>(
+      `${URL}/multipleChoiceQuestions`,
+    );
 
     const categoriesSet = new Set(
       response.data
