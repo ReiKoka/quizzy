@@ -7,8 +7,9 @@ import FinishQuizImg from "../assets/images/finish-quiz.svg?react";
 
 import FinishedInfographic from "./FinishedInfographic";
 import { showToast } from "./ui/ShowToast";
-import { createOrEditHighscore } from "../services/services";
+import { createOrEditHighscore, createResult } from "../services/services";
 import Icon from "supercons";
+import { HighscoreExtended, Result } from "../utils/types";
 
 const CONFETTI_DURATION = 5000;
 
@@ -57,33 +58,53 @@ function FinishedQuiz() {
 
   const handleSaveScore = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const promises: Promise<Result | HighscoreExtended>[] = [];
 
-    if (!userName.trim()) {
+    const trimmedUserName = userName.trim();
+    if (!trimmedUserName) {
       showToast("warning", "Please enter your name.");
       return;
     }
-
     setIsSaving(true);
 
     try {
-      const currentResult = {
-        highScorePoints: points,
-        time: timeTaken,
-      };
-
-      await createOrEditHighscore(
-        userName.trim(),
-        category as string,
-        difficulty,
-        currentResult,
+      promises.push(
+        createResult(
+          userName.trim(),
+          category as string,
+          difficulty,
+          points,
+          maxPossiblePoints ?? 0,
+          secondsRemaining ?? 0,
+        ),
       );
 
+      if (isNewHighScore) {
+        const currentResult = {
+          highScorePoints: points,
+          time: timeTaken,
+        };
+
+        promises.push(
+          createOrEditHighscore(
+            userName.trim(),
+            category as string,
+            difficulty,
+            currentResult,
+          ),
+        );
+
+        showToast("success", `High score saved for ${userName}!`);
+      }
+
+      await Promise.all(promises);
+
       setHasSaved(true);
-      showToast("success", `High score saved for ${userName}!`);
       setUserName("");
+      showToast("success", `Result saved for ${userName}!`);
     } catch (error) {
-      console.error("Failed to save high score:", error);
-      showToast("error", `Failed to save high score`);
+      console.error("Failed to save score", error);
+      showToast("error", `Failed to save score`);
     } finally {
       setIsSaving(false);
     }
@@ -114,7 +135,7 @@ function FinishedQuiz() {
       <FinishedInfographic />
 
       <div className="mt-auto flex flex-col gap-2 p-2 md:flex-row">
-        {isNewHighScore && !hasSaved && (
+        {!hasSaved && (
           <form
             onSubmit={handleSaveScore}
             className="mx-auto flex w-full items-center gap-4"

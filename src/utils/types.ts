@@ -8,14 +8,26 @@ export type HighScore = {
   time: number;
 };
 
-export type HighscoreExtended = {
+export interface ResultBase {
   id: string;
   category: string;
   difficultySetting: Difficulty;
   userName: string;
+  date: string;
+}
+
+export interface HighscoreExtended extends ResultBase {
   score: number;
   time: number;
-};
+}
+
+export interface Result extends ResultBase {
+  points: number;
+  maxPossiblePoints: number;
+  totalTimeTaken: number;
+}
+
+export type NewResultData = Omit<Result, "id">;
 
 export type Question = {
   id: string;

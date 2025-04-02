@@ -3,7 +3,9 @@ import {
   Difficulty,
   HighScore,
   HighscoreExtended,
+  NewResultData,
   Question,
+  Result,
 } from "../utils/types";
 import { URL } from "../utils/constants";
 
@@ -101,6 +103,7 @@ export const createOrEditHighscore = async (
         userName: name,
         score: currentResult.highScorePoints,
         time: currentResult.time,
+        date: new Date().toISOString(),
       };
       const postResponse = await axios.post<HighscoreExtended>(
         collectionUrl,
@@ -125,6 +128,57 @@ export const createOrEditHighscore = async (
     if (axios.isAxiosError(error)) {
       throw new Error(
         `Failed to save high score for ${category} (${difficulty}): ${
+          error.response?.data?.message || error.message
+        }`,
+      );
+    }
+    throw error;
+  }
+};
+
+export const getAllResults = async (): Promise<Result[]> => {
+  try {
+    const response = await axios.get<Result[]>(`${URL}/results`);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+    if (axios.isAxiosError(error)) {
+      throw new Error(
+        `Failed to get results ${
+          error.response?.data?.message || error.message
+        }`,
+      );
+    }
+    throw error;
+  }
+};
+
+export const createResult = async (
+  name: string,
+  category: string,
+  difficulty: Difficulty,
+  points: number,
+  maxPossiblePoints: number,
+  secondsRemaining: number,
+): Promise<Result> => {
+  try {
+    const newResult: NewResultData = {
+      category,
+      difficultySetting: difficulty,
+      userName: name,
+      points,
+      maxPossiblePoints,
+      totalTimeTaken: maxPossiblePoints - secondsRemaining,
+      date: new Date().toISOString(),
+    };
+
+    const response = await axios.post<Result>(`${URL}/results`, newResult);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+    if (axios.isAxiosError(error)) {
+      throw new Error(
+        `Failed to save new result | ${
           error.response?.data?.message || error.message
         }`,
       );

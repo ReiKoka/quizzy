@@ -1048,7 +1048,8 @@
       "difficultySetting": "easy",
       "userName": "ReiKoka",
       "score": 40,
-      "time": 4
+      "time": 10,
+      "date": "2023-10-27T10:30:00.000Z"
     },
     {
       "id": "css_easy",
@@ -1062,24 +1063,53 @@
   "results": [
     {
       "id": 1,
-      "userId": 2,
-      "score": 45,
-      "totalTimeTaken": 38.5,
+      "userName": "ReiKoka",
+      "points": 30,
+      "maxPossiblePoints": 40,
+      "category": "html",
+      "difficultySetting": "easy",
+      "totalTimeTaken": 20,
       "date": "2023-10-27T10:30:00.000Z"
     },
     {
-      "id": 2,
-      "userId": 1,
-      "score": 48,
-      "totalTimeTaken": 42.1,
-      "date": "2023-10-27T11:05:15.000Z"
+      "id": "fad2",
+      "category": "HTML",
+      "difficultySetting": "easy",
+      "userName": "test",
+      "points": 30,
+      "maxPossiblePoints": 40,
+      "totalTimeTaken": 13,
+      "date": "2025-04-02T08:52:59.960Z"
     },
     {
-      "id": 3,
-      "userId": 1,
-      "score": 50,
-      "totalTimeTaken": 35.2,
-      "date": "2023-10-28T09:15:00.000Z"
+      "id": "aa20",
+      "category": "HTML",
+      "difficultySetting": "easy",
+      "userName": "test",
+      "points": 10,
+      "maxPossiblePoints": 40,
+      "totalTimeTaken": 10,
+      "date": "2025-04-02T09:05:24.842Z"
+    },
+    {
+      "id": "9585",
+      "category": "HTML",
+      "difficultySetting": "easy",
+      "userName": "test",
+      "points": 10,
+      "maxPossiblePoints": 40,
+      "totalTimeTaken": 8,
+      "date": "2025-04-02T09:07:11.579Z"
+    },
+    {
+      "id": "892f",
+      "category": "HTML",
+      "difficultySetting": "easy",
+      "userName": "ReiKoka",
+      "points": 40,
+      "maxPossiblePoints": 40,
+      "totalTimeTaken": 10,
+      "date": "2025-04-02T09:07:44.060Z"
     }
   ]
 }
