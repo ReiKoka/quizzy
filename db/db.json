@@ -1058,49 +1058,18 @@
       "userName": "ReiKoka",
       "score": 40,
       "time": 10
+    },
+    {
+      "id": "html_all",
+      "category": "html",
+      "difficultySetting": "all",
+      "userName": "Rei Koka",
+      "score": 180,
+      "time": 23,
+      "date": "2025-04-02T10:01:42.219Z"
     }
   ],
   "results": [
-    {
-      "id": 1,
-      "userName": "ReiKoka",
-      "points": 30,
-      "maxPossiblePoints": 40,
-      "category": "html",
-      "difficultySetting": "easy",
-      "totalTimeTaken": 20,
-      "date": "2023-10-27T10:30:00.000Z"
-    },
-    {
-      "id": "fad2",
-      "category": "HTML",
-      "difficultySetting": "easy",
-      "userName": "test",
-      "points": 30,
-      "maxPossiblePoints": 40,
-      "totalTimeTaken": 13,
-      "date": "2025-04-02T08:52:59.960Z"
-    },
-    {
-      "id": "aa20",
-      "category": "HTML",
-      "difficultySetting": "easy",
-      "userName": "test",
-      "points": 10,
-      "maxPossiblePoints": 40,
-      "totalTimeTaken": 10,
-      "date": "2025-04-02T09:05:24.842Z"
-    },
-    {
-      "id": "9585",
-      "category": "HTML",
-      "difficultySetting": "easy",
-      "userName": "test",
-      "points": 10,
-      "maxPossiblePoints": 40,
-      "totalTimeTaken": 8,
-      "date": "2025-04-02T09:07:11.579Z"
-    },
     {
       "id": "892f",
       "category": "HTML",
@@ -1110,6 +1079,16 @@
       "maxPossiblePoints": 40,
       "totalTimeTaken": 10,
       "date": "2025-04-02T09:07:44.060Z"
+    },
+    {
+      "id": "0a9e",
+      "category": "HTML",
+      "difficultySetting": "all",
+      "userName": "Rei Koka",
+      "points": 180,
+      "maxPossiblePoints": 180,
+      "totalTimeTaken": 23,
+      "date": "2025-04-02T10:01:42.167Z"
     }
   ]
 }
