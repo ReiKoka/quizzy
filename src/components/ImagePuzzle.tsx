@@ -295,8 +295,8 @@ function ImagePuzzle({ question, onPuzzleSolved }: ImagePuzzleProps) {
           <div
             className="puzzle-board grid min-w-fit overflow-hidden rounded-xl shadow-2xl"
             style={{
-              gridTemplateRows: `repeat(${rows}, ${Math.floor(imageNaturalWidth / cols)}px)`,
-              gridTemplateColumns: `repeat(${cols}, ${Math.floor(imageNaturalHeight / cols)}px)`,
+              gridTemplateRows: `repeat(${rows}, ${Math.floor(imageNaturalHeight / rows)}px)`,
+              gridTemplateColumns: `repeat(${cols}, ${Math.floor(imageNaturalWidth / cols)}px)`,
             }}
           >
             {boardState.flat().map((slot) => (

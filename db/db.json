@@ -27,7 +27,7 @@
     {
       "id": 104,
       "category": "React",
-      "imageUrl": "/react.png",
+      "imageUrl": "/test.jpg",
       "gridSize": { "rows": 4, "cols": 4 },
       "points": 60,
       "type": "image-puzzle"
