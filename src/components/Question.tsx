@@ -2,6 +2,7 @@ import useQuiz from "../hooks/useQuiz";
 import ImagePuzzle from "./ImagePuzzle";
 import Options from "./Options";
 import ProgressBar from "./ui/ProgressBar";
+import { showToast } from "./ui/ShowToast";
 
 function Question() {
   const { questions, index, dispatch } = useQuiz();
@@ -9,8 +10,9 @@ function Question() {
 
   const handlePuzzleSolved = (pointsAwarded: number) => {
     console.log(`Puzzle solved! Awarding ${pointsAwarded} points.`);
-
-    // dispatch({ type: "puzzleSolved", payload: pointsAwarded });
+    showToast("success", "Puzzle solved successfully! 😃 ");
+    console.log(pointsAwarded);
+    dispatch({ type: "puzzleSolved", payload: pointsAwarded });
   };
 
   return (

@@ -1,8 +1,8 @@
 import useQuiz from "../hooks/useQuiz";
-import { Option, Question } from "../utils/types";
+import { Option, MultipleChoiceQuestion } from "../utils/types";
 
 type OptionsProps = {
-  question: Question;
+  question: MultipleChoiceQuestion;
 };
 
 function Options({ question }: OptionsProps) {
@@ -14,7 +14,7 @@ function Options({ question }: OptionsProps) {
   };
 
   return (
-    <div className="mx-auto my-auto grid w-full grid-cols-2 place-items-center gap-2 md:my-0 md:flex md:grow md:flex-col md:justify-center 2xl:flex 2xl:flex-col md:portrait:gap-4">
+    <div className="mx-auto my-auto grid w-full grid-cols-2 2xl:gap-3 place-items-center gap-2 md:my-0 md:flex md:grow md:flex-col md:justify-center 2xl:flex 2xl:flex-col md:portrait:gap-4">
       {question.options.map((option) => {
         let dynamicClasses = "";
 
@@ -34,7 +34,7 @@ function Options({ question }: OptionsProps) {
         return (
           <button
             key={option.id}
-            className={`btn text-base-content hover:bg-warning hover:text-warning-content h-fit min-h-10 w-full max-w-96 text-xs text-balance transition-all duration-300 md:portrait:min-h-14 ${dynamicClasses} ${hasAnswered && "pointer-events-none"}`}
+            className={`btn text-base-content 2xl:min-h-16 hover:bg-warning hover:text-warning-content h-fit min-h-10 w-full max-w-96 text-xs text-balance transition-all duration-300 md:portrait:min-h-14 ${dynamicClasses} ${hasAnswered && "pointer-events-none"}`}
             onClick={() => handleOptionClick(option)}
           >
             {option.text}

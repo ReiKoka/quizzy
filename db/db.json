@@ -4,7 +4,7 @@
       "id": 101,
       "category": "HTML",
       "imageUrl": "/html.png",
-      "gridSize": { "rows": 3, "cols": 3 },
+      "gridSize": { "rows": 4, "cols": 4 },
       "points": 60,
       "type": "image-puzzle"
     },
@@ -12,7 +12,7 @@
       "id": 102,
       "category": "CSS",
       "imageUrl": "/css.png",
-      "gridSize": { "rows": 3, "cols": 3 },
+      "gridSize": { "rows": 4, "cols": 4 },
       "points": 60,
       "type": "image-puzzle"
     },
@@ -20,7 +20,15 @@
       "id": 103,
       "category": "JavaScript",
       "imageUrl": "/js.png",
-      "gridSize": { "rows": 3, "cols": 3 },
+      "gridSize": { "rows": 4, "cols": 4 },
+      "points": 60,
+      "type": "image-puzzle"
+    },
+    {
+      "id": 104,
+      "category": "React",
+      "imageUrl": "/react.png",
+      "gridSize": { "rows": 4, "cols": 4 },
       "points": 60,
       "type": "image-puzzle"
     }

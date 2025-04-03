@@ -13,6 +13,7 @@ export type QuizActionType =
   | { type: "tick" }
   | { type: "newAnswer"; payload: string }
   | { type: "nextQuestion" }
+  | { type: "puzzleSolved"; payload: number }
   | { type: "restartQuiz" }
   | { type: "finishedQuiz" };
 
@@ -124,7 +125,8 @@ export const reducer = (state: QuizType, action: QuizActionType): QuizType => {
         ...state,
         answer: action.payload,
         points:
-          "correctAnswerId" in question && action.payload === question.correctAnswerId
+          "correctAnswerId" in question &&
+          action.payload === question.correctAnswerId
             ? state.points + question.points
             : state.points,
       };
@@ -132,6 +134,11 @@ export const reducer = (state: QuizType, action: QuizActionType): QuizType => {
 
     case "nextQuestion":
       return { ...state, index: state.index + 1, answer: null };
+
+    case "puzzleSolved": {
+      const newPoints = state.points + action.payload;
+      return { ...state, points: newPoints };
+    }
 
     case "finishedQuiz": {
       let updatedHighScore = state.highScore;

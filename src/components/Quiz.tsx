@@ -37,7 +37,7 @@ function Quiz() {
       {status === "error" && <Error />}
       {status === "ready" && <Start />}
       {status === "active" && (
-        <div className="flex h-full grow flex-col gap-4 overflow-auto">
+        <div className="flex h-full grow flex-col gap-4 overflow-x-hidden overflow-y-auto">
           <Infographic />
           <Question />
           <Footer />
