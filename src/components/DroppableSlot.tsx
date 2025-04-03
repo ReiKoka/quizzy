@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useDroppable } from "@dnd-kit/core";
 import { BoardSlot } from "../utils/types";
 import { PlacedPiece } from "./PlacedPiece";
