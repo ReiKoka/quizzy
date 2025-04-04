@@ -4,6 +4,7 @@ import { getAllResults } from "../services/services";
 import { showToast } from "./ui/ShowToast";
 
 import { format } from "date-fns";
+import { formatSecondsToMMSS } from "../utils/helpers";
 
 const formatString = "EEEE do 'of' MMM, yyyy";
 
@@ -24,6 +25,21 @@ function Results() {
     };
     fetchResults();
   }, []);
+
+  const badgeColor = (category: string) => {
+    switch (category.toLowerCase()) {
+      case "html":
+        return "badge-accent";
+      case "css":
+        return "badge-secondary";
+      case "javascript":
+        return "badge-warning";
+      case "react":
+        return "badge-info";
+      default:
+        return "badge-base-100";
+    }
+  };
 
   return (
     <div className="flex h-full w-full flex-col">
@@ -50,10 +66,14 @@ function Results() {
                   <tr key={result.id} className="capitalize">
                     <th>{result.id}</th>
                     <td>{result.userName}</td>
-                    <td>{result.category}</td>
+                    <td>
+                      <p className={`badge ${badgeColor(result.category)}`}>
+                        {result.category}
+                      </p>
+                    </td>
                     <td>{result.difficultySetting}</td>
                     <td>{format(result.date, formatString)}</td>
-                    <td>{result.totalTimeTaken}</td>
+                    <td>{formatSecondsToMMSS(result.totalTimeTaken)}</td>
                     <td>
                       {result.points} / {result.maxPossiblePoints}
                     </td>

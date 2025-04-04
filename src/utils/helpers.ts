@@ -6,3 +6,24 @@ export function shuffleArray<T>(array: T[]): T[] {
   }
   return shuffled;
 }
+
+export function formatSecondsToMMSS(
+  totalSeconds: number | null | undefined,
+): string {
+  if (
+    totalSeconds === null ||
+    totalSeconds === undefined ||
+    isNaN(totalSeconds) ||
+    totalSeconds < 0
+  ) {
+    return "00:00";
+  }
+
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
+
+  const min = String(minutes).padStart(2, "0");
+  const sec = String(seconds).padStart(2, "0");
+
+  return `${min}:${sec}`;
+}

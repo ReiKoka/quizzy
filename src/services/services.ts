@@ -163,7 +163,7 @@ export const createOrEditHighscore = async (
 
 export const getAllResults = async (): Promise<Result[]> => {
   try {
-    const response = await axios.get<Result[]>(`${URL}/results`);
+    const response = await axios.get<Result[]>(`${URL}/results?_sort=-date`);
     return response.data;
   } catch (error) {
     console.error(error);

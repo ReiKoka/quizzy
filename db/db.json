@@ -3331,6 +3331,15 @@
       "score": 160,
       "time": 44,
       "date": "2025-04-04T08:55:32.345Z"
+    },
+    {
+      "id": "react_easy",
+      "category": "react",
+      "difficultySetting": "easy",
+      "userName": "ReiKoka",
+      "score": 160,
+      "time": 132,
+      "date": "2025-04-04T10:43:37.418Z"
     }
   ],
   "results": [
@@ -3463,6 +3472,16 @@
       "maxPossiblePoints": 160,
       "totalTimeTaken": 119,
       "date": "2025-04-04T10:10:58.415Z"
+    },
+    {
+      "id": "7ad3",
+      "category": "React",
+      "difficultySetting": "easy",
+      "userName": "ReiKoka",
+      "points": 160,
+      "maxPossiblePoints": 160,
+      "totalTimeTaken": 28,
+      "date": "2025-04-04T10:43:37.379Z"
     }
   ]
 }

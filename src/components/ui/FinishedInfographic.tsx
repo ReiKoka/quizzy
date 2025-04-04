@@ -1,4 +1,5 @@
 import useQuiz from "../../hooks/useQuiz";
+import { formatSecondsToMMSS } from "../../utils/helpers";
 import SingleInfographicBox from "./SingleInfographicBox";
 
 function FinishedInfographic() {
@@ -12,15 +13,12 @@ function FinishedInfographic() {
     highScoreUpdateInfo,
   } = useQuiz();
 
-  const highScoreMinutes =
-    secondsRemaining !== null ? Math.floor(highScore.time / 60) : 0;
-  const highScoreSeconds = secondsRemaining !== null ? highScore.time % 60 : 0;
-
   const timeTaken = Math.max(0, (maxPossiblePoints ?? 0) - secondsRemaining);
 
-  const yourMinutes =
-    secondsRemaining !== null ? Math.floor(timeTaken / 60) : 0;
-  const yourSeconds = secondsRemaining !== null ? timeTaken % 60 : 0;
+  const [highScoreMinutes, highScoreSeconds] = formatSecondsToMMSS(
+    highScore.time,
+  ).split(":");
+  const [yourMinutes, yourSeconds] = formatSecondsToMMSS(timeTaken).split(":");
 
   return (
     <div className="mx-auto flex w-full">
@@ -55,18 +53,14 @@ function FinishedInfographic() {
         {!highScoreUpdateInfo.new && (
           <SingleInfographicBox
             title="Your Time"
-            value={`${yourMinutes < 10 ? `0${yourMinutes}` : yourMinutes}:${
-              yourSeconds < 10 ? `0${yourSeconds}` : yourSeconds
-            }`}
+            value={`${yourMinutes}:${yourSeconds}`}
             description="MM:SS"
           />
         )}
 
         <SingleInfographicBox
           title="Fastest Time"
-          value={`${highScoreMinutes < 10 ? `0${highScoreMinutes}` : highScoreMinutes}:${
-            highScoreSeconds < 10 ? `0${highScoreSeconds}` : highScoreSeconds
-          }`}
+          value={`${highScoreMinutes}:${highScoreSeconds}`}
           description="MM:SS"
         />
       </div>
