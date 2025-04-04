@@ -8,13 +8,19 @@ function FinishedInfographic() {
     secondsRemaining,
     points,
     difficulty,
+    highScore,
+    highScoreUpdateInfo,
   } = useQuiz();
 
-  const currentTimeTaken = maxPossiblePoints - secondsRemaining;
+  const highScoreMinutes =
+    secondsRemaining !== null ? Math.floor(highScore.time / 60) : 0;
+  const highScoreSeconds = secondsRemaining !== null ? highScore.time % 60 : 0;
 
-  const minutes =
-    secondsRemaining !== null ? Math.floor(currentTimeTaken / 60) : 0;
-  const seconds = secondsRemaining !== null ? currentTimeTaken % 60 : 0;
+  const timeTaken = Math.max(0, (maxPossiblePoints ?? 0) - secondsRemaining);
+
+  const yourMinutes =
+    secondsRemaining !== null ? Math.floor(timeTaken / 60) : 0;
+  const yourSeconds = secondsRemaining !== null ? timeTaken % 60 : 0;
 
   return (
     <div className="mx-auto flex w-full">
@@ -32,16 +38,34 @@ function FinishedInfographic() {
           description="Total"
         />
 
+        {!highScoreUpdateInfo.new && (
+          <SingleInfographicBox
+            title="Your Score"
+            value={points}
+            description={`Max Points ${maxPossiblePoints}`}
+          />
+        )}
+
         <SingleInfographicBox
-          title="Points"
-          value={points}
+          title="Highest Score"
+          value={highScore.highScorePoints}
           description={`Max Points ${maxPossiblePoints}`}
         />
 
+        {!highScoreUpdateInfo.new && (
+          <SingleInfographicBox
+            title="Your Time"
+            value={`${yourMinutes < 10 ? `0${yourMinutes}` : yourMinutes}:${
+              yourSeconds < 10 ? `0${yourSeconds}` : yourSeconds
+            }`}
+            description="MM:SS"
+          />
+        )}
+
         <SingleInfographicBox
           title="Fastest Time"
-          value={`${minutes < 10 ? `0${minutes}` : minutes}:${
-            seconds < 10 ? `0${seconds}` : seconds
+          value={`${highScoreMinutes < 10 ? `0${highScoreMinutes}` : highScoreMinutes}:${
+            highScoreSeconds < 10 ? `0${highScoreSeconds}` : highScoreSeconds
           }`}
           description="MM:SS"
         />

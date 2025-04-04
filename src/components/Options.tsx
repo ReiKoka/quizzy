@@ -34,7 +34,7 @@ function Options({ question }: OptionsProps) {
         return (
           <button
             key={option.id}
-            className={`btn text-base-content 2xl:min-h-16 hover:bg-warning hover:text-warning-content h-fit min-h-10 w-full max-w-96 text-xs text-balance transition-all duration-300 md:portrait:min-h-14 ${dynamicClasses} ${hasAnswered && "pointer-events-none"}`}
+            className={`btn text-base-content 2xl:min-h-16 xl:text-sm hover:bg-warning hover:text-warning-content h-fit min-h-10 w-full max-w-96 text-xs text-balance transition-all duration-300 md:portrait:min-h-14 ${dynamicClasses} ${hasAnswered && "pointer-events-none"}`}
             onClick={() => handleOptionClick(option)}
           >
             {option.text}

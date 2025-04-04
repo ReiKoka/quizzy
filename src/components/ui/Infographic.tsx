@@ -21,7 +21,7 @@ function Infographic() {
           title="Difficulty"
           value={difficulty}
           description={`${difficulty} questions`}
-          className="hidden md:block"
+          className="hidden md:block capitalize"
         />
 
         <SingleInfographicBox
