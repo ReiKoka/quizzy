@@ -1,5 +1,5 @@
 import { useDraggable } from "@dnd-kit/core";
-import { PuzzlePiece } from "../utils/types";
+import { PuzzlePiece } from "../../utils/types";
 
 type PlacedPiecePropTypes = {
   piece: PuzzlePiece;

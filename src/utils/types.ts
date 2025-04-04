@@ -71,7 +71,7 @@ export interface QuizType {
   maxPossiblePoints: number;
   category: string | null;
   allCategories: string[];
-  isNewHighScore: boolean;
+  highScoreUpdateInfo: { new: boolean; prevHighscore: HighScore | null };
 }
 
 export interface PuzzlePiece {

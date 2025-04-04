@@ -31,7 +31,7 @@ function Results() {
         Previous Quiz Results
       </h1>
       <div className="h-full grow overflow-hidden p-3">
-        <div className="rounded-lg border-base-content/20 bg-base-100  overflow-auto border h-full">
+        <div className="border-base-content/20 bg-base-100 h-full overflow-auto rounded-lg border">
           <table className="font-primary table-pin-cols table h-auto">
             <thead className="font-secondary text-primary text-base font-medium">
               <tr>
@@ -47,7 +47,7 @@ function Results() {
             <tbody>
               {results &&
                 results.map((result) => (
-                  <tr className="capitalize">
+                  <tr key={result.id} className="capitalize">
                     <th>{result.id}</th>
                     <td>{result.userName}</td>
                     <td>{result.category}</td>

@@ -1,5 +1,5 @@
-import useQuiz from "../hooks/useQuiz";
-import SingleInfographicBox from "./ui/SingleInfographicBox";
+import useQuiz from "../../hooks/useQuiz";
+import SingleInfographicBox from "./SingleInfographicBox";
 
 function FinishedInfographic() {
   const {
@@ -23,7 +23,7 @@ function FinishedInfographic() {
           title="Difficulty"
           value={difficulty}
           description={`${difficulty} questions`}
-          className="hidden md:block capitalize"
+          className="hidden capitalize md:block"
         />
 
         <SingleInfographicBox

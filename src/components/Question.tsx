@@ -1,13 +1,14 @@
 import useQuiz from "../hooks/useQuiz";
-import ImagePuzzle from "./ImagePuzzle";
+import ImagePuzzle from "./puzzle/ImagePuzzle";
 import Options from "./Options";
 import ProgressBar from "./ui/ProgressBar";
 import { showToast } from "./ui/ShowToast";
 
 function Question() {
-  const { questions, index, dispatch } = useQuiz();
+  const { questions, index, dispatch, highScore } = useQuiz();
   const question = questions[index];
 
+  console.log(highScore);
   const handlePuzzleSolved = (pointsAwarded: number) => {
     console.log(`Puzzle solved! Awarding ${pointsAwarded} points.`);
     showToast("success", "Puzzle solved successfully! 😃 ");

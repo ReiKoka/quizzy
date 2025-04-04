@@ -33,7 +33,7 @@ export const initialState: QuizType = {
   maxPossiblePoints: 0,
   category: null,
   allCategories: [],
-  isNewHighScore: false,
+  highScoreUpdateInfo: { new: false, prevHighscore: null },
 };
 
 export const reducer = (state: QuizType, action: QuizActionType): QuizType => {
@@ -144,18 +144,19 @@ export const reducer = (state: QuizType, action: QuizActionType): QuizType => {
       let updatedHighScore = state.highScore;
       const currentTimeTaken = state.maxPossiblePoints - state.secondsRemaining;
       let isNewHighScore = false;
+      const prevHighscore = state.highScore;
 
       if (state.points > state.highScore.highScorePoints) {
         updatedHighScore = {
           highScorePoints: state.points,
-          time: state.secondsRemaining,
+          time: currentTimeTaken,
         };
         isNewHighScore = true;
       } else if (state.points === state.highScore.highScorePoints) {
         if (currentTimeTaken < state.highScore.time) {
           updatedHighScore = {
             highScorePoints: state.points,
-            time: state.secondsRemaining,
+            time: currentTimeTaken,
           };
           isNewHighScore = true;
         }
@@ -165,7 +166,10 @@ export const reducer = (state: QuizType, action: QuizActionType): QuizType => {
         ...state,
         status: "finished",
         highScore: updatedHighScore,
-        isNewHighScore,
+        highScoreUpdateInfo: {
+          new: isNewHighScore,
+          prevHighscore: prevHighscore,
+        },
       };
     }
 

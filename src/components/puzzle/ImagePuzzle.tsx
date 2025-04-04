@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { BoardSlot, ImagePuzzleQuestion, PuzzlePiece } from "../utils/types";
-import { shuffleArray } from "../utils/helpers";
+import { BoardSlot, ImagePuzzleQuestion, PuzzlePiece } from "../../utils/types";
+import { shuffleArray } from "../../utils/helpers";
 import {
   DndContext,
   DragEndEvent,
@@ -10,6 +10,7 @@ import {
   useSensor,
   useSensors,
 } from "@dnd-kit/core";
+
 import { DraggablePiece } from "./DraggablePiece";
 import { DroppableSlot } from "./DroppableSlot";
 
