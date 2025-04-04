@@ -24,12 +24,15 @@ function FinishedQuiz() {
     category,
     difficulty,
     points,
+    highScore,
   } = useQuiz();
 
   const [userName, setUserName] = useState("");
   const [isSaving, setIsSaving] = useState(false);
   const [hasSaved, setHasSaved] = useState(false);
   const timeTaken = Math.max(0, (maxPossiblePoints ?? 0) - secondsRemaining);
+
+  console.log(points, highScore.highScorePoints, timeTaken, highScore.time);
 
   useEffect(() => {
     if (!isNewHighScore) {
@@ -126,7 +129,16 @@ function FinishedQuiz() {
           <h1 className="font-secondary text-center text-lg font-semibold md:text-xl">
             New High Score
           </h1>
-          <NewHighscoreImg className="text-primary animate-jump-in animate-once animate-duration-700 animate-ease-out animate-delay-300 mx-auto w-[250px] max-w-[600px] lg:w-[350px] 2xl:w-[600px] md:portrait:w-[400px]" />
+          {isNewHighScore && (
+            <p className="font-secondary text-secondary text-center text-base font-medium">
+              You beat the previous record by{" "}
+              {points === highScore.highScorePoints
+                ? Math.abs(timeTaken - highScore.time)
+                : points - highScore.highScorePoints}
+              {points === highScore.highScorePoints ? " seconds" : " points"}!
+            </p>
+          )}
+          <NewHighscoreImg className="text-primary animate-jump-in animate-once animate-duration-700 animate-ease-out animate-delay-300 mx-auto w-[250px] max-w-[600px] lg:w-[350px] 2xl:w-[500px] md:portrait:w-[400px]" />
         </>
       ) : (
         <FinishQuizImg className="text-primary animate-jump-in animate-once animate-duration-700 animate-ease-out animate-delay-300 mx-auto w-[250px] max-w-[400px] lg:w-[350px] 2xl:w-[300px] md:portrait:w-[400px]" />

@@ -1,48 +1,72 @@
 {
   "puzzleQuestions": [
     {
-      "id": 101,
+      "id": "101",
       "category": "HTML",
       "imageUrl": "/html.png",
-      "gridSize": { "rows": 4, "cols": 4 },
+      "gridSize": {
+        "rows": 4,
+        "cols": 4
+      },
       "points": 60,
       "type": "image-puzzle"
     },
     {
-      "id": 102,
+      "id": "102",
       "category": "CSS",
       "imageUrl": "/css.png",
-      "gridSize": { "rows": 4, "cols": 4 },
+      "gridSize": {
+        "rows": 4,
+        "cols": 4
+      },
       "points": 60,
       "type": "image-puzzle"
     },
     {
-      "id": 103,
+      "id": "103",
       "category": "JavaScript",
       "imageUrl": "/js.png",
-      "gridSize": { "rows": 4, "cols": 4 },
+      "gridSize": {
+        "rows": 4,
+        "cols": 4
+      },
       "points": 60,
       "type": "image-puzzle"
     },
     {
-      "id": 104,
+      "id": "104",
       "category": "React",
       "imageUrl": "/test.jpg",
-      "gridSize": { "rows": 4, "cols": 4 },
+      "gridSize": {
+        "rows": 4,
+        "cols": 4
+      },
       "points": 60,
       "type": "image-puzzle"
     }
   ],
   "multipleChoiceQuestions": [
     {
-      "id": 13,
+      "id": "13",
       "category": "HTML",
       "question": "What is the correct HTML element for the largest heading?",
       "options": [
-        { "id": "a", "text": "<heading>" },
-        { "id": "b", "text": "<h6>" },
-        { "id": "c", "text": "<head>" },
-        { "id": "d", "text": "<h1>" }
+        {
+          "id": "a",
+          "text": "<heading>"
+        },
+        {
+          "id": "b",
+          "text": "<h6>"
+        },
+        {
+          "id": "c",
+          "text": "<head>"
+        },
+        {
+          "id": "d",
+          "text": "<h1>"
+        }
       ],
       "correctAnswerId": "d",
       "difficulty": "easy",
@@ -50,14 +74,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 14,
+      "id": "14",
       "category": "HTML",
       "question": "Which HTML tag is used to define an unordered list?",
       "options": [
-        { "id": "a", "text": "<ol>" },
-        { "id": "b", "text": "<ul>" },
-        { "id": "c", "text": "<list>" },
-        { "id": "d", "text": "<li>" }
+        {
+          "id": "a",
+          "text": "<ol>"
+        },
+        {
+          "id": "b",
+          "text": "<ul>"
+        },
+        {
+          "id": "c",
+          "text": "<list>"
+        },
+        {
+          "id": "d",
+          "text": "<li>"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "easy",
@@ -65,14 +101,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 15,
+      "id": "15",
       "category": "HTML",
       "question": "What does the `<a>` tag define?",
       "options": [
-        { "id": "a", "text": "An article" },
-        { "id": "b", "text": "An abbreviation" },
-        { "id": "c", "text": "A hyperlink" },
-        { "id": "d", "text": "An aside" }
+        {
+          "id": "a",
+          "text": "An article"
+        },
+        {
+          "id": "b",
+          "text": "An abbreviation"
+        },
+        {
+          "id": "c",
+          "text": "A hyperlink"
+        },
+        {
+          "id": "d",
+          "text": "An aside"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "easy",
@@ -80,14 +128,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 16,
+      "id": "16",
       "category": "HTML",
       "question": "Which attribute specifies a unique id for an HTML element?",
       "options": [
-        { "id": "a", "text": "class" },
-        { "id": "b", "text": "id" },
-        { "id": "c", "text": "name" },
-        { "id": "d", "text": "identifier" }
+        {
+          "id": "a",
+          "text": "class"
+        },
+        {
+          "id": "b",
+          "text": "id"
+        },
+        {
+          "id": "c",
+          "text": "name"
+        },
+        {
+          "id": "d",
+          "text": "identifier"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "easy",
@@ -95,14 +155,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 53,
+      "id": "53",
       "category": "HTML",
       "question": "Which HTML tag is used to define an image?",
       "options": [
-        { "id": "a", "text": "<image>" },
-        { "id": "b", "text": "<picture>" },
-        { "id": "c", "text": "<src>" },
-        { "id": "d", "text": "<img>" }
+        {
+          "id": "a",
+          "text": "<image>"
+        },
+        {
+          "id": "b",
+          "text": "<picture>"
+        },
+        {
+          "id": "c",
+          "text": "<src>"
+        },
+        {
+          "id": "d",
+          "text": "<img>"
+        }
       ],
       "correctAnswerId": "d",
       "difficulty": "easy",
@@ -110,17 +182,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 54,
+      "id": "54",
       "category": "HTML",
       "question": "What does the `alt` attribute in an `<img>` tag provide?",
       "options": [
-        { "id": "a", "text": "The alignment of the image" },
+        {
+          "id": "a",
+          "text": "The alignment of the image"
+        },
         {
           "id": "b",
           "text": "Alternative text for the image if it cannot be displayed"
         },
-        { "id": "c", "text": "A link to the image source" },
-        { "id": "d", "text": "The title of the image" }
+        {
+          "id": "c",
+          "text": "A link to the image source"
+        },
+        {
+          "id": "d",
+          "text": "The title of the image"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "easy",
@@ -128,14 +209,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 55,
+      "id": "55",
       "category": "HTML",
       "question": "Which tag is used to define a paragraph?",
       "options": [
-        { "id": "a", "text": "<paragraph>" },
-        { "id": "b", "text": "<p>" },
-        { "id": "c", "text": "<para>" },
-        { "id": "d", "text": "<text>" }
+        {
+          "id": "a",
+          "text": "<paragraph>"
+        },
+        {
+          "id": "b",
+          "text": "<p>"
+        },
+        {
+          "id": "c",
+          "text": "<para>"
+        },
+        {
+          "id": "d",
+          "text": "<text>"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "easy",
@@ -143,14 +236,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 56,
+      "id": "56",
       "category": "HTML",
       "question": "Which tag defines the document's body?",
       "options": [
-        { "id": "a", "text": "<head>" },
-        { "id": "b", "text": "<main>" },
-        { "id": "c", "text": "<body>" },
-        { "id": "d", "text": "<content>" }
+        {
+          "id": "a",
+          "text": "<head>"
+        },
+        {
+          "id": "b",
+          "text": "<main>"
+        },
+        {
+          "id": "c",
+          "text": "<body>"
+        },
+        {
+          "id": "d",
+          "text": "<content>"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "easy",
@@ -158,14 +263,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 57,
+      "id": "57",
       "category": "HTML",
       "question": "Which tag is used to create a line break?",
       "options": [
-        { "id": "a", "text": "<lb>" },
-        { "id": "b", "text": "<break>" },
-        { "id": "c", "text": "<br>" },
-        { "id": "d", "text": "<newline>" }
+        {
+          "id": "a",
+          "text": "<lb>"
+        },
+        {
+          "id": "b",
+          "text": "<break>"
+        },
+        {
+          "id": "c",
+          "text": "<br>"
+        },
+        {
+          "id": "d",
+          "text": "<newline>"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "easy",
@@ -173,14 +290,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 58,
+      "id": "58",
       "category": "HTML",
       "question": "What does HTML stand for?",
       "options": [
-        { "id": "a", "text": "Hyperlinks and Text Markup Language" },
-        { "id": "b", "text": "Home Tool Markup Language" },
-        { "id": "c", "text": "Hyper Text Markup Language" },
-        { "id": "d", "text": "Hyper Tool Markup Language" }
+        {
+          "id": "a",
+          "text": "Hyperlinks and Text Markup Language"
+        },
+        {
+          "id": "b",
+          "text": "Home Tool Markup Language"
+        },
+        {
+          "id": "c",
+          "text": "Hyper Text Markup Language"
+        },
+        {
+          "id": "d",
+          "text": "Hyper Tool Markup Language"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "easy",
@@ -188,14 +317,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 17,
+      "id": "17",
       "category": "HTML",
       "question": "Which HTML element is used to specify a footer for a document or section?",
       "options": [
-        { "id": "a", "text": "<bottom>" },
-        { "id": "b", "text": "<section>" },
-        { "id": "c", "text": "<footer>" },
-        { "id": "d", "text": "<end>" }
+        {
+          "id": "a",
+          "text": "<bottom>"
+        },
+        {
+          "id": "b",
+          "text": "<section>"
+        },
+        {
+          "id": "c",
+          "text": "<footer>"
+        },
+        {
+          "id": "d",
+          "text": "<end>"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "medium",
@@ -203,17 +344,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 18,
+      "id": "18",
       "category": "HTML",
       "question": "What is the purpose of the `<canvas>` element?",
       "options": [
-        { "id": "a", "text": "To display tabular data" },
-        { "id": "b", "text": "To embed video content" },
+        {
+          "id": "a",
+          "text": "To display tabular data"
+        },
+        {
+          "id": "b",
+          "text": "To embed video content"
+        },
         {
           "id": "c",
           "text": "To draw graphics, on the fly, via scripting (usually JavaScript)"
         },
-        { "id": "d", "text": "To create input controls for forms" }
+        {
+          "id": "d",
+          "text": "To create input controls for forms"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "medium",
@@ -221,14 +371,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 19,
+      "id": "19",
       "category": "HTML",
       "question": "Which input type defines a slider control?",
       "options": [
-        { "id": "a", "text": "search" },
-        { "id": "b", "text": "range" },
-        { "id": "c", "text": "slider" },
-        { "id": "d", "text": "number" }
+        {
+          "id": "a",
+          "text": "search"
+        },
+        {
+          "id": "b",
+          "text": "range"
+        },
+        {
+          "id": "c",
+          "text": "slider"
+        },
+        {
+          "id": "d",
+          "text": "number"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "medium",
@@ -236,14 +398,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 21,
+      "id": "21",
       "category": "HTML",
       "question": "Which tag is used to define navigation links?",
       "options": [
-        { "id": "a", "text": "<navigate>" },
-        { "id": "b", "text": "<nav>" },
-        { "id": "c", "text": "<navigation>" },
-        { "id": "d", "text": "<links>" }
+        {
+          "id": "a",
+          "text": "<navigate>"
+        },
+        {
+          "id": "b",
+          "text": "<nav>"
+        },
+        {
+          "id": "c",
+          "text": "<navigation>"
+        },
+        {
+          "id": "d",
+          "text": "<links>"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "medium",
@@ -251,14 +425,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 59,
+      "id": "59",
       "category": "HTML",
       "question": "Which tag defines an ordered list?",
       "options": [
-        { "id": "a", "text": "<ul>" },
-        { "id": "b", "text": "<ol>" },
-        { "id": "c", "text": "<dl>" },
-        { "id": "d", "text": "<li>" }
+        {
+          "id": "a",
+          "text": "<ul>"
+        },
+        {
+          "id": "b",
+          "text": "<ol>"
+        },
+        {
+          "id": "c",
+          "text": "<dl>"
+        },
+        {
+          "id": "d",
+          "text": "<li>"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "medium",
@@ -266,14 +452,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 60,
+      "id": "60",
       "category": "HTML",
       "question": "Which attribute specifies the URL of the page the link goes to?",
       "options": [
-        { "id": "a", "text": "src" },
-        { "id": "b", "text": "link" },
-        { "id": "c", "text": "href" },
-        { "id": "d", "text": "url" }
+        {
+          "id": "a",
+          "text": "src"
+        },
+        {
+          "id": "b",
+          "text": "link"
+        },
+        {
+          "id": "c",
+          "text": "href"
+        },
+        {
+          "id": "d",
+          "text": "url"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "medium",
@@ -281,14 +479,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 61,
+      "id": "61",
       "category": "HTML",
       "question": "Which element is used to define important text?",
       "options": [
-        { "id": "a", "text": "<i>" },
-        { "id": "b", "text": "<important>" },
-        { "id": "c", "text": "<strong>" },
-        { "id": "d", "text": "<b>" }
+        {
+          "id": "a",
+          "text": "<i>"
+        },
+        {
+          "id": "b",
+          "text": "<important>"
+        },
+        {
+          "id": "c",
+          "text": "<strong>"
+        },
+        {
+          "id": "d",
+          "text": "<b>"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "medium",
@@ -296,14 +506,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 62,
+      "id": "62",
       "category": "HTML",
       "question": "Which element defines the title of a document?",
       "options": [
-        { "id": "a", "text": "<head>" },
-        { "id": "b", "text": "<meta>" },
-        { "id": "c", "text": "<title>" },
-        { "id": "d", "text": "<h1>" }
+        {
+          "id": "a",
+          "text": "<head>"
+        },
+        {
+          "id": "b",
+          "text": "<meta>"
+        },
+        {
+          "id": "c",
+          "text": "<title>"
+        },
+        {
+          "id": "d",
+          "text": "<h1>"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "medium",
@@ -311,14 +533,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 63,
+      "id": "63",
       "category": "HTML",
       "question": "Which HTML element represents self-contained content, like a blog post or news article?",
       "options": [
-        { "id": "a", "text": "<section>" },
-        { "id": "b", "text": "<div>" },
-        { "id": "c", "text": "<article>" },
-        { "id": "d", "text": "<aside>" }
+        {
+          "id": "a",
+          "text": "<section>"
+        },
+        {
+          "id": "b",
+          "text": "<div>"
+        },
+        {
+          "id": "c",
+          "text": "<article>"
+        },
+        {
+          "id": "d",
+          "text": "<aside>"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "medium",
@@ -326,14 +560,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 65,
+      "id": "65",
       "category": "HTML",
       "question": "Which element is used to embed video content?",
       "options": [
-        { "id": "a", "text": "<media>" },
-        { "id": "b", "text": "<video>" },
-        { "id": "c", "text": "<movie>" },
-        { "id": "d", "text": "<embed>" }
+        {
+          "id": "a",
+          "text": "<media>"
+        },
+        {
+          "id": "b",
+          "text": "<video>"
+        },
+        {
+          "id": "c",
+          "text": "<movie>"
+        },
+        {
+          "id": "d",
+          "text": "<embed>"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "medium",
@@ -341,17 +587,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 20,
+      "id": "20",
       "category": "HTML",
       "question": "What does the `DOCTYPE` declaration do?",
       "options": [
-        { "id": "a", "text": "It defines the character set for the document" },
-        { "id": "b", "text": "It links to an external stylesheet" },
+        {
+          "id": "a",
+          "text": "It defines the character set for the document"
+        },
+        {
+          "id": "b",
+          "text": "It links to an external stylesheet"
+        },
         {
           "id": "c",
           "text": "It informs the browser about the document type and version of HTML"
         },
-        { "id": "d", "text": "It creates a new document object" }
+        {
+          "id": "d",
+          "text": "It creates a new document object"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "hard",
@@ -359,7 +614,7 @@
       "type": "multiple-choice"
     },
     {
-      "id": 22,
+      "id": "22",
       "category": "HTML",
       "question": "What is the difference between `<strong>` and `<b>` tags?",
       "options": [
@@ -386,17 +641,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 64,
+      "id": "64",
       "category": "HTML",
       "question": "What is the purpose of the `data-*` attributes?",
       "options": [
-        { "id": "a", "text": "To style elements using CSS" },
+        {
+          "id": "a",
+          "text": "To style elements using CSS"
+        },
         {
           "id": "b",
           "text": "To store custom data private to the page or application"
         },
-        { "id": "c", "text": "To define the data type of an input field" },
-        { "id": "d", "text": "To link to external data sources" }
+        {
+          "id": "c",
+          "text": "To define the data type of an input field"
+        },
+        {
+          "id": "d",
+          "text": "To link to external data sources"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "hard",
@@ -404,17 +668,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 66,
+      "id": "66",
       "category": "HTML",
       "question": "What does the `<aside>` element represent?",
       "options": [
-        { "id": "a", "text": "The main content of the document" },
+        {
+          "id": "a",
+          "text": "The main content of the document"
+        },
         {
           "id": "b",
           "text": "Content tangentially related to the content around it (e.g., a sidebar)"
         },
-        { "id": "c", "text": "A section containing navigation links" },
-        { "id": "d", "text": "A self-contained article" }
+        {
+          "id": "c",
+          "text": "A section containing navigation links"
+        },
+        {
+          "id": "d",
+          "text": "A self-contained article"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "hard",
@@ -422,14 +695,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 67,
+      "id": "67",
       "category": "HTML",
       "question": "Which attribute is used to specify that an input field must be filled out?",
       "options": [
-        { "id": "a", "text": "placeholder" },
-        { "id": "b", "text": "validate" },
-        { "id": "c", "text": "required" },
-        { "id": "d", "text": "mandatory" }
+        {
+          "id": "a",
+          "text": "placeholder"
+        },
+        {
+          "id": "b",
+          "text": "validate"
+        },
+        {
+          "id": "c",
+          "text": "required"
+        },
+        {
+          "id": "d",
+          "text": "mandatory"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "hard",
@@ -437,17 +722,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 68,
+      "id": "68",
       "category": "HTML",
       "question": "What is the purpose of the `<figure>` element?",
       "options": [
-        { "id": "a", "text": "To define a mathematical figure" },
-        { "id": "b", "text": "To create a drawing canvas" },
+        {
+          "id": "a",
+          "text": "To define a mathematical figure"
+        },
+        {
+          "id": "b",
+          "text": "To create a drawing canvas"
+        },
         {
           "id": "c",
           "text": "To encapsulate self-contained content, like illustrations, diagrams, photos, code listings, etc., potentially with a caption (<figcaption>)"
         },
-        { "id": "d", "text": "To define a section of navigation links" }
+        {
+          "id": "d",
+          "text": "To define a section of navigation links"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "hard",
@@ -455,12 +749,18 @@
       "type": "multiple-choice"
     },
     {
-      "id": 69,
+      "id": "69",
       "category": "HTML",
       "question": "What is the difference between `<div>` and `<span>`?",
       "options": [
-        { "id": "a", "text": "Both are block-level elements" },
-        { "id": "b", "text": "Both are inline elements" },
+        {
+          "id": "a",
+          "text": "Both are block-level elements"
+        },
+        {
+          "id": "b",
+          "text": "Both are inline elements"
+        },
         {
           "id": "c",
           "text": "`<div>` is block-level, used for grouping larger sections; `<span>` is inline, used for smaller pieces of text or content within a block"
@@ -476,16 +776,22 @@
       "type": "multiple-choice"
     },
     {
-      "id": 70,
+      "id": "70",
       "category": "HTML",
       "question": "What is the purpose of the `rel=\"noopener\"` attribute on a link?",
       "options": [
-        { "id": "a", "text": "It prevents the linked page from opening" },
+        {
+          "id": "a",
+          "text": "It prevents the linked page from opening"
+        },
         {
           "id": "b",
           "text": "It improves security by preventing the opened page from gaining access to the originating page's `window` object when `target=\"_blank\"` is used"
         },
-        { "id": "c", "text": "It specifies the relationship is non-existent" },
+        {
+          "id": "c",
+          "text": "It specifies the relationship is non-existent"
+        },
         {
           "id": "d",
           "text": "It opens the link in a new, smaller popup window"
@@ -497,14 +803,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 71,
+      "id": "71",
       "category": "HTML",
       "question": "Which tag is used to define a description list?",
       "options": [
-        { "id": "a", "text": "<ul>" },
-        { "id": "b", "text": "<ol>" },
-        { "id": "c", "text": "<list>" },
-        { "id": "d", "text": "<dl>" }
+        {
+          "id": "a",
+          "text": "<ul>"
+        },
+        {
+          "id": "b",
+          "text": "<ol>"
+        },
+        {
+          "id": "c",
+          "text": "<list>"
+        },
+        {
+          "id": "d",
+          "text": "<dl>"
+        }
       ],
       "correctAnswerId": "d",
       "difficulty": "hard",
@@ -512,17 +830,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 72,
+      "id": "72",
       "category": "HTML",
       "question": "What is the purpose of the `<template>` tag?",
       "options": [
-        { "id": "a", "text": "To define a standard page layout" },
+        {
+          "id": "a",
+          "text": "To define a standard page layout"
+        },
         {
           "id": "b",
           "text": "To hold HTML content that is not rendered immediately but can be instantiated later using JavaScript"
         },
-        { "id": "c", "text": "To link to an external HTML template file" },
-        { "id": "d", "text": "To create reusable custom elements" }
+        {
+          "id": "c",
+          "text": "To link to an external HTML template file"
+        },
+        {
+          "id": "d",
+          "text": "To create reusable custom elements"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "hard",
@@ -530,14 +857,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 23,
+      "id": "23",
       "category": "CSS",
       "question": "What does CSS stand for?",
       "options": [
-        { "id": "a", "text": "Creative Style Sheets" },
-        { "id": "b", "text": "Computer Style Sheets" },
-        { "id": "c", "text": "Cascading Style Sheets" },
-        { "id": "d", "text": "Colorful Style Sheets" }
+        {
+          "id": "a",
+          "text": "Creative Style Sheets"
+        },
+        {
+          "id": "b",
+          "text": "Computer Style Sheets"
+        },
+        {
+          "id": "c",
+          "text": "Cascading Style Sheets"
+        },
+        {
+          "id": "d",
+          "text": "Colorful Style Sheets"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "easy",
@@ -545,14 +884,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 24,
+      "id": "24",
       "category": "CSS",
       "question": "Which HTML attribute is used to define inline styles?",
       "options": [
-        { "id": "a", "text": "class" },
-        { "id": "b", "text": "styles" },
-        { "id": "c", "text": "font" },
-        { "id": "d", "text": "style" }
+        {
+          "id": "a",
+          "text": "class"
+        },
+        {
+          "id": "b",
+          "text": "styles"
+        },
+        {
+          "id": "c",
+          "text": "font"
+        },
+        {
+          "id": "d",
+          "text": "style"
+        }
       ],
       "correctAnswerId": "d",
       "difficulty": "easy",
@@ -560,14 +911,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 25,
+      "id": "25",
       "category": "CSS",
       "question": "Which property is used to change the background color?",
       "options": [
-        { "id": "a", "text": "color" },
-        { "id": "b", "text": "bgcolor" },
-        { "id": "c", "text": "background-color" },
-        { "id": "d", "text": "background" }
+        {
+          "id": "a",
+          "text": "color"
+        },
+        {
+          "id": "b",
+          "text": "bgcolor"
+        },
+        {
+          "id": "c",
+          "text": "background-color"
+        },
+        {
+          "id": "d",
+          "text": "background"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "easy",
@@ -575,14 +938,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 26,
+      "id": "26",
       "category": "CSS",
       "question": "How do you select an element with id 'header'?",
       "options": [
-        { "id": "a", "text": ".header" },
-        { "id": "b", "text": "*header" },
-        { "id": "c", "text": "header" },
-        { "id": "d", "text": "#header" }
+        {
+          "id": "a",
+          "text": ".header"
+        },
+        {
+          "id": "b",
+          "text": "*header"
+        },
+        {
+          "id": "c",
+          "text": "header"
+        },
+        {
+          "id": "d",
+          "text": "#header"
+        }
       ],
       "correctAnswerId": "d",
       "difficulty": "easy",
@@ -590,14 +965,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 73,
+      "id": "73",
       "category": "CSS",
       "question": "How do you select elements with the class name 'example'?",
       "options": [
-        { "id": "a", "text": "#example" },
-        { "id": "b", "text": "example" },
-        { "id": "c", "text": ".example" },
-        { "id": "d", "text": "*example" }
+        {
+          "id": "a",
+          "text": "#example"
+        },
+        {
+          "id": "b",
+          "text": "example"
+        },
+        {
+          "id": "c",
+          "text": ".example"
+        },
+        {
+          "id": "d",
+          "text": "*example"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "easy",
@@ -605,14 +992,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 74,
+      "id": "74",
       "category": "CSS",
       "question": "Which property is used to change the text color of an element?",
       "options": [
-        { "id": "a", "text": "font-color" },
-        { "id": "b", "text": "text-color" },
-        { "id": "c", "text": "color" },
-        { "id": "d", "text": "text-style" }
+        {
+          "id": "a",
+          "text": "font-color"
+        },
+        {
+          "id": "b",
+          "text": "text-color"
+        },
+        {
+          "id": "c",
+          "text": "color"
+        },
+        {
+          "id": "d",
+          "text": "text-style"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "easy",
@@ -620,14 +1019,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 75,
+      "id": "75",
       "category": "CSS",
       "question": "Which property is used to change the font size of text?",
       "options": [
-        { "id": "a", "text": "text-size" },
-        { "id": "b", "text": "font-style" },
-        { "id": "c", "text": "font-size" },
-        { "id": "d", "text": "size" }
+        {
+          "id": "a",
+          "text": "text-size"
+        },
+        {
+          "id": "b",
+          "text": "font-style"
+        },
+        {
+          "id": "c",
+          "text": "font-size"
+        },
+        {
+          "id": "d",
+          "text": "size"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "easy",
@@ -635,14 +1046,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 76,
+      "id": "76",
       "category": "CSS",
       "question": "How do you make text bold?",
       "options": [
-        { "id": "a", "text": "font-style: bold;" },
-        { "id": "b", "text": "text-weight: bold;" },
-        { "id": "c", "text": "font-weight: bold;" },
-        { "id": "d", "text": "style: bold;" }
+        {
+          "id": "a",
+          "text": "font-style: bold;"
+        },
+        {
+          "id": "b",
+          "text": "text-weight: bold;"
+        },
+        {
+          "id": "c",
+          "text": "font-weight: bold;"
+        },
+        {
+          "id": "d",
+          "text": "style: bold;"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "easy",
@@ -650,14 +1073,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 77,
+      "id": "77",
       "category": "CSS",
       "question": "Which property controls the space outside the border of an element?",
       "options": [
-        { "id": "a", "text": "padding" },
-        { "id": "b", "text": "margin" },
-        { "id": "c", "text": "border-spacing" },
-        { "id": "d", "text": "outline-offset" }
+        {
+          "id": "a",
+          "text": "padding"
+        },
+        {
+          "id": "b",
+          "text": "margin"
+        },
+        {
+          "id": "c",
+          "text": "border-spacing"
+        },
+        {
+          "id": "d",
+          "text": "outline-offset"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "easy",
@@ -665,14 +1100,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 80,
+      "id": "80",
       "category": "CSS",
       "question": "How do you add a comment in a CSS file?",
       "options": [
-        { "id": "a", "text": "// This is a comment" },
-        { "id": "b", "text": "<!-- This is a comment -->" },
-        { "id": "c", "text": "/* This is a comment */" },
-        { "id": "d", "text": "' This is a comment" }
+        {
+          "id": "a",
+          "text": "// This is a comment"
+        },
+        {
+          "id": "b",
+          "text": "<!-- This is a comment -->"
+        },
+        {
+          "id": "c",
+          "text": "/* This is a comment */"
+        },
+        {
+          "id": "d",
+          "text": "' This is a comment"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "easy",
@@ -680,14 +1127,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 27,
+      "id": "27",
       "category": "CSS",
       "question": "Which property controls the space between the content and the border of an element?",
       "options": [
-        { "id": "a", "text": "margin" },
-        { "id": "b", "text": "padding" },
-        { "id": "c", "text": "border-spacing" },
-        { "id": "d", "text": "outline" }
+        {
+          "id": "a",
+          "text": "margin"
+        },
+        {
+          "id": "b",
+          "text": "padding"
+        },
+        {
+          "id": "c",
+          "text": "border-spacing"
+        },
+        {
+          "id": "d",
+          "text": "outline"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "medium",
@@ -695,14 +1154,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 28,
+      "id": "28",
       "category": "CSS",
       "question": "What does the `z-index` property control?",
       "options": [
-        { "id": "a", "text": "The zoom level of an element" },
-        { "id": "b", "text": "The stack order (depth) of positioned elements" },
-        { "id": "c", "text": "The horizontal alignment" },
-        { "id": "d", "text": "The text indentation" }
+        {
+          "id": "a",
+          "text": "The zoom level of an element"
+        },
+        {
+          "id": "b",
+          "text": "The stack order (depth) of positioned elements"
+        },
+        {
+          "id": "c",
+          "text": "The horizontal alignment"
+        },
+        {
+          "id": "d",
+          "text": "The text indentation"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "medium",
@@ -710,14 +1181,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 29,
+      "id": "29",
       "category": "CSS",
       "question": "Which value of the `display` property makes an element behave like an inline element but allows setting width and height?",
       "options": [
-        { "id": "a", "text": "block" },
-        { "id": "b", "text": "inline" },
-        { "id": "c", "text": "inline-block" },
-        { "id": "d", "text": "flex" }
+        {
+          "id": "a",
+          "text": "block"
+        },
+        {
+          "id": "b",
+          "text": "inline"
+        },
+        {
+          "id": "c",
+          "text": "inline-block"
+        },
+        {
+          "id": "d",
+          "text": "flex"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "medium",
@@ -725,14 +1208,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 32,
+      "id": "32",
       "category": "CSS",
       "question": "How do you center a block-level element (like a div) horizontally within its container?",
       "options": [
-        { "id": "a", "text": "text-align: center;" },
-        { "id": "b", "text": "margin: auto;" },
-        { "id": "c", "text": "padding: auto;" },
-        { "id": "d", "text": "align-items: center;" }
+        {
+          "id": "a",
+          "text": "text-align: center;"
+        },
+        {
+          "id": "b",
+          "text": "margin: auto;"
+        },
+        {
+          "id": "c",
+          "text": "padding: auto;"
+        },
+        {
+          "id": "d",
+          "text": "align-items: center;"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "medium",
@@ -740,14 +1235,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 78,
+      "id": "78",
       "category": "CSS",
       "question": "How do you apply a style to all `<p>` elements?",
       "options": [
-        { "id": "a", "text": "#p { ... }" },
-        { "id": "b", "text": ".p { ... }" },
-        { "id": "c", "text": "p { ... }" },
-        { "id": "d", "text": "*p { ... }" }
+        {
+          "id": "a",
+          "text": "#p { ... }"
+        },
+        {
+          "id": "b",
+          "text": ".p { ... }"
+        },
+        {
+          "id": "c",
+          "text": "p { ... }"
+        },
+        {
+          "id": "d",
+          "text": "*p { ... }"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "medium",
@@ -755,14 +1262,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 79,
+      "id": "79",
       "category": "CSS",
       "question": "Which property is used to set the background image of an element?",
       "options": [
-        { "id": "a", "text": "background-color" },
-        { "id": "b", "text": "image-src" },
-        { "id": "c", "text": "background-image" },
-        { "id": "d", "text": "bg-image" }
+        {
+          "id": "a",
+          "text": "background-color"
+        },
+        {
+          "id": "b",
+          "text": "image-src"
+        },
+        {
+          "id": "c",
+          "text": "background-image"
+        },
+        {
+          "id": "d",
+          "text": "bg-image"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "medium",
@@ -770,14 +1289,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 81,
+      "id": "81",
       "category": "CSS",
       "question": "Which property is used to control the alignment of text?",
       "options": [
-        { "id": "a", "text": "vertical-align" },
-        { "id": "b", "text": "align-text" },
-        { "id": "c", "text": "text-align" },
-        { "id": "d", "text": "horizontal-align" }
+        {
+          "id": "a",
+          "text": "vertical-align"
+        },
+        {
+          "id": "b",
+          "text": "align-text"
+        },
+        {
+          "id": "c",
+          "text": "text-align"
+        },
+        {
+          "id": "d",
+          "text": "horizontal-align"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "medium",
@@ -785,14 +1316,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 82,
+      "id": "82",
       "category": "CSS",
       "question": "Which value for the `position` property removes an element from the normal document flow and positions it relative to its nearest positioned ancestor?",
       "options": [
-        { "id": "a", "text": "static" },
-        { "id": "b", "text": "relative" },
-        { "id": "c", "text": "absolute" },
-        { "id": "d", "text": "fixed" }
+        {
+          "id": "a",
+          "text": "static"
+        },
+        {
+          "id": "b",
+          "text": "relative"
+        },
+        {
+          "id": "c",
+          "text": "absolute"
+        },
+        {
+          "id": "d",
+          "text": "fixed"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "medium",
@@ -800,14 +1343,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 83,
+      "id": "83",
       "category": "CSS",
       "question": "Which CSS pseudo-class selects an element that is currently being hovered over by the mouse pointer?",
       "options": [
-        { "id": "a", "text": ":active" },
-        { "id": "b", "text": ":focus" },
-        { "id": "c", "text": ":visited" },
-        { "id": "d", "text": ":hover" }
+        {
+          "id": "a",
+          "text": ":active"
+        },
+        {
+          "id": "b",
+          "text": ":focus"
+        },
+        {
+          "id": "c",
+          "text": ":visited"
+        },
+        {
+          "id": "d",
+          "text": ":hover"
+        }
       ],
       "correctAnswerId": "d",
       "difficulty": "medium",
@@ -815,14 +1370,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 84,
+      "id": "84",
       "category": "CSS",
       "question": "In the CSS Box Model, what is the correct order from innermost to outermost?",
       "options": [
-        { "id": "a", "text": "Margin, Border, Padding, Content" },
-        { "id": "b", "text": "Content, Padding, Border, Margin" },
-        { "id": "c", "text": "Content, Margin, Padding, Border" },
-        { "id": "d", "text": "Padding, Content, Border, Margin" }
+        {
+          "id": "a",
+          "text": "Margin, Border, Padding, Content"
+        },
+        {
+          "id": "b",
+          "text": "Content, Padding, Border, Margin"
+        },
+        {
+          "id": "c",
+          "text": "Content, Margin, Padding, Border"
+        },
+        {
+          "id": "d",
+          "text": "Padding, Content, Border, Margin"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "medium",
@@ -830,17 +1397,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 30,
+      "id": "30",
       "category": "CSS",
       "question": "What is CSS Specificity?",
       "options": [
-        { "id": "a", "text": "A measure of how fast CSS rules are applied" },
+        {
+          "id": "a",
+          "text": "A measure of how fast CSS rules are applied"
+        },
         {
           "id": "b",
           "text": "The algorithm browsers use to determine which CSS rule applies if multiple rules target the same element"
         },
-        { "id": "c", "text": "A way to specify styles for specific browsers" },
-        { "id": "d", "text": "The file size of a CSS document" }
+        {
+          "id": "c",
+          "text": "A way to specify styles for specific browsers"
+        },
+        {
+          "id": "d",
+          "text": "The file size of a CSS document"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "hard",
@@ -848,14 +1424,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 31,
+      "id": "31",
       "category": "CSS",
       "question": "Which CSS unit is relative to the font-size of the root element?",
       "options": [
-        { "id": "a", "text": "em" },
-        { "id": "b", "text": "px" },
-        { "id": "c", "text": "%" },
-        { "id": "d", "text": "rem" }
+        {
+          "id": "a",
+          "text": "em"
+        },
+        {
+          "id": "b",
+          "text": "px"
+        },
+        {
+          "id": "c",
+          "text": "%"
+        },
+        {
+          "id": "d",
+          "text": "rem"
+        }
       ],
       "correctAnswerId": "d",
       "difficulty": "hard",
@@ -863,14 +1451,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 85,
+      "id": "85",
       "category": "CSS",
       "question": "What does `display: flex;` do to an element?",
       "options": [
-        { "id": "a", "text": "Makes it an inline element" },
-        { "id": "b", "text": "Hides the element" },
-        { "id": "c", "text": "Enables Flexbox layout for its direct children" },
-        { "id": "d", "text": "Makes it absolutely positioned" }
+        {
+          "id": "a",
+          "text": "Makes it an inline element"
+        },
+        {
+          "id": "b",
+          "text": "Hides the element"
+        },
+        {
+          "id": "c",
+          "text": "Enables Flexbox layout for its direct children"
+        },
+        {
+          "id": "d",
+          "text": "Makes it absolutely positioned"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "hard",
@@ -878,14 +1478,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 86,
+      "id": "86",
       "category": "CSS",
       "question": "Which property is used to create rounded corners?",
       "options": [
-        { "id": "a", "text": "corner-radius" },
-        { "id": "b", "text": "border-round" },
-        { "id": "c", "text": "border-radius" },
-        { "id": "d", "text": "round-corners" }
+        {
+          "id": "a",
+          "text": "corner-radius"
+        },
+        {
+          "id": "b",
+          "text": "border-round"
+        },
+        {
+          "id": "c",
+          "text": "border-radius"
+        },
+        {
+          "id": "d",
+          "text": "round-corners"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "hard",
@@ -893,11 +1505,14 @@
       "type": "multiple-choice"
     },
     {
-      "id": 87,
+      "id": "87",
       "category": "CSS",
       "question": "What is the difference between `visibility: hidden;` and `display: none;`?",
       "options": [
-        { "id": "a", "text": "There is no difference." },
+        {
+          "id": "a",
+          "text": "There is no difference."
+        },
         {
           "id": "b",
           "text": "`visibility: hidden;` hides the element, but it still takes up space. `display: none;` removes the element entirely from the document flow."
@@ -917,14 +1532,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 88,
+      "id": "88",
       "category": "CSS",
       "question": "Which selector has the highest specificity: `div p`, `.content p`, `#main p`?",
       "options": [
-        { "id": "a", "text": "`div p`" },
-        { "id": "b", "text": "`.content p`" },
-        { "id": "c", "text": "`#main p`" },
-        { "id": "d", "text": "They have the same specificity" }
+        {
+          "id": "a",
+          "text": "`div p`"
+        },
+        {
+          "id": "b",
+          "text": "`.content p`"
+        },
+        {
+          "id": "c",
+          "text": "`#main p`"
+        },
+        {
+          "id": "d",
+          "text": "They have the same specificity"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "hard",
@@ -932,17 +1559,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 89,
+      "id": "89",
       "category": "CSS",
       "question": "What does the `!important` rule do in CSS?",
       "options": [
-        { "id": "a", "text": "Marks the style as important for documentation" },
-        { "id": "b", "text": "Imports another stylesheet" },
+        {
+          "id": "a",
+          "text": "Marks the style as important for documentation"
+        },
+        {
+          "id": "b",
+          "text": "Imports another stylesheet"
+        },
         {
           "id": "c",
           "text": "Overrides any other declarations for that property, regardless of specificity"
         },
-        { "id": "d", "text": "Applies the style only to `<p>` tags" }
+        {
+          "id": "d",
+          "text": "Applies the style only to `<p>` tags"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "hard",
@@ -950,14 +1586,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 90,
+      "id": "90",
       "category": "CSS",
       "question": "Consider the selectors: `p`, `.myClass`, `p.myClass`, `#myId`. Rank them from lowest to highest specificity.",
       "options": [
-        { "id": "a", "text": "`p`, `.myClass`, `p.myClass`, `#myId`" },
-        { "id": "b", "text": "`p`, `p.myClass`, `.myClass`, `#myId`" },
-        { "id": "c", "text": "`#myId`, `p.myClass`, `.myClass`, `p`" },
-        { "id": "d", "text": "`p`, `.myClass`, `#myId`, `p.myClass`" }
+        {
+          "id": "a",
+          "text": "`p`, `.myClass`, `p.myClass`, `#myId`"
+        },
+        {
+          "id": "b",
+          "text": "`p`, `p.myClass`, `.myClass`, `#myId`"
+        },
+        {
+          "id": "c",
+          "text": "`#myId`, `p.myClass`, `.myClass`, `p`"
+        },
+        {
+          "id": "d",
+          "text": "`p`, `.myClass`, `#myId`, `p.myClass`"
+        }
       ],
       "correctAnswerId": "a",
       "difficulty": "hard",
@@ -965,7 +1613,7 @@
       "type": "multiple-choice"
     },
     {
-      "id": 91,
+      "id": "91",
       "category": "CSS",
       "question": "What are CSS Custom Properties (Variables)?",
       "options": [
@@ -981,7 +1629,10 @@
           "id": "c",
           "text": "Browser-defined properties that cannot be changed"
         },
-        { "id": "d", "text": "Properties specific to certain CSS frameworks" }
+        {
+          "id": "d",
+          "text": "Properties specific to certain CSS frameworks"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "hard",
@@ -989,17 +1640,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 92,
+      "id": "92",
       "category": "CSS",
       "question": "What is the purpose of the `calc()` function in CSS?",
       "options": [
-        { "id": "a", "text": "To calculate the specificity of a selector" },
+        {
+          "id": "a",
+          "text": "To calculate the specificity of a selector"
+        },
         {
           "id": "b",
           "text": "To perform mathematical calculations on property values"
         },
-        { "id": "c", "text": "To trigger JavaScript calculations" },
-        { "id": "d", "text": "To define calculator-like interfaces" }
+        {
+          "id": "c",
+          "text": "To trigger JavaScript calculations"
+        },
+        {
+          "id": "d",
+          "text": "To define calculator-like interfaces"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "hard",
@@ -1007,14 +1667,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 33,
+      "id": "33",
       "category": "JavaScript",
       "question": "Inside which HTML element do we put the JavaScript?",
       "options": [
-        { "id": "a", "text": "<js>" },
-        { "id": "b", "text": "<javascript>" },
-        { "id": "c", "text": "<scripting>" },
-        { "id": "d", "text": "<script>" }
+        {
+          "id": "a",
+          "text": "<js>"
+        },
+        {
+          "id": "b",
+          "text": "<javascript>"
+        },
+        {
+          "id": "c",
+          "text": "<scripting>"
+        },
+        {
+          "id": "d",
+          "text": "<script>"
+        }
       ],
       "correctAnswerId": "d",
       "difficulty": "easy",
@@ -1022,14 +1694,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 34,
+      "id": "34",
       "category": "JavaScript",
       "question": "How do you write 'Hello World' in an alert box?",
       "options": [
-        { "id": "a", "text": "msg('Hello World');" },
-        { "id": "b", "text": "alertBox('Hello World');" },
-        { "id": "c", "text": "alert('Hello World');" },
-        { "id": "d", "text": "msgBox('Hello World');" }
+        {
+          "id": "a",
+          "text": "msg('Hello World');"
+        },
+        {
+          "id": "b",
+          "text": "alertBox('Hello World');"
+        },
+        {
+          "id": "c",
+          "text": "alert('Hello World');"
+        },
+        {
+          "id": "d",
+          "text": "msgBox('Hello World');"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "easy",
@@ -1037,14 +1721,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 35,
+      "id": "35",
       "category": "JavaScript",
       "question": "How do you create a function in JavaScript?",
       "options": [
-        { "id": "a", "text": "function:myFunction()" },
-        { "id": "b", "text": "function = myFunction()" },
-        { "id": "c", "text": "function myFunction()" },
-        { "id": "d", "text": "create function myFunction()" }
+        {
+          "id": "a",
+          "text": "function:myFunction()"
+        },
+        {
+          "id": "b",
+          "text": "function = myFunction()"
+        },
+        {
+          "id": "c",
+          "text": "function myFunction()"
+        },
+        {
+          "id": "d",
+          "text": "create function myFunction()"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "easy",
@@ -1052,14 +1748,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 36,
+      "id": "36",
       "category": "JavaScript",
       "question": "How do you call a function named 'myFunction'?",
       "options": [
-        { "id": "a", "text": "call function myFunction()" },
-        { "id": "b", "text": "call myFunction()" },
-        { "id": "c", "text": "myFunction()" },
-        { "id": "d", "text": "execute myFunction()" }
+        {
+          "id": "a",
+          "text": "call function myFunction()"
+        },
+        {
+          "id": "b",
+          "text": "call myFunction()"
+        },
+        {
+          "id": "c",
+          "text": "myFunction()"
+        },
+        {
+          "id": "d",
+          "text": "execute myFunction()"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "easy",
@@ -1067,14 +1775,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 37,
+      "id": "37",
       "category": "JavaScript",
       "question": "How can you add a comment in JavaScript?",
       "options": [
-        { "id": "a", "text": "'This is a comment" },
-        { "id": "b", "text": "<!--This is a comment-->" },
-        { "id": "c", "text": "// This is a comment" },
-        { "id": "d", "text": "** This is a comment **" }
+        {
+          "id": "a",
+          "text": "'This is a comment"
+        },
+        {
+          "id": "b",
+          "text": "<!--This is a comment-->"
+        },
+        {
+          "id": "c",
+          "text": "// This is a comment"
+        },
+        {
+          "id": "d",
+          "text": "** This is a comment **"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "easy",
@@ -1082,14 +1802,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 93,
+      "id": "93",
       "category": "JavaScript",
       "question": "Which keyword is used to declare a variable that can be reassigned?",
       "options": [
-        { "id": "a", "text": "const" },
-        { "id": "b", "text": "var" },
-        { "id": "c", "text": "let" },
-        { "id": "d", "text": "static" }
+        {
+          "id": "a",
+          "text": "const"
+        },
+        {
+          "id": "b",
+          "text": "var"
+        },
+        {
+          "id": "c",
+          "text": "let"
+        },
+        {
+          "id": "d",
+          "text": "static"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "easy",
@@ -1097,14 +1829,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 94,
+      "id": "94",
       "category": "JavaScript",
       "question": "What operator is used for assignment?",
       "options": [
-        { "id": "a", "text": "==" },
-        { "id": "b", "text": "=" },
-        { "id": "c", "text": "===" },
-        { "id": "d", "text": ":=" }
+        {
+          "id": "a",
+          "text": "=="
+        },
+        {
+          "id": "b",
+          "text": "="
+        },
+        {
+          "id": "c",
+          "text": "==="
+        },
+        {
+          "id": "d",
+          "text": ":="
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "easy",
@@ -1112,14 +1856,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 95,
+      "id": "95",
       "category": "JavaScript",
       "question": "How do you write an IF statement in JavaScript?",
       "options": [
-        { "id": "a", "text": "if i = 5 then" },
-        { "id": "b", "text": "if (i == 5)" },
-        { "id": "c", "text": "if i == 5" },
-        { "id": "d", "text": "if i = 5" }
+        {
+          "id": "a",
+          "text": "if i = 5 then"
+        },
+        {
+          "id": "b",
+          "text": "if (i == 5)"
+        },
+        {
+          "id": "c",
+          "text": "if i == 5"
+        },
+        {
+          "id": "d",
+          "text": "if i = 5"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "easy",
@@ -1127,14 +1883,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 98,
+      "id": "98",
       "category": "JavaScript",
       "question": "What is the result of `typeof \"Hello\"`?",
       "options": [
-        { "id": "a", "text": "\"string\"" },
-        { "id": "b", "text": "\"text\"" },
-        { "id": "c", "text": "\"String\"" },
-        { "id": "d", "text": "\"object\"" }
+        {
+          "id": "a",
+          "text": "\"string\""
+        },
+        {
+          "id": "b",
+          "text": "\"text\""
+        },
+        {
+          "id": "c",
+          "text": "\"String\""
+        },
+        {
+          "id": "d",
+          "text": "\"object\""
+        }
       ],
       "correctAnswerId": "a",
       "difficulty": "easy",
@@ -1142,14 +1910,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 99,
+      "id": "99",
       "category": "JavaScript",
       "question": "Which operator means 'not equal' (value only)?",
       "options": [
-        { "id": "a", "text": "<>" },
-        { "id": "b", "text": "!==" },
-        { "id": "c", "text": "!=" },
-        { "id": "d", "text": "!" }
+        {
+          "id": "a",
+          "text": "<>"
+        },
+        {
+          "id": "b",
+          "text": "!=="
+        },
+        {
+          "id": "c",
+          "text": "!="
+        },
+        {
+          "id": "d",
+          "text": "!"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "easy",
@@ -1157,14 +1937,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 38,
+      "id": "38",
       "category": "JavaScript",
       "question": "What is the correct way to write a JavaScript array?",
       "options": [
-        { "id": "a", "text": "var colors = (1:'red', 2:'green', 3:'blue')" },
-        { "id": "b", "text": "var colors = ['red', 'green', 'blue']" },
-        { "id": "c", "text": "var colors = 'red', 'green', 'blue'" },
-        { "id": "d", "text": "var colors = { 'red', 'green', 'blue' }" }
+        {
+          "id": "a",
+          "text": "var colors = (1:'red', 2:'green', 3:'blue')"
+        },
+        {
+          "id": "b",
+          "text": "var colors = ['red', 'green', 'blue']"
+        },
+        {
+          "id": "c",
+          "text": "var colors = 'red', 'green', 'blue'"
+        },
+        {
+          "id": "d",
+          "text": "var colors = { 'red', 'green', 'blue' }"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "medium",
@@ -1172,14 +1964,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 39,
+      "id": "39",
       "category": "JavaScript",
       "question": "Which event occurs when the user clicks on an HTML element?",
       "options": [
-        { "id": "a", "text": "onchange" },
-        { "id": "b", "text": "onmouseclick" },
-        { "id": "c", "text": "onmouseover" },
-        { "id": "d", "text": "onclick" }
+        {
+          "id": "a",
+          "text": "onchange"
+        },
+        {
+          "id": "b",
+          "text": "onmouseclick"
+        },
+        {
+          "id": "c",
+          "text": "onmouseover"
+        },
+        {
+          "id": "d",
+          "text": "onclick"
+        }
       ],
       "correctAnswerId": "d",
       "difficulty": "medium",
@@ -1187,17 +1991,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 40,
+      "id": "40",
       "category": "JavaScript",
       "question": "What does `JSON.stringify()` do?",
       "options": [
-        { "id": "a", "text": "Parses a JSON string into a JavaScript object" },
+        {
+          "id": "a",
+          "text": "Parses a JSON string into a JavaScript object"
+        },
         {
           "id": "b",
           "text": "Converts a JavaScript object or value into a JSON string"
         },
-        { "id": "c", "text": "Validates a JSON string" },
-        { "id": "d", "text": "Fetches data from a JSON file" }
+        {
+          "id": "c",
+          "text": "Validates a JSON string"
+        },
+        {
+          "id": "d",
+          "text": "Fetches data from a JSON file"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "medium",
@@ -1205,14 +2018,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 96,
+      "id": "96",
       "category": "JavaScript",
       "question": "How does a FOR loop start?",
       "options": [
-        { "id": "a", "text": "for (i = 0; i <= 5)" },
-        { "id": "b", "text": "for i = 1 to 5" },
-        { "id": "c", "text": "for (i <= 5; i++)" },
-        { "id": "d", "text": "for (let i = 0; i < 5; i++)" }
+        {
+          "id": "a",
+          "text": "for (i = 0; i <= 5)"
+        },
+        {
+          "id": "b",
+          "text": "for i = 1 to 5"
+        },
+        {
+          "id": "c",
+          "text": "for (i <= 5; i++)"
+        },
+        {
+          "id": "d",
+          "text": "for (let i = 0; i < 5; i++)"
+        }
       ],
       "correctAnswerId": "d",
       "difficulty": "medium",
@@ -1220,14 +2045,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 97,
+      "id": "97",
       "category": "JavaScript",
       "question": "How can you get the length of a string variable `txt`?",
       "options": [
-        { "id": "a", "text": "txt.length()" },
-        { "id": "b", "text": "length(txt)" },
-        { "id": "c", "text": "txt.length" },
-        { "id": "d", "text": "len(txt)" }
+        {
+          "id": "a",
+          "text": "txt.length()"
+        },
+        {
+          "id": "b",
+          "text": "length(txt)"
+        },
+        {
+          "id": "c",
+          "text": "txt.length"
+        },
+        {
+          "id": "d",
+          "text": "len(txt)"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "medium",
@@ -1235,14 +2072,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 100,
+      "id": "100",
       "category": "JavaScript",
       "question": "How do you round the number 7.25 to the nearest integer?",
       "options": [
-        { "id": "a", "text": "Math.rnd(7.25)" },
-        { "id": "b", "text": "round(7.25)" },
-        { "id": "c", "text": "Math.round(7.25)" },
-        { "id": "d", "text": "rnd(7.25)" }
+        {
+          "id": "a",
+          "text": "Math.rnd(7.25)"
+        },
+        {
+          "id": "b",
+          "text": "round(7.25)"
+        },
+        {
+          "id": "c",
+          "text": "Math.round(7.25)"
+        },
+        {
+          "id": "d",
+          "text": "rnd(7.25)"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "medium",
@@ -1250,14 +2099,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 101,
+      "id": "101",
       "category": "JavaScript",
       "question": "How do you declare a JavaScript object?",
       "options": [
-        { "id": "a", "text": "var car = {type:'Fiat', model:'500'};" },
-        { "id": "b", "text": "var car = (type:'Fiat', model:'500');" },
-        { "id": "c", "text": "var car = [type:'Fiat', model:'500'];" },
-        { "id": "d", "text": "var car = <type:'Fiat', model:'500'>;" }
+        {
+          "id": "a",
+          "text": "var car = {type:'Fiat', model:'500'};"
+        },
+        {
+          "id": "b",
+          "text": "var car = (type:'Fiat', model:'500');"
+        },
+        {
+          "id": "c",
+          "text": "var car = [type:'Fiat', model:'500'];"
+        },
+        {
+          "id": "d",
+          "text": "var car = <type:'Fiat', model:'500'>;"
+        }
       ],
       "correctAnswerId": "a",
       "difficulty": "medium",
@@ -1265,14 +2126,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 102,
+      "id": "102",
       "category": "JavaScript",
       "question": "Which built-in method returns the calling string value converted to upper case?",
       "options": [
-        { "id": "a", "text": "toUpperCase()" },
-        { "id": "b", "text": "toUpper()" },
-        { "id": "c", "text": "changeCase(upper)" },
-        { "id": "d", "text": "upperCase()" }
+        {
+          "id": "a",
+          "text": "toUpperCase()"
+        },
+        {
+          "id": "b",
+          "text": "toUpper()"
+        },
+        {
+          "id": "c",
+          "text": "changeCase(upper)"
+        },
+        {
+          "id": "d",
+          "text": "upperCase()"
+        }
       ],
       "correctAnswerId": "a",
       "difficulty": "medium",
@@ -1280,14 +2153,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 106,
+      "id": "106",
       "category": "JavaScript",
       "question": "How do you select an HTML element with the id 'myElement' using JavaScript?",
       "options": [
-        { "id": "a", "text": "document.select('#myElement')" },
-        { "id": "b", "text": "document.getElement('myElement')" },
-        { "id": "c", "text": "document.getElementById('myElement')" },
-        { "id": "d", "text": "document.querySelector('myElement')" }
+        {
+          "id": "a",
+          "text": "document.select('#myElement')"
+        },
+        {
+          "id": "b",
+          "text": "document.getElement('myElement')"
+        },
+        {
+          "id": "c",
+          "text": "document.getElementById('myElement')"
+        },
+        {
+          "id": "d",
+          "text": "document.querySelector('myElement')"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "medium",
@@ -1295,7 +2180,7 @@
       "type": "multiple-choice"
     },
     {
-      "id": 107,
+      "id": "107",
       "category": "JavaScript",
       "question": "What does `JSON.parse()` do?",
       "options": [
@@ -1303,9 +2188,18 @@
           "id": "a",
           "text": "Converts a JavaScript object or value into a JSON string"
         },
-        { "id": "b", "text": "Parses a JSON string into a JavaScript object" },
-        { "id": "c", "text": "Stringifies a JSON object" },
-        { "id": "d", "text": "Validates a JavaScript object" }
+        {
+          "id": "b",
+          "text": "Parses a JSON string into a JavaScript object"
+        },
+        {
+          "id": "c",
+          "text": "Stringifies a JSON object"
+        },
+        {
+          "id": "d",
+          "text": "Validates a JavaScript object"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "medium",
@@ -1313,17 +2207,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 41,
+      "id": "41",
       "category": "JavaScript",
       "question": "What is a 'closure' in JavaScript?",
       "options": [
-        { "id": "a", "text": "A way to close the browser window" },
-        { "id": "b", "text": "A syntax error that closes the script" },
+        {
+          "id": "a",
+          "text": "A way to close the browser window"
+        },
+        {
+          "id": "b",
+          "text": "A syntax error that closes the script"
+        },
         {
           "id": "c",
           "text": "A function having access to the parent scope, even after the parent function has closed"
         },
-        { "id": "d", "text": "The final statement in a function" }
+        {
+          "id": "d",
+          "text": "The final statement in a function"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "hard",
@@ -1331,17 +2234,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 42,
+      "id": "42",
       "category": "JavaScript",
       "question": "What is the purpose of `async` and `await` keywords?",
       "options": [
-        { "id": "a", "text": "To define synchronous functions" },
-        { "id": "b", "text": "To handle errors in code" },
+        {
+          "id": "a",
+          "text": "To define synchronous functions"
+        },
+        {
+          "id": "b",
+          "text": "To handle errors in code"
+        },
         {
           "id": "c",
           "text": "To write asynchronous code in a more synchronous-looking fashion, handling Promises"
         },
-        { "id": "d", "text": "To declare variables that change asynchronously" }
+        {
+          "id": "d",
+          "text": "To declare variables that change asynchronously"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "hard",
@@ -1349,14 +2261,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 103,
+      "id": "103",
       "category": "JavaScript",
       "question": "Which array method creates a new array populated with the results of calling a provided function on every element?",
       "options": [
-        { "id": "a", "text": ".forEach()" },
-        { "id": "b", "text": ".map()" },
-        { "id": "c", "text": ".filter()" },
-        { "id": "d", "text": ".reduce()" }
+        {
+          "id": "a",
+          "text": ".forEach()"
+        },
+        {
+          "id": "b",
+          "text": ".map()"
+        },
+        {
+          "id": "c",
+          "text": ".filter()"
+        },
+        {
+          "id": "d",
+          "text": ".reduce()"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "hard",
@@ -1364,14 +2288,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 104,
+      "id": "104",
       "category": "JavaScript",
       "question": "Which array method creates a new array with all elements that pass the test implemented by the provided function?",
       "options": [
-        { "id": "a", "text": ".map()" },
-        { "id": "b", "text": ".forEach()" },
-        { "id": "c", "text": ".filter()" },
-        { "id": "d", "text": ".reduce()" }
+        {
+          "id": "a",
+          "text": ".map()"
+        },
+        {
+          "id": "b",
+          "text": ".forEach()"
+        },
+        {
+          "id": "c",
+          "text": ".filter()"
+        },
+        {
+          "id": "d",
+          "text": ".reduce()"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "hard",
@@ -1379,14 +2315,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 105,
+      "id": "105",
       "category": "JavaScript",
       "question": "Which array method executes a reducer function on each element of the array, resulting in a single output value?",
       "options": [
-        { "id": "a", "text": ".map()" },
-        { "id": "b", "text": ".filter()" },
-        { "id": "c", "text": ".forEach()" },
-        { "id": "d", "text": ".reduce()" }
+        {
+          "id": "a",
+          "text": ".map()"
+        },
+        {
+          "id": "b",
+          "text": ".filter()"
+        },
+        {
+          "id": "c",
+          "text": ".forEach()"
+        },
+        {
+          "id": "d",
+          "text": ".reduce()"
+        }
       ],
       "correctAnswerId": "d",
       "difficulty": "hard",
@@ -1394,11 +2342,14 @@
       "type": "multiple-choice"
     },
     {
-      "id": 108,
+      "id": "108",
       "category": "JavaScript",
       "question": "What is the difference between `==` and `===`?",
       "options": [
-        { "id": "a", "text": "They are identical." },
+        {
+          "id": "a",
+          "text": "They are identical."
+        },
         {
           "id": "b",
           "text": "`==` checks for value equality with type coercion, `===` checks for value and type equality without coercion."
@@ -1407,7 +2358,10 @@
           "id": "c",
           "text": "`===` checks for value equality with type coercion, `==` checks for value and type equality without coercion."
         },
-        { "id": "d", "text": "`==` is for numbers, `===` is for strings." }
+        {
+          "id": "d",
+          "text": "`==` is for numbers, `===` is for strings."
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "hard",
@@ -1415,11 +2369,14 @@
       "type": "multiple-choice"
     },
     {
-      "id": 109,
+      "id": "109",
       "category": "JavaScript",
       "question": "What is prototypal inheritance?",
       "options": [
-        { "id": "a", "text": "A way to create private variables" },
+        {
+          "id": "a",
+          "text": "A way to create private variables"
+        },
         {
           "id": "b",
           "text": "A feature where objects can inherit properties and methods from other objects (their prototype)"
@@ -1439,17 +2396,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 110,
+      "id": "110",
       "category": "JavaScript",
       "question": "What is the Event Loop?",
       "options": [
-        { "id": "a", "text": "A `for` loop used for handling events" },
-        { "id": "b", "text": "A browser API for looping animations" },
+        {
+          "id": "a",
+          "text": "A `for` loop used for handling events"
+        },
+        {
+          "id": "b",
+          "text": "A browser API for looping animations"
+        },
         {
           "id": "c",
           "text": "A mechanism in JavaScript runtime that handles execution of code, collects and processes events, and executes queued sub-tasks (like Promises and callbacks)"
         },
-        { "id": "d", "text": "A way to iterate over event listeners" }
+        {
+          "id": "d",
+          "text": "A way to iterate over event listeners"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "hard",
@@ -1457,14 +2423,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 111,
+      "id": "111",
       "category": "JavaScript",
       "question": "What does the `this` keyword refer to in a standard function call (not an arrow function) inside an object method?",
       "options": [
-        { "id": "a", "text": "The global window object" },
-        { "id": "b", "text": "The function itself" },
-        { "id": "c", "text": "The object that the method was called on" },
-        { "id": "d", "text": "`undefined` in strict mode" }
+        {
+          "id": "a",
+          "text": "The global window object"
+        },
+        {
+          "id": "b",
+          "text": "The function itself"
+        },
+        {
+          "id": "c",
+          "text": "The object that the method was called on"
+        },
+        {
+          "id": "d",
+          "text": "`undefined` in strict mode"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "hard",
@@ -1472,7 +2450,7 @@
       "type": "multiple-choice"
     },
     {
-      "id": 112,
+      "id": "112",
       "category": "JavaScript",
       "question": "What is a Promise in JavaScript?",
       "options": [
@@ -1480,12 +2458,18 @@
           "id": "a",
           "text": "A guarantee that a function will execute without errors"
         },
-        { "id": "b", "text": "A syntax for declaring asynchronous functions" },
+        {
+          "id": "b",
+          "text": "A syntax for declaring asynchronous functions"
+        },
         {
           "id": "c",
           "text": "An object representing the eventual completion (or failure) of an asynchronous operation and its resulting value"
         },
-        { "id": "d", "text": "A way to store callback functions" }
+        {
+          "id": "d",
+          "text": "A way to store callback functions"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "hard",
@@ -1493,14 +2477,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 43,
+      "id": "43",
       "category": "React",
       "question": "What is React primarily used for?",
       "options": [
-        { "id": "a", "text": "Server-side scripting" },
-        { "id": "b", "text": "Database management" },
-        { "id": "c", "text": "Building user interfaces" },
-        { "id": "d", "text": "Machine learning" }
+        {
+          "id": "a",
+          "text": "Server-side scripting"
+        },
+        {
+          "id": "b",
+          "text": "Database management"
+        },
+        {
+          "id": "c",
+          "text": "Building user interfaces"
+        },
+        {
+          "id": "d",
+          "text": "Machine learning"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "easy",
@@ -1508,17 +2504,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 44,
+      "id": "44",
       "category": "React",
       "question": "What is JSX?",
       "options": [
-        { "id": "a", "text": "A JavaScript data format" },
-        { "id": "b", "text": "A CSS preprocessor" },
+        {
+          "id": "a",
+          "text": "A JavaScript data format"
+        },
+        {
+          "id": "b",
+          "text": "A CSS preprocessor"
+        },
         {
           "id": "c",
           "text": "A syntax extension for JavaScript, often used with React to describe UI structure"
         },
-        { "id": "d", "text": "A type of React component" }
+        {
+          "id": "d",
+          "text": "A type of React component"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "easy",
@@ -1526,14 +2531,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 45,
+      "id": "45",
       "category": "React",
       "question": "How do you pass data from a parent component to a child component?",
       "options": [
-        { "id": "a", "text": "Using state" },
-        { "id": "b", "text": "Using props" },
-        { "id": "c", "text": "Using context" },
-        { "id": "d", "text": "Using refs" }
+        {
+          "id": "a",
+          "text": "Using state"
+        },
+        {
+          "id": "b",
+          "text": "Using props"
+        },
+        {
+          "id": "c",
+          "text": "Using context"
+        },
+        {
+          "id": "d",
+          "text": "Using refs"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "easy",
@@ -1541,14 +2558,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 46,
+      "id": "46",
       "category": "React",
       "question": "Which hook would you use to add state to a functional component?",
       "options": [
-        { "id": "a", "text": "useEffect" },
-        { "id": "b", "text": "useContext" },
-        { "id": "c", "text": "useState" },
-        { "id": "d", "text": "useReducer" }
+        {
+          "id": "a",
+          "text": "useEffect"
+        },
+        {
+          "id": "b",
+          "text": "useContext"
+        },
+        {
+          "id": "c",
+          "text": "useState"
+        },
+        {
+          "id": "d",
+          "text": "useReducer"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "easy",
@@ -1556,14 +2585,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 113,
+      "id": "113",
       "category": "React",
       "question": "What is a common way to create a React component?",
       "options": [
-        { "id": "a", "text": "Using a JavaScript object" },
-        { "id": "b", "text": "Using an HTML template" },
-        { "id": "c", "text": "Using a JavaScript function or class" },
-        { "id": "d", "text": "Using a CSS class" }
+        {
+          "id": "a",
+          "text": "Using a JavaScript object"
+        },
+        {
+          "id": "b",
+          "text": "Using an HTML template"
+        },
+        {
+          "id": "c",
+          "text": "Using a JavaScript function or class"
+        },
+        {
+          "id": "d",
+          "text": "Using a CSS class"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "easy",
@@ -1571,14 +2612,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 114,
+      "id": "114",
       "category": "React",
       "question": "In React, what do you call the syntax that looks like HTML within JavaScript?",
       "options": [
-        { "id": "a", "text": "HTMLScript" },
-        { "id": "b", "text": "JSX" },
-        { "id": "c", "text": "ReactHTML" },
-        { "id": "d", "text": "ScriptX" }
+        {
+          "id": "a",
+          "text": "HTMLScript"
+        },
+        {
+          "id": "b",
+          "text": "JSX"
+        },
+        {
+          "id": "c",
+          "text": "ReactHTML"
+        },
+        {
+          "id": "d",
+          "text": "ScriptX"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "easy",
@@ -1586,17 +2639,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 115,
+      "id": "115",
       "category": "React",
       "question": "How do you render a React element into the DOM?",
       "options": [
-        { "id": "a", "text": "React.render()" },
+        {
+          "id": "a",
+          "text": "React.render()"
+        },
         {
           "id": "b",
           "text": "ReactDOM.render() (Legacy) or createRoot().render() (React 18+)"
         },
-        { "id": "c", "text": "Component.render()" },
-        { "id": "d", "text": "DOM.renderElement()" }
+        {
+          "id": "c",
+          "text": "Component.render()"
+        },
+        {
+          "id": "d",
+          "text": "DOM.renderElement()"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "easy",
@@ -1604,14 +2666,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 116,
+      "id": "116",
       "category": "React",
       "question": "What is used to pass data to a component from outside?",
       "options": [
-        { "id": "a", "text": "state" },
-        { "id": "b", "text": "props" },
-        { "id": "c", "text": "setState" },
-        { "id": "d", "text": "arguments" }
+        {
+          "id": "a",
+          "text": "state"
+        },
+        {
+          "id": "b",
+          "text": "props"
+        },
+        {
+          "id": "c",
+          "text": "setState"
+        },
+        {
+          "id": "d",
+          "text": "arguments"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "easy",
@@ -1619,12 +2693,18 @@
       "type": "multiple-choice"
     },
     {
-      "id": 118,
+      "id": "118",
       "category": "React",
       "question": "What does `useState` return?",
       "options": [
-        { "id": "a", "text": "Just the state value" },
-        { "id": "b", "text": "Just the function to update the state" },
+        {
+          "id": "a",
+          "text": "Just the state value"
+        },
+        {
+          "id": "b",
+          "text": "Just the function to update the state"
+        },
         {
           "id": "c",
           "text": "An array with the current state value and a function to update it"
@@ -1640,17 +2720,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 120,
+      "id": "120",
       "category": "React",
       "question": "What is the main function of a React component?",
       "options": [
-        { "id": "a", "text": "To fetch data from an API" },
-        { "id": "b", "text": "To manage application state globally" },
+        {
+          "id": "a",
+          "text": "To fetch data from an API"
+        },
+        {
+          "id": "b",
+          "text": "To manage application state globally"
+        },
         {
           "id": "c",
           "text": "To return React elements describing a UI segment"
         },
-        { "id": "d", "text": "To directly manipulate the DOM" }
+        {
+          "id": "d",
+          "text": "To directly manipulate the DOM"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "easy",
@@ -1658,17 +2747,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 47,
+      "id": "47",
       "category": "React",
       "question": "What is the purpose of the `useEffect` hook?",
       "options": [
-        { "id": "a", "text": "To manage component state" },
+        {
+          "id": "a",
+          "text": "To manage component state"
+        },
         {
           "id": "b",
           "text": "To perform side effects in functional components (e.g., data fetching, subscriptions)"
         },
-        { "id": "c", "text": "To pass data between components" },
-        { "id": "d", "text": "To define the component's structure" }
+        {
+          "id": "c",
+          "text": "To pass data between components"
+        },
+        {
+          "id": "d",
+          "text": "To define the component's structure"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "medium",
@@ -1676,14 +2774,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 48,
+      "id": "48",
       "category": "React",
       "question": "How do you render a list of items in React?",
       "options": [
-        { "id": "a", "text": "Using a `for` loop directly inside JSX" },
-        { "id": "b", "text": "Using the `.map()` array method inside JSX" },
-        { "id": "c", "text": "Using the `<list>` component" },
-        { "id": "d", "text": "Using `forEach` inside JSX" }
+        {
+          "id": "a",
+          "text": "Using a `for` loop directly inside JSX"
+        },
+        {
+          "id": "b",
+          "text": "Using the `.map()` array method inside JSX"
+        },
+        {
+          "id": "c",
+          "text": "Using the `<list>` component"
+        },
+        {
+          "id": "d",
+          "text": "Using `forEach` inside JSX"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "medium",
@@ -1691,14 +2801,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 49,
+      "id": "49",
       "category": "React",
       "question": "What is required for each item when rendering a list using `.map()`?",
       "options": [
-        { "id": "a", "text": "A unique `id` attribute" },
-        { "id": "b", "text": "A unique `key` prop" },
-        { "id": "c", "text": "A `className` prop" },
-        { "id": "d", "text": "An `index` prop" }
+        {
+          "id": "a",
+          "text": "A unique `id` attribute"
+        },
+        {
+          "id": "b",
+          "text": "A unique `key` prop"
+        },
+        {
+          "id": "c",
+          "text": "A `className` prop"
+        },
+        {
+          "id": "d",
+          "text": "An `index` prop"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "medium",
@@ -1706,7 +2828,7 @@
       "type": "multiple-choice"
     },
     {
-      "id": 50,
+      "id": "50",
       "category": "React",
       "question": "What is the difference between state and props?",
       "options": [
@@ -1718,8 +2840,14 @@
           "id": "b",
           "text": "State is managed within the component, props are passed from the parent"
         },
-        { "id": "c", "text": "Both are managed within the component" },
-        { "id": "d", "text": "Both are passed from the parent" }
+        {
+          "id": "c",
+          "text": "Both are managed within the component"
+        },
+        {
+          "id": "d",
+          "text": "Both are passed from the parent"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "medium",
@@ -1727,14 +2855,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 117,
+      "id": "117",
       "category": "React",
       "question": "In JSX, how do you embed a JavaScript expression?",
       "options": [
-        { "id": "a", "text": "Using double quotes: \"{expression}\"" },
-        { "id": "b", "text": "Using square brackets: [expression]" },
-        { "id": "c", "text": "Using curly braces: {expression}" },
-        { "id": "d", "text": "Using parentheses: (expression)" }
+        {
+          "id": "a",
+          "text": "Using double quotes: \"{expression}\""
+        },
+        {
+          "id": "b",
+          "text": "Using square brackets: [expression]"
+        },
+        {
+          "id": "c",
+          "text": "Using curly braces: {expression}"
+        },
+        {
+          "id": "d",
+          "text": "Using parentheses: (expression)"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "medium",
@@ -1742,14 +2882,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 119,
+      "id": "119",
       "category": "React",
       "question": "How do you apply a CSS class to a JSX element?",
       "options": [
-        { "id": "a", "text": "class=\"my-class\"" },
-        { "id": "b", "text": "cssClass=\"my-class\"" },
-        { "id": "c", "text": "className=\"my-class\"" },
-        { "id": "d", "text": "styleClass=\"my-class\"" }
+        {
+          "id": "a",
+          "text": "class=\"my-class\""
+        },
+        {
+          "id": "b",
+          "text": "cssClass=\"my-class\""
+        },
+        {
+          "id": "c",
+          "text": "className=\"my-class\""
+        },
+        {
+          "id": "d",
+          "text": "styleClass=\"my-class\""
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "medium",
@@ -1757,14 +2909,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 121,
+      "id": "121",
       "category": "React",
       "question": "How do you write comments inside JSX?",
       "options": [
-        { "id": "a", "text": "// comment" },
-        { "id": "b", "text": "<!-- comment -->" },
-        { "id": "c", "text": "{/* comment */}" },
-        { "id": "d", "text": "/* comment */" }
+        {
+          "id": "a",
+          "text": "// comment"
+        },
+        {
+          "id": "b",
+          "text": "<!-- comment -->"
+        },
+        {
+          "id": "c",
+          "text": "{/* comment */}"
+        },
+        {
+          "id": "d",
+          "text": "/* comment */"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "medium",
@@ -1772,14 +2936,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 122,
+      "id": "122",
       "category": "React",
       "question": "What must functional component names start with?",
       "options": [
-        { "id": "a", "text": "A lowercase letter" },
-        { "id": "b", "text": "An underscore" },
-        { "id": "c", "text": "An uppercase letter" },
-        { "id": "d", "text": "A dollar sign" }
+        {
+          "id": "a",
+          "text": "A lowercase letter"
+        },
+        {
+          "id": "b",
+          "text": "An underscore"
+        },
+        {
+          "id": "c",
+          "text": "An uppercase letter"
+        },
+        {
+          "id": "d",
+          "text": "A dollar sign"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "medium",
@@ -1787,7 +2963,7 @@
       "type": "multiple-choice"
     },
     {
-      "id": 123,
+      "id": "123",
       "category": "React",
       "question": "How do you handle events (like clicks) in React?",
       "options": [
@@ -1803,7 +2979,10 @@
           "id": "c",
           "text": "Using `addEventListener` directly on the component"
         },
-        { "id": "d", "text": "Using the `handleEvent` prop" }
+        {
+          "id": "d",
+          "text": "Using the `handleEvent` prop"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "medium",
@@ -1811,17 +2990,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 124,
+      "id": "124",
       "category": "React",
       "question": "What is the second argument passed to `useEffect` used for?",
       "options": [
-        { "id": "a", "text": "The initial state value" },
-        { "id": "b", "text": "A cleanup function" },
+        {
+          "id": "a",
+          "text": "The initial state value"
+        },
+        {
+          "id": "b",
+          "text": "A cleanup function"
+        },
         {
           "id": "c",
           "text": "A dependency array to control when the effect runs"
         },
-        { "id": "d", "text": "The component's props" }
+        {
+          "id": "d",
+          "text": "The component's props"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "medium",
@@ -1829,17 +3017,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 51,
+      "id": "51",
       "category": "React",
       "question": "What problem does the `useContext` hook solve?",
       "options": [
-        { "id": "a", "text": "Managing local component state" },
-        { "id": "b", "text": "Performing side effects" },
+        {
+          "id": "a",
+          "text": "Managing local component state"
+        },
+        {
+          "id": "b",
+          "text": "Performing side effects"
+        },
         {
           "id": "c",
           "text": "Avoiding 'prop drilling' by allowing components to consume data from a context provider"
         },
-        { "id": "d", "text": "Memoizing expensive calculations" }
+        {
+          "id": "d",
+          "text": "Memoizing expensive calculations"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "hard",
@@ -1847,7 +3044,7 @@
       "type": "multiple-choice"
     },
     {
-      "id": 52,
+      "id": "52",
       "category": "React",
       "question": "What is the Virtual DOM?",
       "options": [
@@ -1874,16 +3071,22 @@
       "type": "multiple-choice"
     },
     {
-      "id": 125,
+      "id": "125",
       "category": "React",
       "question": "How can you conditionally render a component or JSX?",
       "options": [
-        { "id": "a", "text": "Using CSS `display: none` only" },
+        {
+          "id": "a",
+          "text": "Using CSS `display: none` only"
+        },
         {
           "id": "b",
           "text": "Using JavaScript operators like `if/else`, ternary (`? :`), or logical AND (`&&`) within the component's return"
         },
-        { "id": "c", "text": "Using a special `<conditional>` tag" },
+        {
+          "id": "c",
+          "text": "Using a special `<conditional>` tag"
+        },
         {
           "id": "d",
           "text": "React automatically handles conditional rendering"
@@ -1895,17 +3098,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 126,
+      "id": "126",
       "category": "React",
       "question": "What is the purpose of a React Fragment (`<>...</>` or `<Fragment>...</Fragment>`)?",
       "options": [
-        { "id": "a", "text": "To add extra styling" },
+        {
+          "id": "a",
+          "text": "To add extra styling"
+        },
         {
           "id": "b",
           "text": "To group multiple elements without adding an extra node to the DOM"
         },
-        { "id": "c", "text": "To create a reusable component" },
-        { "id": "d", "text": "To handle component state" }
+        {
+          "id": "c",
+          "text": "To create a reusable component"
+        },
+        {
+          "id": "d",
+          "text": "To handle component state"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "hard",
@@ -1913,14 +3125,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 127,
+      "id": "127",
       "category": "React",
       "question": "In a class component, which lifecycle method is invoked immediately after a component is mounted (inserted into the tree)?",
       "options": [
-        { "id": "a", "text": "render()" },
-        { "id": "b", "text": "constructor()" },
-        { "id": "c", "text": "componentDidMount()" },
-        { "id": "d", "text": "componentWillMount() (Deprecated)" }
+        {
+          "id": "a",
+          "text": "render()"
+        },
+        {
+          "id": "b",
+          "text": "constructor()"
+        },
+        {
+          "id": "c",
+          "text": "componentDidMount()"
+        },
+        {
+          "id": "d",
+          "text": "componentWillMount() (Deprecated)"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "hard",
@@ -1928,11 +3152,14 @@
       "type": "multiple-choice"
     },
     {
-      "id": 128,
+      "id": "128",
       "category": "React",
       "question": "What is a Higher-Order Component (HOC)?",
       "options": [
-        { "id": "a", "text": "A component with more complex state logic" },
+        {
+          "id": "a",
+          "text": "A component with more complex state logic"
+        },
         {
           "id": "b",
           "text": "A component rendered at the top level of the application"
@@ -1941,7 +3168,10 @@
           "id": "c",
           "text": "A function that takes a component and returns a new component, often used for reusing component logic"
         },
-        { "id": "d", "text": "A built-in React component like `<Fragment>`" }
+        {
+          "id": "d",
+          "text": "A built-in React component like `<Fragment>`"
+        }
       ],
       "correctAnswerId": "c",
       "difficulty": "hard",
@@ -1949,12 +3179,18 @@
       "type": "multiple-choice"
     },
     {
-      "id": 129,
+      "id": "129",
       "category": "React",
       "question": "What is the purpose of the `useRef` hook?",
       "options": [
-        { "id": "a", "text": "To manage component state like `useState`" },
-        { "id": "b", "text": "To perform side effects like `useEffect`" },
+        {
+          "id": "a",
+          "text": "To manage component state like `useState`"
+        },
+        {
+          "id": "b",
+          "text": "To perform side effects like `useEffect`"
+        },
         {
           "id": "c",
           "text": "To get a mutable ref object whose `.current` property can hold a value or reference a DOM element, persisting across renders without causing re-renders"
@@ -1970,7 +3206,7 @@
       "type": "multiple-choice"
     },
     {
-      "id": 130,
+      "id": "130",
       "category": "React",
       "question": "What is 'prop drilling' and how can it be avoided?",
       "options": [
@@ -1997,17 +3233,26 @@
       "type": "multiple-choice"
     },
     {
-      "id": 131,
+      "id": "131",
       "category": "React",
       "question": "What is the purpose of `React.memo`?",
       "options": [
-        { "id": "a", "text": "To memorize API calls" },
+        {
+          "id": "a",
+          "text": "To memorize API calls"
+        },
         {
           "id": "b",
           "text": "A HOC that memoizes a functional component, preventing re-renders if its props haven't changed"
         },
-        { "id": "c", "text": "To create memo pads within a React app" },
-        { "id": "d", "text": "To manage component memory usage" }
+        {
+          "id": "c",
+          "text": "To create memo pads within a React app"
+        },
+        {
+          "id": "d",
+          "text": "To manage component memory usage"
+        }
       ],
       "correctAnswerId": "b",
       "difficulty": "hard",
@@ -2015,12 +3260,18 @@
       "type": "multiple-choice"
     },
     {
-      "id": 132,
+      "id": "132",
       "category": "React",
       "question": "What are Render Props?",
       "options": [
-        { "id": "a", "text": "Props used specifically in the render method" },
-        { "id": "b", "text": "A way to pass JSX elements as props" },
+        {
+          "id": "a",
+          "text": "Props used specifically in the render method"
+        },
+        {
+          "id": "b",
+          "text": "A way to pass JSX elements as props"
+        },
         {
           "id": "c",
           "text": "A technique for sharing code between components using a prop whose value is a function that returns a React element"
@@ -2041,9 +3292,9 @@
       "id": "html_easy",
       "category": "html",
       "difficultySetting": "easy",
-      "userName": "Rei Koka",
-      "score": 140,
-      "time": 31,
+      "userName": "ReiKoka",
+      "score": 160,
+      "time": 40,
       "date": "2023-10-27T10:30:00.000Z"
     },
     {
@@ -2051,8 +3302,8 @@
       "category": "css",
       "difficultySetting": "easy",
       "userName": "ReiKoka",
-      "score": 40,
-      "time": 10
+      "score": 160,
+      "time": 78
     },
     {
       "id": "html_all",
@@ -2074,6 +3325,36 @@
       "maxPossiblePoints": 140,
       "totalTimeTaken": 31,
       "date": "2025-04-02T12:26:20.986Z"
+    },
+    {
+      "id": "26e7",
+      "category": "HTML",
+      "difficultySetting": "easy",
+      "userName": "ReiKoka",
+      "points": 160,
+      "maxPossiblePoints": 160,
+      "totalTimeTaken": 48,
+      "date": "2025-04-04T07:28:14.464Z"
+    },
+    {
+      "id": "896b",
+      "category": "HTML",
+      "difficultySetting": "easy",
+      "userName": "ReiKoka",
+      "points": 160,
+      "maxPossiblePoints": 160,
+      "totalTimeTaken": 40,
+      "date": "2025-04-04T07:29:28.841Z"
+    },
+    {
+      "id": "2fb8",
+      "category": "CSS",
+      "difficultySetting": "easy",
+      "userName": "ReiKoka",
+      "points": 160,
+      "maxPossiblePoints": 160,
+      "totalTimeTaken": 78,
+      "date": "2025-04-04T07:42:57.776Z"
     }
   ]
 }
